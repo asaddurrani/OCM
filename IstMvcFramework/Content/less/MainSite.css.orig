@@ -1,0 +1,254 @@
+﻿#productBinding .activeView {
+  background-color: #ff7e47;
+  color: white;
+}
+#productBinding .inactiveView {
+  background-color: #ffffff;
+  color: black;
+}
+#productBinding #changeViewSection {
+  padding-left: 0;
+}
+#productBinding #gridZoomSlider {
+  width: 100%;
+}
+#productBinding .filter-block .form-group {
+  margin-bottom: 0;
+}
+#productBinding #stockDialog #stockDialogMainContainer {
+  width: 838px;
+}
+#productBinding #signtureEdit .modal-dialog {
+  width: 838px;
+}
+#productBinding #itemAddonCostCentreDialog #itemAddonCostCentreDialogMainContainer {
+  width: 838px;
+}
+#productBinding .form-group .input-group-addon {
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+#productBinding .form-group .input-group .input-group-addon {
+  border: 1px solid #ccc;
+}
+#productBinding #tab-pricetable .form-group #txtDiscountsContainer {
+  padding: 0;
+}
+#productBinding #tab-pricetable .form-group #packagingWeightUnitLabel {
+  padding-top: 10px;
+}
+#productBinding #tab-pricetable .form-group #txtTaxContainer {
+  width: 50%;
+}
+#productBinding #tab-pricetable .form-group #stateTaxSectionLabel {
+  font-weight: bold;
+}
+#productBinding #tab-pricetable #tab-pricetable-itemPriceMatrix tr th#Qty {
+  width: 104px;
+}
+#productBinding #tab-pricetable #tab-pricetable-itemPriceMatrix tr th#QtyRangeFrom,
+#productBinding #tab-pricetable #tab-pricetable-itemPriceMatrix tr th#QtyRangeTo {
+  width: 104px;
+}
+#productBinding #tab-pricetable #tab-pricetable-itemPriceMatrix tr th.paperStockType {
+  width: 10%;
+}
+#productBinding #tab-supplierPrice .labelBold {
+  font-weight: bold;
+}
+#productBinding #tab-supplierPrice #estProductionTimeContainer #txtEstProductionTime {
+  width: 30%;
+}
+#productBinding #tab-supplierPrice #estProductionTimeContainer span {
+  width: 30%;
+}
+#productBinding #tab-supplierPrice #switchAutoCreateGraterContainer {
+  padding-left: 0;
+  padding-right: 0;
+  width: 12%;
+}
+#productBinding #tab-supplierPrice .deliveryTimeContiner input,
+#productBinding #tab-supplierPrice .deliveryTimeContiner span {
+  width: 40%;
+}
+#productBinding #tab-supplierPrice #supplierTabs {
+  border: dotted;
+  border-width: 1px;
+  border-color: lightgray;
+}
+#productBinding #tab-supplierPrice #qtyLimitLabel {
+  width: 17%;
+}
+#productBinding #tab-supplierPrice #qtyLimitInputContainer {
+  width: 15%;
+}
+#productBinding #tab-supplierPrice #qtyLimitInputContainer input {
+  width: 100px;
+}
+#productBinding #productCategoryDialog ol.dd-list li.dd-item .nested-links {
+  margin-top: -3px;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle th.markupCodeTh {
+  width: 10% !important;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle th.markupRateTh {
+  width: 30% !important;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle th.actionTh {
+  width: 20% !important;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle td.markupCode {
+  width: 10%;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle td.markupRate {
+  width: 30%;
+}
+#myOrganizationBinding #tab-RegionalSettings #markupTablle td.action {
+  width: 20%;
+}
+#storesBinding #addStore {
+  margin-top: 25px;
+}
+#storesBinding #filter {
+  height: 62px !important;
+}
+#storesBinding #topArea {
+  margin-bottom: -11px;
+}
+#storesBinding #tabsHeader {
+  border: 1px solid silver;
+  box-shadow: 1px 1px 1px silver;
+}
+.store-user-link {
+  display: block;
+  font-size: 1.25em;
+  padding-top: 3px;
+}
+.profileLabelPadding {
+  margin-top: 15px;
+}
+#storesBinding .selectedItemRow {
+  background: yellow;
+}
+#storesBinding #itemsForWidgetsDialog .selectedItemRow {
+  background: yellow;
+}
+<<<<<<< HEAD
+/*#inventoryBinding {
+    #inventoryEditor {
+        #tab-CostPrice {
+            #costTxt {
+                width: 70px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+.costTxt {
+    width: 70px;
+    height: 23px;
+}*/
+=======
+#inventoryBinding #addInventory {
+  margin-top: 25px;
+}
+#inventoryBinding #filter {
+  height: 62px !important;
+}
+#inventoryBinding #topArea {
+  margin-bottom: -11px;
+}
+#inventoryBinding #tabsHeader {
+  border: 1px solid silver;
+  box-shadow: 1px 1px 1px silver;
+}
+#inventoryBinding #inventoryEditor #tab-CostPrice #costTablle tr th#costTh {
+  width: 104px;
+}
+#inventoryBinding #inventoryEditor #tab-CostPrice #costTablle tr th#fromTh {
+  width: 104px;
+}
+#inventoryBinding #inventoryEditor #tab-CostPrice #costTablle tr th#toTh {
+  width: 10%;
+}
+#inventoryBinding #inventoryEditor #tab-CostPrice #costTablle tr th#packCostTh {
+  width: 10%;
+}
+#paperSheetBinding #filter {
+  height: 62px !important;
+}
+#paperSheetBinding .removeLeftMargin {
+  margin-left: 0px;
+}
+#inventoryCategoriesBinding #addInventory {
+  margin-top: 25px;
+}
+#inventoryCategoriesBinding #filter {
+  height: 62px !important;
+}
+#inventoryCategoriesBinding #topArea {
+  margin-bottom: -11px;
+}
+#inventoryCategoriesBinding #detailArea {
+  margin-top: 3px;
+}
+>>>>>>> 90c1b05cda23e59d6501f2120ead4ab717497c9c
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+}
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#phraseLibraryDialog .selectedSection,
+#phraseLibraryDialog .selectedPhraseField {
+  background: yellow;
+}
+.inlineGrid table {
+  max-width: 100%;
+  width: 100%;
+  min-width: 100%;
+}
+.inlineGrid table td {
+  padding: 4px 5px;
+  vertical-align: middle;
+}
+.inlineGrid table tr td select,
+.inlineGrid table textarea,
+.inlineGrid table input[type="text"],
+.inlineGrid table input[type="password"],
+.inlineGrid table input[type="datetime"],
+.inlineGrid table input[type="datetime-local"],
+.inlineGrid table input[type="date"],
+.inlineGrid table input[type="month"],
+.inlineGrid table input[type="time"],
+.inlineGrid table input[type="week"],
+.inlineGrid table input[type="number"],
+.inlineGrid table input[type="email"],
+.inlineGrid table input[type="url"],
+.inlineGrid table input[type="search"],
+.inlineGrid table input[type="tel"],
+.inlineGrid table input[type="color"],
+.inlineGrid table .uneditable-input {
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1px;
+  margin-right: 2px;
+}
+.inlineGrid table .selectedRow label {
+  color: #8B8B8B;
+  font-size: 13px;
+  text-align: left;
+}

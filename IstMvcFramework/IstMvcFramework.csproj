@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{426080DD-D8CB-49F2-9645-DFD962ADFFDF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IstMvcFramework</RootNamespace>
+    <AssemblyName>IstMvcFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
+    <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
+    <Compile Include="Areas\Api\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Api\Controllers\VehicleMakerController.cs" />
+    <Compile Include="Areas\Api\Controllers\VehicleModelMakerController.cs" />
+    <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
+    <Compile Include="Areas\Oil\Controllers\OilController.cs" />
+    <Compile Include="Areas\Oil\OilAreaRegistration.cs" />
+    <Compile Include="Areas\Record\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Record\ProductAreaRegistration.cs" />
+    <Compile Include="Areas\Product\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Product\ProductAreaRegistration.cs" />
+    <Compile Include="Areas\Vehicle\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Vehicle\ProductAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="ExceptionUtilities\CommonException .cs" />
+    <Compile Include="ExceptionUtilities\CustomExceptionFilterAttribute.cs" />
+    <Compile Include="ExceptionUtilities\IstUtilityException.cs" />
+    <Compile Include="ExceptionUtilities\IstUtilityResourceManager.cs" />
+    <Compile Include="ExceptionUtilities\Tag.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CultureHelper.cs" />
+    <Compile Include="ModelMappers\CategoryMapper.cs" />
+    <Compile Include="ModelMappers\ProductResponseMapper.cs" />
+    <Compile Include="ModelMappers\ProductMapper.cs" />
+    <Compile Include="ModelMappers\VehicleMakerResponse.cs" />
+    <Compile Include="ModelMappers\VehicleMakerResponseMapper.cs" />
+    <Compile Include="ModelMappers\VehicleModelMakerMapper.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductResponse.cs" />
+    <Compile Include="Models\VehicleMaker.cs" />
+    <Compile Include="Models\VehicleMakerResponse.cs" />
+    <Compile Include="Models\VehicleModelMaker.cs" />
+    <Compile Include="Models\VehicleModelMakerResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Shared\Common.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Products\Product.ar.Designer.cs">
+      <DependentUpon>Product.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Products\Product.Designer.cs">
+      <DependentUpon>Product.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="TypeRegistrations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Common\Scripts\confirmation.view.js" />
+    <Content Include="Areas\Common\Scripts\confirmation.viewModel.js" />
+    <Content Include="Areas\Common\Scripts\pagination.js" />
+    <Content Include="Areas\Oil\Scripts\oil.dataservice.js" />
+    <Content Include="Areas\Oil\Scripts\oil.model.js" />
+    <Content Include="Areas\Oil\Scripts\oil.view.js" />
+    <Content Include="Areas\Oil\Scripts\oil.viewModel.js" />
+    <Content Include="Areas\Oil\Scripts\product.dataservice.js" />
+    <Content Include="Areas\Oil\Scripts\product.model.js" />
+    <Content Include="Areas\Oil\Scripts\product.view.js" />
+    <Content Include="Areas\Oil\Scripts\product.viewModel.js" />
+    <Content Include="Areas\Oil\Scripts\productWithKoMapping.model.js" />
+    <Content Include="Areas\Product\Scripts\product.dataservice.js" />
+    <Content Include="Areas\Product\Scripts\productWithKoMapping.model.js" />
+    <Content Include="Areas\Product\Scripts\product.model.js" />
+    <Content Include="Areas\Product\Scripts\product.view.js" />
+    <Content Include="Areas\Product\Scripts\product.viewModel.js" />
+    <Content Include="Areas\Record\Scripts\record.dataservice.js" />
+    <Content Include="Areas\Record\Scripts\record.model.js" />
+    <Content Include="Areas\Record\Scripts\record.view.js" />
+    <Content Include="Areas\Record\Scripts\record.viewModel.js" />
+    <Content Include="Areas\Vehicle\Scripts\product.dataservice.js" />
+    <Content Include="Areas\Vehicle\Scripts\product.model.js" />
+    <Content Include="Areas\Vehicle\Scripts\product.view.js" />
+    <Content Include="Areas\Vehicle\Scripts\product.viewModel.js" />
+    <Content Include="Areas\Vehicle\Scripts\productWithKoMapping.model.js" />
+    <Content Include="Areas\Vehicle\Scripts\vehicle.dataservice.js" />
+    <Content Include="Areas\Vehicle\Scripts\vehicle.model.js" />
+    <Content Include="Areas\Vehicle\Scripts\vehicle.view.js" />
+    <Content Include="Areas\Vehicle\Scripts\vehicle.viewModel.js" />
+    <Content Include="asadtest.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Centaurus\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Centaurus\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Centaurus\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Centaurus\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Centaurus\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Centaurus\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Centaurus\base\jquery-ui.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.accordion.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.all.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.base.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.button.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.core.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.dialog.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.resizable.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.selectable.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.slider.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.tabs.css" />
+    <Content Include="Content\Centaurus\base\jquery.ui.theme.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\Centaurus\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\compiled\calendar.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\compiled\css.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\compiled\elements.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\compiled\layout.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\compiled\wizard.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\bootstrap-timepicker.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\bootstrap-wizard.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\datepicker.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\daterangepicker.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\dropzone.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\font-awesome.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\fullcalendar.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\fullcalendar.print.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\jquery.nouislider.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\magnific-popup.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\morris.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\nanoscroller.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\select2.css" />
+    <Content Include="Content\Centaurus\Centaurus\css\libs\xcharts.css" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\fontawesome-webfont862f.svg" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Centaurus\Centaurus\img\ArrowDown.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\ArrowUp.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\backIcon.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Cancel.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\error-404-v2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\error-404-v3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\error-500-v1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\forwardArrow.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\login-img.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\logo-black.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\logo-black_.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\logo-small.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\logo.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\logo_.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Machine_Copier.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Machine_DigitalPress.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Machine_Guillotine.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Machine_Lookups.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Machine_SheetPress.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\mpc_beta.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\pricing-star.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Print_Inoice.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Print_Job.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\Print_Order.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\1.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\2.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\3.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\4.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\5.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\6.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\7.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\8.PNG" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\angelina-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\arrow_down.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\banner1.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\banner2.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\banner3.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\CategoryImg1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-img-2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-img.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-180-3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-260-1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-260-2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-sample-small-3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-template-1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-template-2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-template-3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\email-template-4.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\emma-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\emma.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\forwardicon.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\george.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_1.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_2.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_3.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_4.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_5.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_6.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_7.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\img_8.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_1.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_2.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_3.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_4.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_5.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_6.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_7.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\hdr\small\img_8.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\ipad.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\jessica.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\kunis-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\kunis.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\lima-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\1.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\10.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\12.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\2.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\3.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\4.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\5.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\6.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\7.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\8.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\9.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\unbound159.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\logos\UserPage.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\messages-photo-1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\messages-photo-2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\messages-photo-3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\miranda-560-300.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\myorganization128.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\myreports256.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\product2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\product3.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\product4.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\robert-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\robert.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\ryan-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\ryan.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\scarlet-159.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\scarlet.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\scarlett-300.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\sprite.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\startnumbers128.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\SystemEmails128.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\tahiti-1.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\tahiti-2.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\tahiti-3.jpg" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\templateShirt1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\thumbnail1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\thumbnail2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\user-profile-1.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\UserRoles128.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\samples\usersManager128.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\select2-spinner.gif" />
+    <Content Include="Content\Centaurus\Centaurus\img\select2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\select2x2.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\spritemap%402x.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\spritemap.png" />
+    <Content Include="Content\Centaurus\Centaurus\img\youtube-grey.png" />
+    <Content Include="Content\Centaurus\Centaurus\js\bootstrap-datepicker.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\bootstrap-timepicker.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\bootstrap-wizard.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\bootstrap-wysiwyg.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\bootstrap.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\ckeditor\ckeditor.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\CSJSRequestObject.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\customjs.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\d3.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\dashboard.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\daterangepicker.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\demo-skin-changer.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\demo.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\dropzone.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.orderBars.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.stack.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.threshold.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\flot\jquery.flot.time.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\fullcalendar.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\gdp-data.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\hogan.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery-jvectormap-world-merc-en.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery-ui.custom.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.hotkeys.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.knob.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.maskedinput.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.nanoscroller.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.nestable.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.nouislider.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.pwstrength.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquery.slimscroll.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\jquerySlider.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\moment.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\morris.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\morris.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\popup.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\rainbow.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\raphael-min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\scripts.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\select2.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\typeahead.min.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\wizard.js" />
+    <Content Include="Content\Centaurus\Centaurus\js\xcharts.js" />
+    <Content Include="Content\CSS\architecture.css" />
+    <Content Include="Content\CSS\bootstrap-rtl.css" />
+    <Content Include="Content\CSS\PagedList.css" />
+    <Content Include="Content\CSS\spinner.gif" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\arrow-down.png" />
+    <Content Include="Content\Images\arrow-up.png" />
+    <Content Include="Content\Images\delete.png" />
+    <Content Include="Content\Images\edit.png" />
+    <Content Include="Content\Images\spinner.gif" />
+    <Content Include="Content\less\CompanySelector.css" />
+    <Content Include="Content\less\Inventory.css" />
+    <Content Include="Content\less\InventoryCategory.css" />
+    <Content Include="Content\less\Invoice.css" />
+    <Content Include="Content\less\ItemJobStatus.css" />
+    <Content Include="Content\less\MainSite.css" />
+    <Content Include="Content\less\MainSite.min.css" />
+    <Content Include="Content\less\Orders.css" />
+    <Content Include="Content\less\Organisation.css" />
+    <Content Include="Content\less\PaperSheet.css" />
+    <Content Include="Content\less\Products.css" />
+    <Content Include="Content\less\PurchaseOrder.css" />
+    <Content Include="Content\less\StockItemDialog.css" />
+    <Content Include="Content\less\Store.css" />
+    <Content Include="Content\less\Store.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Resources\Product.xml" />
+    <Content Include="Scripts\affix.js" />
+    <Content Include="Scripts\alert.js" />
+    <Content Include="Areas\Product\Views\web.config" />
+    <Content Include="Areas\Product\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Product\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Product\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Api\Views\web.config" />
+    <Content Include="Areas\Common\Views\web.config" />
+    <Content Include="Areas\Common\Views\Shared\_ConfirmationDialog.cshtml" />
+    <Content Include="Areas\Common\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Common\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Common\Views\Shared\_Pager.cshtml" />
+    <Content Include="Areas\Product\Views\Home\_ProductEditor.cshtml" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\fontawesome-webfont862f.eot" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\fontawesome-webfont862f.ttf" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\fontawesome-webfont862f.woff" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Centaurus\Centaurus\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Areas\Oil\Views\web.config" />
+    <Content Include="Areas\Oil\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Oil\Views\Shared\_Layout.cshtml" />
+    <Content Include="Content\less\CompanySelector.less" />
+    <Content Include="Content\less\Inventory.less" />
+    <Content Include="Content\less\InventoryCategory.less" />
+    <Content Include="Content\less\Invoice.less" />
+    <Content Include="Content\less\ItemJobStatus.less" />
+    <Content Include="Content\less\MainSite.css.map" />
+    <Content Include="Content\less\MainSite.css.orig" />
+    <Content Include="Content\less\MainSite.less" />
+    <Content Include="Content\less\Orders.css.map" />
+    <Content Include="Content\less\Orders.less" />
+    <Content Include="Content\less\Organisation.less" />
+    <Content Include="Content\less\PaperSheet.less" />
+    <Content Include="Content\less\Products.less" />
+    <Content Include="Content\less\PurchaseOrder.less" />
+    <Content Include="Content\less\StockItemDialog.less" />
+    <Content Include="Content\less\Store.css.map" />
+    <Content Include="Content\less\Store.less" />
+    <Content Include="Areas\Oil\Views\Oil\Index.cshtml" />
+    <Content Include="Areas\Record\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Record\Views\Home\_oilChangeDialog.cshtml" />
+    <Content Include="Areas\Record\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Record\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Record\Views\web.config" />
+    <Content Include="Areas\Vehicle\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Vehicle\Views\Home\_ProductEditor.cshtml" />
+    <Content Include="Areas\Vehicle\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Vehicle\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Vehicle\Views\web.config" />
+    <Content Include="Areas\Vehicle\Views\Home\_VehicleEditor.cshtml" />
+    <Content Include="Areas\Oil\Views\Oil\_oilDialog.cshtml" />
+    <None Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\App\architecture.js" />
+    <Content Include="Scripts\App\requireConfig.js" />
+    <Content Include="Scripts\bootstrap-rtl.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="Scripts\button.js" />
+    <Content Include="Scripts\carousel-rtl.js" />
+    <Content Include="Scripts\collapse.js" />
+    <Content Include="Scripts\dropdown.js" />
+    <Content Include="Scripts\GPL-LICENSE.txt" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\knockout-3.1.0.debug.js" />
+    <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.validation.debug.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\MIT-LICENSE.txt" />
+    <Content Include="Scripts\modal.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\popover.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\README.txt" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scrollspy.js" />
+    <Content Include="Scripts\tab.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\tooltip.js" />
+    <Content Include="Scripts\transition.js" />
+    <Content Include="Scripts\underscore-ko-1.6.0.js" />
+    <Content Include="Scripts\underscore-ko-1.6.0.min.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\UsersAdmin\Index.cshtml" />
+    <Content Include="Views\UsersAdmin\Edit.cshtml" />
+    <Content Include="Views\UsersAdmin\Details.cshtml" />
+    <Content Include="Views\UsersAdmin\Delete.cshtml" />
+    <Content Include="Views\UsersAdmin\Create.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\SetPassword.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\RolesAdmin\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Scripts\toastr.min.js.map" />
+    <Content Include="Scripts\underscore-min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Api\Models\" />
+    <Folder Include="Areas\Api\Views\Shared\" />
+    <Folder Include="Areas\Api\Views\VehicleMaker\" />
+    <Folder Include="Areas\Api\Views\VehicleModelMaker\" />
+    <Folder Include="Areas\Common\Controllers\" />
+    <Folder Include="Areas\Common\Models\" />
+    <Folder Include="Areas\Oil\Models\" />
+    <Folder Include="Areas\Product\Models\" />
+    <Folder Include="Areas\Record\Models\" />
+    <Folder Include="Areas\Vehicle\Models\" />
+    <Folder Include="Content\Centaurus\base\minified\images\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Implementation\Implementation.csproj">
+      <Project>{42d2e6c0-74f1-46fb-b7ba-43251156275d}</Project>
+      <Name>Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{98F7A831-6D93-48E9-950F-623772AA607A}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{81067904-2176-4648-87ab-014b0d76b85e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBase\WebBase.csproj">
+      <Project>{bcb8bcfd-0163-430c-8088-224074d6e384}</Project>
+      <Name>WebBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Shared\Common.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Products\Product.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Product.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Products\Product.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>43063</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:43063/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

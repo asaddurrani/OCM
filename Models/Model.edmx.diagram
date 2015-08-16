@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea92800c92c04d3e9b022ccfc03ace02" Name="Diagram1">
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.625" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.Category" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.Product" Width="1.5" PointX="3" PointY="6.875" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.VehicleMaker" Width="1.5" PointX="7.75" PointY="2.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.VehicleModelMaker" Width="1.5" PointX="7.75" PointY="5.75" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_dbo_Product_dbo_Category_CategoryId" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.AspNetUserRoles" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_VehicleModelMaker_VehicleMakers" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.Customer" Width="1.5" PointX="10.375" PointY="1" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.CustomerVehicle" Width="1.5" PointX="10" PointY="5.5" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilChangeRecord" Width="1.5" PointX="12.625" PointY="1.625" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilMakerCompany" Width="1.5" PointX="8.375" PointY="9.5" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilNetWeight" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.Oil" Width="1.5" PointX="10.625" PointY="9" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_OilChangeRecords_Oils" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_CustomerVehicles_VehicleModelMaker" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_Oils_OilNetWeight" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

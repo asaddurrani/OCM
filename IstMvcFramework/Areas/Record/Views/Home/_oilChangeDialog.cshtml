@@ -1,0 +1,144 @@
+﻿
+
+
+<div class="modal fade" id="recordDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div style="width: 1100px;" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="dialgHeaderPadding">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Add/Edit Oil Change Record</h4>
+            </div>
+            <div class="col-lg-12 form-horizontal outerDiv-Padding" @*data-bind="with: $root.selectedOilChangeRecords"*@>
+                <div class="well" style="height: 73px;">
+                    <div class="col-sm-12" style="margin-left: 23%">
+                        <div class="col-sm-2"><input type="text" class="form-control" placeholder="e.g : LXY"/></div>
+                        <div class="col-sm-1"><input type="text" class="form-control" placeholder="e.g :  09" /></div>
+                        <div class="col-sm-2"><input type="text" class="form-control" placeholder="e.g :  1717" /></div>
+                    </div>
+                </div>
+
+
+                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                </a>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="well">
+                        <table id="" class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Vehicle</th>
+                                    <th>Vehicle No.</th>
+                                    <th>Oil</th>
+                                    <th>Oil Change Date</th>
+                                    <th>SMS</th>
+                                    <th>Grand Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>asdads</td>
+                                    <td>asdads</td>
+                                    <td>asdads</td>
+                                    <td>asdads</td>
+                                    <td>asdads</td>
+                                    <td>asdads</td>
+                                </tr>
+                            </tbody>
+                            @*<tbody data-bind="foreach: oils">
+                                    <tr data-bind="click: $root.selectOil">
+                                        <td data-bind="text: oilMakerCompanyName"></td>
+                                        <td data-bind="text: oilName"></td>
+                                        <td data-bind="text: oilPower"></td>
+                                        <td data-bind="text: oilAverageMilage"></td>
+                                        <td data-bind="text: oilPrice"></td>
+                                        <td>
+                                            <!-- ko template: { name: 'editActionVehicleTemplate' } -->
+                                            <!-- /ko -->
+                                        </td>
+                                        <td>
+                                            <!-- ko template: { name: 'deleteActionVehicleTemplate' } -->
+                                            <!-- /ko -->
+                                        </td>
+                                    </tr>
+                                </tbody>*@
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-4 text-right">
+                        <div class="bs-example-tooltips tooltip-float-width">
+                            <a class="input-group-addon" style="text-decoration: none; border: 0; cursor: pointer;" data-container="body" data-toggle="popover" data-placement="right" data-original-title="" title="">
+                                <span class="label label-circle-question">&nbsp;&nbsp;?&nbsp;&nbsp;</span>
+                            </a>
+                        </div>
+                        <label for="vehicleMaker" class="control-label text-right tooltip-float">Choose Oil Maker Company</label>
+                    </div>
+                    <div class="col-lg-6">
+                        @*<select class="form-control" data-bind="options: $root.oilMakerCompaniesListForDialog, optionsText: 'OilMakerName', optionsValue: 'OilMakerId', optionsCaption: '--Select Company--', value: oilMakerId"></select>*@
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 text-right">
+                        <div class="bs-example-tooltips tooltip-float-width">
+                            <a class="input-group-addon" style="text-decoration: none; border: 0; cursor: pointer;" data-container="body" data-toggle="popover" data-placement="right" data-content="Sort Order in Category" data-original-title="" title="">
+                                <span class="label label-circle-question">&nbsp;&nbsp;?&nbsp;&nbsp;</span>
+                            </a>
+                        </div>
+                        <label for="oilName" class="control-label text-right tooltip-float">Oil Name</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" id="oilName" @*data-bind="value: oilName, validationTooltip: oilName"*@>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 text-right">
+                        <div class="bs-example-tooltips tooltip-float-width">
+                            <a class="input-group-addon" style="text-decoration: none; border: 0; cursor: pointer;" data-container="body" data-toggle="popover" data-placement="right" data-content="Sort Order in Category" data-original-title="" title="">
+                                <span class="label label-circle-question">&nbsp;&nbsp;?&nbsp;&nbsp;</span>
+                            </a>
+                        </div>
+                        <label for="oilPower" class="control-label text-right tooltip-float">Oil Power</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" id="oilPower" @*data-bind="value: oilPower, validationTooltip: oilPower"*@>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 text-right">
+                        <div class="bs-example-tooltips tooltip-float-width">
+                            <a class="input-group-addon" style="text-decoration: none; border: 0; cursor: pointer;" data-container="body" data-toggle="popover" data-placement="right" data-content="Sort Order in Category" data-original-title="" title="">
+                                <span class="label label-circle-question">&nbsp;&nbsp;?&nbsp;&nbsp;</span>
+                            </a>
+                        </div>
+                        <label for="oilAverageMilage" class="control-label text-right tooltip-float">Oil Average Milage</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" id="oilAverageMilage" @*data-bind="value: oilAverageMilage, validationTooltip: oilAverageMilage"*@>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 text-right">
+                        <div class="bs-example-tooltips tooltip-float-width">
+                            <a class="input-group-addon" style="text-decoration: none; border: 0; cursor: pointer;" data-container="body" data-toggle="popover" data-placement="right" data-content="Sort Order in Category" data-original-title="" title="">
+                                <span class="label label-circle-question">&nbsp;&nbsp;?&nbsp;&nbsp;</span>
+                            </a>
+                        </div>
+                        <label for="oilPrice" class="control-label text-right tooltip-float">Oil Price</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" id="oilPrice" @*data-bind="value: oilPrice, validationTooltip: oilPrice"*@>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bind="click: $root.onSaveOil">Save</button>
+                <button type="button" class="btn btn-default" style="margin-left: 0px;" data-bind="click: $root.onCloseOilDialog">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Wizard Popup ends here*@

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IstMvcFrameworkALI17ModelStoreContainer" CdmEntityContainer="IstMvcFrameworkALI17Entities">
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleMakers">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.VehicleMaker">
+        <MappingFragment StoreEntitySet="VehicleMakers">
+          <ScalarProperty Name="RecCreatedBy" ColumnName="RecCreatedBy" />
+          <ScalarProperty Name="RecordCreatedDate" ColumnName="RecordCreatedDate" />
+          <ScalarProperty Name="VehicleMakerName" ColumnName="VehicleMakerName" />
+          <ScalarProperty Name="VehicleMakerId" ColumnName="VehicleMakerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleModelMakers">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.VehicleModelMaker">
+        <MappingFragment StoreEntitySet="VehicleModelMaker">
+          <ScalarProperty Name="FuilingTypeId" ColumnName="FuilingTypeId" />
+          <ScalarProperty Name="VehicleModelName" ColumnName="VehicleModelName" />
+          <ScalarProperty Name="VehicleMakerId" ColumnName="VehicleMakerId" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="IstMvcFrameworkALI17Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerDescription" ColumnName="CustomerDescription" />
+          <ScalarProperty Name="CustomerCreatedDate" ColumnName="CustomerCreatedDate" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerEmailAddress" ColumnName="CustomerEmailAddress" />
+          <ScalarProperty Name="CustomerLandline" ColumnName="CustomerLandline" />
+          <ScalarProperty Name="CustomerMobileNumber2" ColumnName="CustomerMobileNumber2" />
+          <ScalarProperty Name="CustomerMobileNumber1" ColumnName="CustomerMobileNumber1" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerMiddleName" ColumnName="CustomerMiddleName" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerVehicles">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.CustomerVehicle">
+        <MappingFragment StoreEntitySet="CustomerVehicles">
+          <ScalarProperty Name="VehicleDailyRunningKms" ColumnName="VehicleDailyRunningKms" />
+          <ScalarProperty Name="VehicleManufacturingYear" ColumnName="VehicleManufacturingYear" />
+          <ScalarProperty Name="VehiclePlateYear" ColumnName="VehiclePlateYear" />
+          <ScalarProperty Name="VehiclePlateNumbers" ColumnName="VehiclePlateNumbers" />
+          <ScalarProperty Name="VehiclePlateAlphabets" ColumnName="VehiclePlateAlphabets" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerVehicleId" ColumnName="CustomerVehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OilChangeRecords">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilChangeRecord">
+        <MappingFragment StoreEntitySet="OilChangeRecords">
+          <ScalarProperty Name="CustomerVehicleId" ColumnName="CustomerVehicleId" />
+          <ScalarProperty Name="OilId" ColumnName="OilId" />
+          <ScalarProperty Name="OilCustomerId" ColumnName="OilCustomerId" />
+          <ScalarProperty Name="OilChangeRecordId" ColumnName="OilChangeRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OilMakerCompanies">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilMakerCompany">
+        <MappingFragment StoreEntitySet="OilMakerCompany">
+          <ScalarProperty Name="OilMakerName" ColumnName="OilMakerName" />
+          <ScalarProperty Name="OilMakerId" ColumnName="OilMakerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OilNetWeights">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilNetWeight">
+        <MappingFragment StoreEntitySet="OilNetWeight">
+          <ScalarProperty Name="OilNetWeight1" ColumnName="OilNetWeight" />
+          <ScalarProperty Name="OilNetWeightId" ColumnName="OilNetWeightId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oils">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.Oil">
+        <MappingFragment StoreEntitySet="Oils">
+          <ScalarProperty Name="OilNetWeightId" ColumnName="OilNetWeightId" />
+          <ScalarProperty Name="OilDescription" ColumnName="OilDescription" />
+          <ScalarProperty Name="OilPrice" ColumnName="OilPrice" />
+          <ScalarProperty Name="OilPower" ColumnName="OilPower" />
+          <ScalarProperty Name="OilAverageMilage" ColumnName="OilAverageMilage" />
+          <ScalarProperty Name="OilMakerId" ColumnName="OilMakerId" />
+          <ScalarProperty Name="OilName" ColumnName="OilName" />
+          <ScalarProperty Name="OilId" ColumnName="OilId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,67 @@
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.dll.config
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.pdb
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Owin.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\PagedList.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Helpers.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Mvc.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Razor.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\PagedList.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Helpers.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Mvc.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Razor.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\obj\Debug\Models.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Models\obj\Debug\Models.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.dll.config
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Models.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.Security.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Owin.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\PagedList.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Helpers.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Mvc.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Razor.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\Microsoft.Owin.Security.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\PagedList.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Helpers.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Mvc.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.Razor.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\obj\Debug\Models.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\obj\Debug\Models.pdb

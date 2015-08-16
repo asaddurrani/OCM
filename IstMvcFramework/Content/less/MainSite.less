@@ -1,0 +1,229 @@
+﻿/* Common Styles */
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#phraseLibraryDialog {
+    .selectedSection, .selectedPhraseField {
+        background: yellow;
+    }
+
+    .category {
+        padding-right: 5px;
+        border: 1px solid silver;
+        max-height: 450px;
+        overflow-y: auto;
+        margin-top: 14px;
+    }
+}
+
+.inlineGrid {
+    table {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+
+        th {
+            // color: @column_header_color;
+        }
+
+        td {
+            padding: 4px 5px;
+            vertical-align: middle;
+        }
+
+
+        tr td select, textarea,
+        input[type="text"], input[type="password"],
+        input[type="datetime"], input[type="datetime-local"],
+        input[type="date"], input[type="month"],
+        input[type="time"], input[type="week"],
+        input[type="number"], input[type="email"],
+        input[type="url"], input[type="search"],
+        input[type="tel"], input[type="color"], .uneditable-input {
+            padding-left: 2px;
+            padding-right: 2px;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1px;
+            margin-right: 2px;
+        }
+
+        .selectedRow {
+            // background-color: @select_row_backgroundColor;
+            label {
+                color: #8B8B8B;
+                font-size: 13px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.my-modal {
+    overflow: auto !important;
+}
+
+.closeSaveButtonMarginRemove {
+    margin-left: 0;
+}
+
+/* Form Group in Details Page */
+
+.filter-block {
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .from-group-filterText {
+        margin-right: 0;
+    }
+}
+
+.form-group {
+    .input-group-addon {
+        text-decoration: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .input-group {
+        .input-group-addon {
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+.my-tabsHeader {
+    border: 1px solid silver;
+    -moz-box-shadow: 1px 1px 1px silver;
+    -webkit-box-shadow: 1px 1px 1px silver;
+    box-shadow: 1px 1px 1px silver;
+}
+
+.set-filter-margin {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Form Group in Details Page */
+
+/* Validation Summary */
+
+.validationSummaryContainer {
+    .validationSummaryLink {
+        margin-left: 15px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    a {
+        color: red;
+    }
+}
+
+.errorFill {
+    border: 1px solid red !important;
+    background-color: #fdd !important;
+}
+
+.errorFillRow {
+    border: 3px solid red !important;
+}
+
+/* For Elements That use ValidationTooltip + Css: { 'errorFill': someValue } , css should be css: { 'errorFillWithValidation': someValue }  */
+.errorFillWithValidation {
+    border: 1px solid red !important;
+    background-color: #fdd !important;
+}
+
+.errorMsgText {
+    color: red !important;
+    cursor: pointer !important;
+}
+
+div#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000000011;
+    border: 2px solid #eeeeee;
+    font-size: 40px;
+    width: 1em;
+    height: 1em;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -ms-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top-color: #2eaef0;
+}
+
+/* Validation Summary */
+
+/* Selected Row Highlight */
+
+.selectedRow {
+    background: lightgray !important;
+}
+
+/* Selected Row Highlight */
+
+/* For Cost Centre Input Dialog */
+
+.opaqueLayer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    background-color: gray;
+    z-Index: 9999;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#innerLayer {
+    background: white;
+}
+
+/* For Cost Centre Input Dialog */
+
+/* Common Styles */
+
+@import "Products";
+@import "Organisation";
+@import "Store";
+@import "Inventory";
+@import "PaperSheet";
+@import "InventoryCategory";
+@import "StockItemDialog";
+@import "Orders";
+@import "CompanySelector";
+@import "ItemJobStatus";
+@import "Invoice";
+@import "PurchaseOrder";

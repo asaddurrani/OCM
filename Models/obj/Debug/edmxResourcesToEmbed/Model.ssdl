@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IstMvcFrameworkALI17Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="CustomerFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerMiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerMobileNumber1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerMobileNumber2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerLandline" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomerCreatedDate" Type="datetime" />
+    <Property Name="CustomerDescription" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="CustomerVehicles">
+    <Key>
+      <PropertyRef Name="CustomerVehicleId" />
+    </Key>
+    <Property Name="CustomerVehicleId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="VehicleId" Type="bigint" />
+    <Property Name="VehiclePlateAlphabets" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehiclePlateNumbers" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehiclePlateYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehicleManufacturingYear" Type="int" />
+    <Property Name="VehicleDailyRunningKms" Type="int" />
+  </EntityType>
+  <EntityType Name="OilChangeRecords">
+    <Key>
+      <PropertyRef Name="OilChangeRecordId" />
+    </Key>
+    <Property Name="OilChangeRecordId" Type="int" Nullable="false" />
+    <Property Name="OilCustomerId" Type="int" />
+    <Property Name="OilId" Type="int" />
+    <Property Name="CustomerVehicleId" Type="int" />
+  </EntityType>
+  <EntityType Name="OilMakerCompany">
+    <Key>
+      <PropertyRef Name="OilMakerId" />
+    </Key>
+    <Property Name="OilMakerId" Type="int" Nullable="false" />
+    <Property Name="OilMakerName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OilNetWeight">
+    <Key>
+      <PropertyRef Name="OilNetWeightId" />
+    </Key>
+    <Property Name="OilNetWeightId" Type="int" Nullable="false" />
+    <Property Name="OilNetWeight" Type="float" />
+  </EntityType>
+  <EntityType Name="Oils">
+    <Key>
+      <PropertyRef Name="OilId" />
+    </Key>
+    <Property Name="OilId" Type="int" Nullable="false" />
+    <Property Name="OilName" Type="nvarchar" MaxLength="50" />
+    <Property Name="OilMakerId" Type="int" />
+    <Property Name="OilAverageMilage" Type="int" />
+    <Property Name="OilPower" Type="nvarchar" MaxLength="50" />
+    <Property Name="OilPrice" Type="float" />
+    <Property Name="OilDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="OilNetWeightId" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="VehicleMakers">
+    <Key>
+      <PropertyRef Name="VehicleMakerId" />
+    </Key>
+    <Property Name="VehicleMakerId" Type="bigint" Nullable="false" />
+    <Property Name="VehicleMakerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordCreatedDate" Type="datetime" />
+    <Property Name="RecCreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="VehicleModelMaker">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="bigint" Nullable="false" />
+    <Property Name="VehicleMakerId" Type="bigint" />
+    <Property Name="VehicleModelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FuilingTypeId" Type="bigint" />
+  </EntityType>
+  <Association Name="FK_AspNetUserRoles_AspNetRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerVehicles_VehicleModelMaker">
+    <End Role="VehicleModelMaker" Type="Self.VehicleModelMaker" Multiplicity="0..1" />
+    <End Role="CustomerVehicles" Type="Self.CustomerVehicles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleModelMaker">
+        <PropertyRef Name="VehicleId" />
+      </Principal>
+      <Dependent Role="CustomerVehicles">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Product_dbo_Category_CategoryId">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OilChangeRecords_Oils">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="OilChangeRecords" Type="Self.OilChangeRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="OilChangeRecords">
+        <PropertyRef Name="OilCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oils_OilNetWeight">
+    <End Role="OilMakerCompany" Type="Self.OilMakerCompany" Multiplicity="0..1" />
+    <End Role="Oils" Type="Self.Oils" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OilMakerCompany">
+        <PropertyRef Name="OilMakerId" />
+      </Principal>
+      <Dependent Role="Oils">
+        <PropertyRef Name="OilMakerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleModelMaker_VehicleMakers">
+    <End Role="VehicleMakers" Type="Self.VehicleMakers" Multiplicity="0..1" />
+    <End Role="VehicleModelMaker" Type="Self.VehicleModelMaker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleMakers">
+        <PropertyRef Name="VehicleMakerId" />
+      </Principal>
+      <Dependent Role="VehicleModelMaker">
+        <PropertyRef Name="VehicleMakerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IstMvcFrameworkALI17ModelStoreContainer">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerVehicles" EntityType="Self.CustomerVehicles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OilChangeRecords" EntityType="Self.OilChangeRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OilMakerCompany" EntityType="Self.OilMakerCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OilNetWeight" EntityType="Self.OilNetWeight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oils" EntityType="Self.Oils" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleMakers" EntityType="Self.VehicleMakers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleModelMaker" EntityType="Self.VehicleModelMaker" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="Self.FK_AspNetUserRoles_AspNetRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="Self.FK_AspNetUserRoles_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerVehicles_VehicleModelMaker" Association="Self.FK_CustomerVehicles_VehicleModelMaker">
+      <End Role="VehicleModelMaker" EntitySet="VehicleModelMaker" />
+      <End Role="CustomerVehicles" EntitySet="CustomerVehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Product_dbo_Category_CategoryId" Association="Self.FK_dbo_Product_dbo_Category_CategoryId">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OilChangeRecords_Oils" Association="Self.FK_OilChangeRecords_Oils">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="OilChangeRecords" EntitySet="OilChangeRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oils_OilNetWeight" Association="Self.FK_Oils_OilNetWeight">
+      <End Role="OilMakerCompany" EntitySet="OilMakerCompany" />
+      <End Role="Oils" EntitySet="Oils" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleModelMaker_VehicleMakers" Association="Self.FK_VehicleModelMaker_VehicleMakers">
+      <End Role="VehicleMakers" EntitySet="VehicleMakers" />
+      <End Role="VehicleModelMaker" EntitySet="VehicleModelMaker" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

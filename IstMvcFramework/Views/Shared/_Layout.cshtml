@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="@IstMvcFramework.Helper.CultureHelper.GetCurrentNeutralCulture()" dir="@(IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "rtl" : "ltr")">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css" + (IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    @Styles.Render("~/Content/siteCss")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Bundle/BaseLibs")
+    @Scripts.Render("~/Bundle/CentaurusLibs")
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap" + (IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    <script src="~/Scripts/App/requireConfig.js"></script>
+    <script src="~/Scripts/App/architecture.js"></script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+   
+    @*<script src="~/Scripts/jquery.blockUI.js"></script>*@
+    <link rel="stylesheet" href="~/Content/Centaurus/Centaurus/css/libs/fullcalendar.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Centaurus/Centaurus/css/libs/fullcalendar.print.css" type="text/css" media="print" />
+    @Styles.Render("~/Content/Centaurus/Centaurus/css/bundleCentaurus/css")
+
+    @* If Debuggin is Enabled then pick css *@
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        <link href="~/Content/less/MainSite.css" rel="stylesheet" />
+    }
+    else
+    {
+        @Styles.Render("~/Bundle/AppLess")
+    }
+
+    @Styles.Render("~/Bundles/BaseCss")
+    @Styles.Render("~/Content/Centaurus/base/css")
+    <link type="image/x-icon" href="favicon.png" rel="shortcut icon" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="theme-blue-gradient">
+    <header class="navbar" id="header-navbar">
+
+
+        <div class="container">
+
+            <a href="~/Dashboard/Index" id="header" class="my-navigator navbar-brand">
+
+                <img src="~/Content/Centaurus/Centaurus/img/logo.png" id="header-logo" alt="" class="normal-logo logo-white" height="25" style="margin-top:5px;" />
+                <img src="~/Content/Centaurus/Centaurus/img/mpc_beta.jpg" id="header-logo-beta" alt="" class="normal-logo logo-white" height="18" style="margin-top:5px;margin-left:10px;" />
+            </a>
+
+            <div class="clearfix">
+
+                <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+                    <ul class="nav navbar-nav pull-left">
+                        <li>
+                            <a class="btn" id="make-small-nav">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="nav-no-collapse pull-right" id="header-nav">
+                    <ul class="nav navbar-nav pull-right">
+
+                        <li class="dropdown profile-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">
+                                    @*@if (User != null && User.Identity != null)
+                                        {
+                                            @User.Identity.Name
+                                        }*@
+                                </span> <b class="caret"></b>
+                                <div class="user-positioner" style="position:fixed;">
+
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a id="btnTakeATour">Take a Tour </a></li>
+                                <li><a href="http://blog.myprintcloud.com/tutorials-quickstart/" target="_blank">Self Paced Tutorials</a></li>
+                                <li><a href="http://www.onlinemeetingnow.com/register/?id=rflm0y9eq7" target="_blank">Attend Webinar</a></li>
+                                <li><a href="http://www.youtube.com/user/myprintcloud" target="_blank">How To Videos</a></li>
+                                <li><a href="http://myprintcloud.com/FAQs" target="_blank">Billing and Licensing FAQs</a></li>
+                                <li><a href="https://myprintcloud.com/dashboard">Change your Plan</a></li>
+                                <li><a href="https://myprintcloud.com/Dashboard/EditProfile"><i class="fa fa-user"></i>Profile</a></li>
+
+                                <li><a href="~/Home/Logout"><i class="fa fa-power-off"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xxs">
+                            <a class="btn" href="~/Home/Logout">
+                                <i class="fa fa-power-off"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="page-wrapper" class="container">
+        <div class="row">
+            <div id="nav-col">
+                <section id="col-left" class="col-left-nano">
+                    <div id="col-left-inner" class="col-left-nano-content">
+
+                        @RenderSection("leftmenue", required: false)
+
+                        @* Test left menue starts here*@
+                        <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                            <ul class="nav nav-pills nav-stacked" id="Navigation-bar">
+                                <li id="lidashboard">
+                                    <a href="~/Dashboard/Index" class="my-navigator" id="anchor-dashboard">
+                                        <i class="fa fa-dashboard"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+
+                                </li>
+                                <li id="licrm">
+                                    <a href="~/CRM/Home/Contacts" class="my-navigator">
+                                        <i class="fa fa-users"></i>
+                                        <span>CRM</span>
+                                    </a>
+                                </li>
+                                <li id="listores">
+                                    <a href="~/Stores/Stores/Index" class="my-navigator">
+                                        <i class="fa fa-th-large"></i>
+                                        <span>Stores</span>
+                                    </a>
+                                </li>
+
+                                <li id="liestimating">
+                                    <a href="~/Orders/Home/EstimatesList" class="my-navigator">
+                                        <i class="fa  fa-fax"></i>
+                                        <span>Estimating</span>
+                                    </a>
+
+                                </li>
+                                <li id="liorderprocessing">
+                                    <a href="~/Orders/Home" class="my-navigator">
+                                        <i class="fa  fa-cubes"></i>
+                                        <span>Orders Processing</span>
+                                    </a>
+
+                                    @*@Html.Action("OrderMenuItems", "Home", new { area = "" })*@
+
+                                </li>
+                                <li id="liproduction">
+                                    <a href="~/Production/Home/Index" class="my-navigator">
+                                        <i class="glyphicon glyphicon-list-alt" style="margin-top:14px;"></i>
+                                        <span>Production Boards</span>
+                                    </a>
+                                </li>
+                                <li id="libilling">
+                                    <a href="~/Invoices/Home/Index" class="my-navigator">
+                                        <i class="glyphicon glyphicon-file" style="margin-top:14px;"></i>
+                                        <span>Invoicing</span>
+                                    </a>
+                                </li>
+                                <li id="lishipping">
+                                    <a href="~/DeliveryNotes/Home/DeliveryNote" class="my-navigator">
+                                        <i class="fa  fa-send-o"></i>
+                                        <span>Shipping</span>
+                                    </a>
+                                </li>
+                                <li id="lipurchases">
+                                    <a href="~/Orders/Home/PurchaseOrders" class="my-navigator">
+                                        <i class="fa  fa-inbox"></i>
+                                        <span>Purchase Orders</span>
+                                    </a>
+                                </li>
+                                <li id="lisettings">
+                                    <a href="~/Settings" class="my-navigator">
+                                        <i class="fa fa-wrench"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        @* Test Left menue ends here*@
+                    </div>
+
+                </section>
+            </div>
+            @*content wrapper goes here*@
+            <div id="content-wrapper">
+                @RenderBody()
+                <div id="spinner" style="display: none">
+                </div>
+                <div id="siteUrl">
+                </div>
+                <footer id="footer-bar" class="row">
+                    <p id="footer-copyright" class="col-xs-12">
+                        &copy; @DateTime.Now.Year Powered by <a href="http://www.myprintcloud.com/" target="_blank">MyPRINTCloud</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/modernizr")
+  
+
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

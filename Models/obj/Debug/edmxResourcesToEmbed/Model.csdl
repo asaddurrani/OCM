@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IstMvcFrameworkALI17Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IstMvcFrameworkALI17Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRoles" EntityType="IstMvcFrameworkALI17Model.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="IstMvcFrameworkALI17Model.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="IstMvcFrameworkALI17Model.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="IstMvcFrameworkALI17Model.AspNetUser" />
+    <EntitySet Name="C__MigrationHistory" EntityType="IstMvcFrameworkALI17Model.C__MigrationHistory" />
+    <EntitySet Name="Categories" EntityType="IstMvcFrameworkALI17Model.Category" />
+    <EntitySet Name="Products" EntityType="IstMvcFrameworkALI17Model.Product" />
+    <EntitySet Name="VehicleMakers" EntityType="IstMvcFrameworkALI17Model.VehicleMaker" />
+    <EntitySet Name="VehicleModelMakers" EntityType="IstMvcFrameworkALI17Model.VehicleModelMaker" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Product_dbo_Category_CategoryId" Association="IstMvcFrameworkALI17Model.FK_dbo_Product_dbo_Category_CategoryId">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="IstMvcFrameworkALI17Model.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleModelMaker_VehicleMakers" Association="IstMvcFrameworkALI17Model.FK_VehicleModelMaker_VehicleMakers">
+      <End Role="VehicleMaker" EntitySet="VehicleMakers" />
+      <End Role="VehicleModelMaker" EntitySet="VehicleModelMakers" />
+    </AssociationSet>
+    <EntitySet Name="Customers" EntityType="IstMvcFrameworkALI17Model.Customer" />
+    <EntitySet Name="CustomerVehicles" EntityType="IstMvcFrameworkALI17Model.CustomerVehicle" />
+    <EntitySet Name="OilChangeRecords" EntityType="IstMvcFrameworkALI17Model.OilChangeRecord" />
+    <EntitySet Name="OilMakerCompanies" EntityType="IstMvcFrameworkALI17Model.OilMakerCompany" />
+    <EntitySet Name="OilNetWeights" EntityType="IstMvcFrameworkALI17Model.OilNetWeight" />
+    <EntitySet Name="Oils" EntityType="IstMvcFrameworkALI17Model.Oil" />
+    <AssociationSet Name="FK_OilChangeRecords_Oils" Association="IstMvcFrameworkALI17Model.FK_OilChangeRecords_Oils">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="OilChangeRecord" EntitySet="OilChangeRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerVehicles_VehicleModelMaker" Association="IstMvcFrameworkALI17Model.FK_CustomerVehicles_VehicleModelMaker">
+      <End Role="VehicleModelMaker" EntitySet="VehicleModelMakers" />
+      <End Role="CustomerVehicle" EntitySet="CustomerVehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oils_OilNetWeight" Association="IstMvcFrameworkALI17Model.FK_Oils_OilNetWeight">
+      <End Role="OilMakerCompany" EntitySet="OilMakerCompanies" />
+      <End Role="Oil" EntitySet="Oils" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="IstMvcFrameworkALI17Model.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="IstMvcFrameworkALI17Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="IstMvcFrameworkALI17Model.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="IstMvcFrameworkALI17Model.FK_dbo_Product_dbo_Category_CategoryId" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="IstMvcFrameworkALI17Model.FK_dbo_Product_dbo_Category_CategoryId" FromRole="Product" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="VehicleMaker">
+    <Key>
+      <PropertyRef Name="VehicleMakerId" />
+    </Key>
+    <Property Name="VehicleMakerId" Type="Int64" Nullable="false" />
+    <Property Name="VehicleMakerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="RecCreatedBy" Type="Int64" />
+    <NavigationProperty Name="VehicleModelMakers" Relationship="IstMvcFrameworkALI17Model.FK_VehicleModelMaker_VehicleMakers" FromRole="VehicleMaker" ToRole="VehicleModelMaker" />
+  </EntityType>
+  <EntityType Name="VehicleModelMaker">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="Int64" Nullable="false" />
+    <Property Name="VehicleMakerId" Type="Int64" />
+    <Property Name="VehicleModelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FuilingTypeId" Type="Int64" />
+    <NavigationProperty Name="VehicleMaker" Relationship="IstMvcFrameworkALI17Model.FK_VehicleModelMaker_VehicleMakers" FromRole="VehicleModelMaker" ToRole="VehicleMaker" />
+    <NavigationProperty Name="CustomerVehicles" Relationship="IstMvcFrameworkALI17Model.FK_CustomerVehicles_VehicleModelMaker" FromRole="VehicleModelMaker" ToRole="CustomerVehicle" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="IstMvcFrameworkALI17Model.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="IstMvcFrameworkALI17Model.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="IstMvcFrameworkALI17Model.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="IstMvcFrameworkALI17Model.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Product_dbo_Category_CategoryId">
+    <End Type="IstMvcFrameworkALI17Model.Category" Role="Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="IstMvcFrameworkALI17Model.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="IstMvcFrameworkALI17Model.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="IstMvcFrameworkALI17Model.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VehicleModelMaker_VehicleMakers">
+    <End Type="IstMvcFrameworkALI17Model.VehicleMaker" Role="VehicleMaker" Multiplicity="0..1" />
+    <End Type="IstMvcFrameworkALI17Model.VehicleModelMaker" Role="VehicleModelMaker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleMaker">
+        <PropertyRef Name="VehicleMakerId" />
+      </Principal>
+      <Dependent Role="VehicleModelMaker">
+        <PropertyRef Name="VehicleMakerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerMiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerMobileNumber1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerMobileNumber2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerLandline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OilChangeRecords" Relationship="IstMvcFrameworkALI17Model.FK_OilChangeRecords_Oils" FromRole="Customer" ToRole="OilChangeRecord" />
+  </EntityType>
+  <EntityType Name="CustomerVehicle">
+    <Key>
+      <PropertyRef Name="CustomerVehicleId" />
+    </Key>
+    <Property Name="CustomerVehicleId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="VehiclePlateAlphabets" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VehiclePlateNumbers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VehiclePlateYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleManufacturingYear" Type="Int32" />
+    <Property Name="VehicleDailyRunningKms" Type="Int32" />
+    <NavigationProperty Name="VehicleModelMaker" Relationship="IstMvcFrameworkALI17Model.FK_CustomerVehicles_VehicleModelMaker" FromRole="CustomerVehicle" ToRole="VehicleModelMaker" />
+  </EntityType>
+  <EntityType Name="OilChangeRecord">
+    <Key>
+      <PropertyRef Name="OilChangeRecordId" />
+    </Key>
+    <Property Name="OilChangeRecordId" Type="Int32" Nullable="false" />
+    <Property Name="OilCustomerId" Type="Int32" />
+    <Property Name="OilId" Type="Int32" />
+    <Property Name="CustomerVehicleId" Type="Int32" />
+    <NavigationProperty Name="Customer" Relationship="IstMvcFrameworkALI17Model.FK_OilChangeRecords_Oils" FromRole="OilChangeRecord" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="OilMakerCompany">
+    <Key>
+      <PropertyRef Name="OilMakerId" />
+    </Key>
+    <Property Name="OilMakerId" Type="Int32" Nullable="false" />
+    <Property Name="OilMakerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Oils" Relationship="IstMvcFrameworkALI17Model.FK_Oils_OilNetWeight" FromRole="OilMakerCompany" ToRole="Oil" />
+  </EntityType>
+  <EntityType Name="OilNetWeight">
+    <Key>
+      <PropertyRef Name="OilNetWeightId" />
+    </Key>
+    <Property Name="OilNetWeightId" Type="Int32" Nullable="false" />
+    <Property Name="OilNetWeight1" Type="Double" />
+  </EntityType>
+  <EntityType Name="Oil">
+    <Key>
+      <PropertyRef Name="OilId" />
+    </Key>
+    <Property Name="OilId" Type="Int32" Nullable="false" />
+    <Property Name="OilName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OilMakerId" Type="Int32" />
+    <Property Name="OilAverageMilage" Type="Int32" />
+    <Property Name="OilPower" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OilPrice" Type="Double" />
+    <Property Name="OilDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OilNetWeightId" Type="Int32" />
+    <NavigationProperty Name="OilMakerCompany" Relationship="IstMvcFrameworkALI17Model.FK_Oils_OilNetWeight" FromRole="Oil" ToRole="OilMakerCompany" />
+  </EntityType>
+  <Association Name="FK_OilChangeRecords_Oils">
+    <End Type="IstMvcFrameworkALI17Model.Customer" Role="Customer" Multiplicity="0..1" />
+    <End Type="IstMvcFrameworkALI17Model.OilChangeRecord" Role="OilChangeRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="OilChangeRecord">
+        <PropertyRef Name="OilCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerVehicles_VehicleModelMaker">
+    <End Type="IstMvcFrameworkALI17Model.VehicleModelMaker" Role="VehicleModelMaker" Multiplicity="0..1" />
+    <End Type="IstMvcFrameworkALI17Model.CustomerVehicle" Role="CustomerVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleModelMaker">
+        <PropertyRef Name="VehicleId" />
+      </Principal>
+      <Dependent Role="CustomerVehicle">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oils_OilNetWeight">
+    <End Type="IstMvcFrameworkALI17Model.OilMakerCompany" Role="OilMakerCompany" Multiplicity="0..1" />
+    <End Type="IstMvcFrameworkALI17Model.Oil" Role="Oil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OilMakerCompany">
+        <PropertyRef Name="OilMakerId" />
+      </Principal>
+      <Dependent Role="Oil">
+        <PropertyRef Name="OilMakerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

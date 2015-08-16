@@ -1,0 +1,128 @@
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.dll.config
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.pdb
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Core.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Windsor.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\FaceSharp.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Interfaces.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Models.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Owin.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Repository.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\RestSharp.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Mvc.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Razor.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Interfaces.pdb
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Models.pdb
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Repository.pdb
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Core.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Windsor.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\RestSharp.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Mvc.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Razor.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.csprojResolveAssemblyReference.cache
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.dll
+C:\Users\Nouman\Downloads\ISTMVCFW-IstMvcFrameworkSPA\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.dll.config
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Implementation.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Core.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Windsor.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\FaceSharp.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Interfaces.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Models.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Owin.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Repository.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\RestSharp.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Mvc.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Razor.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Interfaces.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Models.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Repository.pdb
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Core.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Castle.Windsor.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\RestSharp.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Mvc.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.Razor.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.csprojResolveAssemblyReference.cache
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.dll
+D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Implementation\obj\Debug\Implementation.pdb
