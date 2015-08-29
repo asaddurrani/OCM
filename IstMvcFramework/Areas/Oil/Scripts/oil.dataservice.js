@@ -11,15 +11,15 @@ define("oil/oil.dataservice", function () {
             initialize = function() {
                 if (!isInitialized) {
 
-                    // Define request to get vehicle makers 
-                    amplify.request.define('getVehicleMakers', 'ajax', {
-                        url: '/Api/VehicleMaker',
+                    // Define request to get oil makers 
+                    amplify.request.define('getOilMakerCompanies', 'ajax', {
+                        url: '/Api/OilMaker',
                         dataType: 'json',
                         type: 'GET'
                     });
-                    // Define request to get vehicle model maker 
-                    amplify.request.define('getVehicleModelMaker', 'ajax', {
-                        url: '/Api/VehicleModelMaker',
+                    // Define request to get oils
+                    amplify.request.define('getOils', 'ajax', {
+                        url: '/Api/Oil',
                         dataType: 'json',
                         type: 'GET'
                     });
@@ -27,20 +27,20 @@ define("oil/oil.dataservice", function () {
                     isInitialized = true;
                 }
             },
-            // Get Product Base
-            getVehicleMakers = function(callbacks) {
+            // Get Oil Maker Companies
+            getOilMakerCompanies = function (callbacks) {
                 initialize();
                 return amplify.request({
-                    resourceId: 'getVehicleMakers',
+                    resourceId: 'getOilMakerCompanies',
                     success: callbacks.success,
                     error: callbacks.error
                 });
             },
-            // Get Vehicle Model Maker
-            getVehicleModelMaker = function(param, callbacks) {
+            // Get Oils
+            getOils = function (param, callbacks) {
                 initialize();
                 return amplify.request({
-                    resourceId: 'getVehicleModelMaker',
+                    resourceId: 'getOils',
                     success: callbacks.success,
                     error: callbacks.error,
                     data: param
@@ -49,8 +49,8 @@ define("oil/oil.dataservice", function () {
 
 
         return {
-            getVehicleMakers: getVehicleMakers,
-            getVehicleModelMaker: getVehicleModelMaker,
+            getOilMakerCompanies: getOilMakerCompanies,
+            getOils: getOils,
         };
     })();
 

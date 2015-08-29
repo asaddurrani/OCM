@@ -43,26 +43,26 @@ define("oil/oil.viewModel",
                     },
                     //Get Oil Maker Companies
                     getOilMakerCompanies = function () {
-                        //dataservice.getOilMakerCompanies({
-                        //    success: function (data) {
-                        //        var oilMakerCompaniesList = [];
-                        //        _.each(data.OilMakerCompanies, function (item) {
-                        //            var oilMaker = new model.OilMakerCompany.Create(item);
-                        //            oilMakerCompaniesList.push(oilMaker);
-                        //        });
-                        //        ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
-                        //        oilMakers.valueHasMutated();
-                        //        ko.utils.arrayPushAll(oilMakerCompaniesListForDialog(), oilMakerCompaniesList);
-                        //        oilMakerCompaniesListForDialog.valueHasMutated();
-                        //    },
-                        //    error: function () {
-                        //        toastr.error("Failed to load oil maker companies data");
-                        //    }
-                        //});
+                        dataservice.getOilMakerCompanies({
+                            success: function (data) {
+                                var oilMakerCompaniesList = [];
+                                _.each(data.OilMakerCompanies, function (item) {
+                                    var oilMaker = new model.OilMakerCompany.Create(item);
+                                    oilMakerCompaniesList.push(oilMaker);
+                                });
+                                ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
+                                oilMakers.valueHasMutated();
+                                ko.utils.arrayPushAll(oilMakerCompaniesListForDialog(), oilMakerCompaniesList);
+                                oilMakerCompaniesListForDialog.valueHasMutated();
+                            },
+                            error: function () {
+                                toastr.error("Failed to load oil maker companies data");
+                            }
+                        });
                     },
                     //Get Oils
                     getOils = function () {
-                        isLoadingOil(true);
+                        //isLoadingOil(true);
                         //dataservice.getOils({
                         //    SearchString: searchFilter(),
                         //    PageSize: pager().pageSize(),

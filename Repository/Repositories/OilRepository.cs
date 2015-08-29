@@ -18,5 +18,25 @@ namespace Repository.Repositories
         {
             get { return db.Oils; }
         }
+
+
+        public OilResponse GetAllOils()
+        {
+            var oilsList = db.Oils.ToList();
+            return new OilResponse
+            {
+                Oils = oilsList,
+                TotalCount = oilsList.Count
+            };
+        }
+
+        public Oil GetOilById(int id)
+        {
+            if (id > 0)
+            {
+                return DbSet.Find(id);
+            }
+            return null;
+        }
     }
 }

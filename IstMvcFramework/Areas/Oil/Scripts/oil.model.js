@@ -63,7 +63,6 @@
     };
     //#endregion
 
-
     //#region Oil entity
     // ReSharper disable once AssignToImplicitGlobalInFunctionScope
     Oil = function (specifiedOilId, specifiedOilName, specifiedOilMakerId, specifiedOilAverageMilage, specifiedOilPower, specifiedOilPrice, specifiedOilDescription, specifiedOilNetWeightId, specifiedOilMakerCompanyName) {

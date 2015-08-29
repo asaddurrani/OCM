@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServices\ICategoryService.cs" />
+    <Compile Include="IServices\IOilMakerService.cs" />
+    <Compile Include="IServices\IOilService.cs" />
     <Compile Include="IServices\IProductService.cs" />
     <Compile Include="IServices\IVehicleMakerService.cs" />
     <Compile Include="IServices\IVehicleModelMakerService.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="Repository\ICustomerVehicleRepository.cs" />
     <Compile Include="Repository\IOilChangeRecordRepository.cs" />
     <Compile Include="Repository\IOilMakerCompanyRepository.cs" />
+    <Compile Include="Repository\IOilMakerRepository.cs" />
     <Compile Include="Repository\IOilNetWeightRepository.cs" />
     <Compile Include="Repository\IOilRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />

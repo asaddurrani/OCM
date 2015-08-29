@@ -2,8 +2,8 @@
     Module with the view model for the Vehicle
 */
 define("record/record.viewModel",
-    ["jquery", "amplify", "ko", "record/record.dataservice", "record/record.model", "common/confirmation.viewModel", "common/pagination"],
-    function ($, amplify, ko, dataservice, model, confirmation, pagination) {
+    ["jquery", "amplify", "ko", "record/record.dataservice", "record/record.model", "oil/oil.model", "vehicle/vehicle.model", "common/confirmation.viewModel", "common/pagination"],
+    function ($, amplify, ko, dataservice, model, oilModel, vehicleModel, confirmation, pagination) {
 
         var ist = window.ist || {};
         ist.record = {
@@ -19,6 +19,8 @@ define("record/record.viewModel",
                     oilMakers = ko.observableArray([]),
                     //oil Companies For Dialog
                     oilMakerCompaniesListForDialog = ko.observableArray([]),
+                    //oil Companies For Dialog
+                    vehiclesMakersListForDialog = ko.observableArray([]),
                     //oils
                     oils = ko.observableArray([]),
                     //search Filter
@@ -43,22 +45,22 @@ define("record/record.viewModel",
                     },
                     //Get Oil Maker Companies
                     getOilMakerCompanies = function () {
-                        //dataservice.getOilMakerCompanies({
-                        //    success: function (data) {
-                        //        var oilMakerCompaniesList = [];
-                        //        _.each(data.OilMakerCompanies, function (item) {
-                        //            var oilMaker = new model.OilMakerCompany.Create(item);
-                        //            oilMakerCompaniesList.push(oilMaker);
-                        //        });
-                        //        ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
-                        //        oilMakers.valueHasMutated();
-                        //        ko.utils.arrayPushAll(oilMakerCompaniesListForDialog(), oilMakerCompaniesList);
-                        //        oilMakerCompaniesListForDialog.valueHasMutated();
-                        //    },
-                        //    error: function () {
-                        //        toastr.error("Failed to load oil maker companies data");
-                        //    }
-                        //});
+                        dataservice.getOilMakerCompanies({
+                            success: function (data) {
+                                var oilMakerCompaniesList = [];
+                                _.each(data.OilMakerCompanies, function (item) {
+                                    var oilMaker = new oilModel.OilMakerCompany.Create(item);
+                                    oilMakerCompaniesList.push(oilMaker);
+                                });
+                                ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
+                                oilMakers.valueHasMutated();
+                                ko.utils.arrayPushAll(oilMakerCompaniesListForDialog(), oilMakerCompaniesList);
+                                oilMakerCompaniesListForDialog.valueHasMutated();
+                            },
+                            error: function () {
+                                toastr.error("Failed to load oil maker companies data");
+                            }
+                        });
                     },
                     //Get Oils
                     getOils = function () {
@@ -128,7 +130,7 @@ define("record/record.viewModel",
                         view = specifiedView;
                         ko.applyBindings(view.viewModel, view.bindingRoot);
                         pager(pagination.Pagination({}, oils, getOils));
-                        //getBaseData();
+                        getBaseData();
                         //getOils();
 
                     };
@@ -155,6 +157,7 @@ define("record/record.viewModel",
                     selectOil: selectOil,
                     onSaveOil: onSaveOil,
                     onCloseOilDialog: onCloseOilDialog,
+                    vehiclesMakersListForDialog: vehiclesMakersListForDialog,
                     initialize: initialize
                 };
 

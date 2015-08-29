@@ -210,8 +210,11 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
+    <Compile Include="Areas\Api\Controllers\OilController.cs" />
+    <Compile Include="Areas\Api\Controllers\OilMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Api\Controllers\RecordBaseController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleModelMakerController.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
@@ -238,14 +241,23 @@
     </Compile>
     <Compile Include="Helper\CultureHelper.cs" />
     <Compile Include="ModelMappers\CategoryMapper.cs" />
+    <Compile Include="ModelMappers\OilMakerCompanyMapper.cs" />
+    <Compile Include="ModelMappers\OilMakerCompanyResponseMapper.cs" />
+    <Compile Include="ModelMappers\OilMapper.cs" />
+    <Compile Include="ModelMappers\OilResponseMapper.cs" />
     <Compile Include="ModelMappers\ProductResponseMapper.cs" />
     <Compile Include="ModelMappers\ProductMapper.cs" />
     <Compile Include="ModelMappers\VehicleMakerResponse.cs" />
     <Compile Include="ModelMappers\VehicleMakerResponseMapper.cs" />
     <Compile Include="ModelMappers\VehicleModelMakerMapper.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Oil.cs" />
+    <Compile Include="Models\OilMakerCompany.cs" />
+    <Compile Include="Models\OilMakerResponse.cs" />
+    <Compile Include="Models\OilResponse.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductResponse.cs" />
+    <Compile Include="Models\RecordBaseData.cs" />
     <Compile Include="Models\VehicleMaker.cs" />
     <Compile Include="Models\VehicleMakerResponse.cs" />
     <Compile Include="Models\VehicleModelMaker.cs" />
@@ -812,6 +824,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Api\Models\" />
+    <Folder Include="Areas\Api\Views\OilMaker\" />
+    <Folder Include="Areas\Api\Views\Oil\" />
+    <Folder Include="Areas\Api\Views\RecordBase\" />
     <Folder Include="Areas\Api\Views\Shared\" />
     <Folder Include="Areas\Api\Views\VehicleMaker\" />
     <Folder Include="Areas\Api\Views\VehicleModelMaker\" />

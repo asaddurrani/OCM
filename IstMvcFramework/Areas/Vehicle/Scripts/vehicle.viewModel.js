@@ -87,7 +87,8 @@ define("vehicle/vehicle.viewModel",
                     },
                     //Create Vehicle
                     createVehicle = function () {
-                        selectedVehicle(new model.VehicleModelMaker().Create({}));
+                        //selectedVehicle(new model.VehicleModelMaker().Create({}));
+                        selectedVehicle(new model.VehicleModelMaker());
                         view.showVehiclesDialog();
                     },
                     //Template Chooser

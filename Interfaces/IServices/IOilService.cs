@@ -1,7 +1,8 @@
 ﻿using Models.ResponseModels;
-namespace Interfaces.Repository
+
+namespace Interfaces.IServices
 {
-    public interface IOilRepository : IBaseRepository<Models.DomainModels.Oil, int>
+    public interface IOilService
     {
         OilResponse GetAllOils();
         Models.DomainModels.Oil GetOilById(int id);

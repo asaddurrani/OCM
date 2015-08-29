@@ -18,5 +18,24 @@ namespace Repository.Repositories
         {
             get { return db.OilMakerCompanies; }
         }
+
+        public OilMakerResponce GetAllOilMakers()
+        {
+            var oilMakersList = db.OilMakerCompanies.ToList();
+            return new OilMakerResponce
+            {
+                OilMakers = oilMakersList,
+                TotalCount = oilMakersList.Count
+            };
+        }
+
+        public OilMakerCompany GetOilMakerCompanyById(int id)
+        {
+            if (id > 0)
+            {
+                return DbSet.Find(id);
+            }
+            return null;
+        }
     }
 }

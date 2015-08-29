@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Models.DomainModels;
+using Models.ResponseModels;
 
 namespace Interfaces.Repository
 {
     public interface IOilNetWeightRepository : IBaseRepository<Models.DomainModels.OilNetWeight, int>
     {
+        IEnumerable<OilNetWeight> GetAllOilNetWeights();
     }
 }

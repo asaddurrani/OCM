@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Interfaces.Repository;
 using Microsoft.Practices.Unity;
@@ -17,6 +18,11 @@ namespace Repository.Repositories
         protected override IDbSet<OilNetWeight> DbSet
         {
             get { return db.OilNetWeights; }
+        }
+
+        public IEnumerable<OilNetWeight> GetAllOilNetWeights()
+        {
+            return db.OilNetWeights;
         }
     }
 }

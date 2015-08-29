@@ -2,12 +2,12 @@
 
 namespace IstMvcFramework.Models
 {
-    public sealed class VehicleMakerResponse
+    public sealed class OilMakerResponse
     {
         /// <summary>
-        /// Vehicle Makers
+        /// Oil Makers
         /// </summary>
-        public IEnumerable<Models.VehicleMaker> VehicleMakers { get; set; }
+        public IEnumerable<Models.OilMakerCompany> OilMakerCompanies { get; set; }
 
         /// <summary>
         /// Total Count

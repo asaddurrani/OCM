@@ -19,6 +19,8 @@ namespace Implementation
             unityContainer.RegisterType<IVehicleMakerService, VehicleService>();
             unityContainer.RegisterType<IVehicleModelMakerService, VehicleModelMakerService>();
             unityContainer.RegisterType<ICategoryService, CategoryService>();
+            unityContainer.RegisterType<IOilMakerService, OilMakerService>();
+            unityContainer.RegisterType<IOilService, OilService>();
             unityContainer.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
             
         }
