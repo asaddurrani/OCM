@@ -29,6 +29,12 @@ define("record/record.dataservice", function () {
                         dataType: 'json',
                         type: 'GET'
                     });
+                    // Define request to get record base data
+                    amplify.request.define('getRecordBaseData', 'ajax', {
+                        url: '/Api/RecordBase',
+                        dataType: 'json',
+                        type: 'GET'
+                    });
                     isInitialized = true;
                 }
             },
@@ -37,6 +43,15 @@ define("record/record.dataservice", function () {
                 initialize();
                 return amplify.request({
                     resourceId: 'getOilMakerCompanies',
+                    success: callbacks.success,
+                    error: callbacks.error
+                });
+            },
+            // Get Record Base Data
+            getRecordBaseData = function (callbacks) {
+                initialize();
+                return amplify.request({
+                    resourceId: 'getRecordBaseData',
                     success: callbacks.success,
                     error: callbacks.error
                 });
@@ -56,6 +71,7 @@ define("record/record.dataservice", function () {
         return {
             getOilMakerCompanies: getOilMakerCompanies,
             getVehicleModelMaker: getVehicleModelMaker,
+            getRecordBaseData: getRecordBaseData
         };
     })();
 

@@ -15,14 +15,16 @@ define("record/record.viewModel",
 
                     //Is Loading Records
                     isRecordLoaded = ko.observable(false),
-                    //Oil Maker Companies
+                    
+                    //Oil Maker Companies // Shell, Helix
                     oilMakers = ko.observableArray([]),
-                    //oil Companies For Dialog
-                    oilMakerCompaniesListForDialog = ko.observableArray([]),
-                    //oil Companies For Dialog
-                    vehiclesMakersListForDialog = ko.observableArray([]),
-                    //oils
+                    //oils // remula
                     oils = ko.observableArray([]),
+                    //oil Companies For Dialog // Honda, Toyota, Suzuki
+                    vehiclesMakersList = ko.observableArray([]),
+                    //vehicles // corolla, city, mehran
+                    vehicles = ko.observableArray([]),
+                    
                     //search Filter
                     searchFilter = ko.observable(),
                     //oil Maker Company Filter
@@ -40,22 +42,45 @@ define("record/record.viewModel",
 
                     //get Base Data
                     getBaseData = function () {
-                        //Get Oil Maker Companies
-                        getOilMakerCompanies();
+                        getRecordBaseData();
                     },
-                    //Get Oil Maker Companies
-                    getOilMakerCompanies = function () {
-                        dataservice.getOilMakerCompanies({
+                    getRecordBaseData = function() {
+                        dataservice.getRecordBaseData({
                             success: function (data) {
+                                
                                 var oilMakerCompaniesList = [];
+                                var oilsList = [];
+                                var vehicleMakersList = [];
+                                var vehiclesList = [];
+                               
                                 _.each(data.OilMakerCompanies, function (item) {
                                     var oilMaker = new oilModel.OilMakerCompany.Create(item);
                                     oilMakerCompaniesList.push(oilMaker);
                                 });
                                 ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
                                 oilMakers.valueHasMutated();
-                                ko.utils.arrayPushAll(oilMakerCompaniesListForDialog(), oilMakerCompaniesList);
-                                oilMakerCompaniesListForDialog.valueHasMutated();
+                                
+                                _.each(data.Oils, function (item) {
+                                    var oil = new oilModel.Oil.Create(item);
+                                    oilsList.push(oil);
+                                });
+                                ko.utils.arrayPushAll(oils(), oilsList);
+                                oils.valueHasMutated();
+                                
+                                _.each(data.VehicleMakers, function (item) {
+                                    var vehicleMaker = new vehicleModel.VehicleMaker.Create(item);
+                                    vehicleMakersList.push(vehicleMaker);
+                                });
+                                ko.utils.arrayPushAll(vehiclesMakersList(), vehicleMakersList);
+                                vehiclesMakersList.valueHasMutated();
+                                
+                                _.each(data.VehicleModelMaker, function (item) {
+                                    var vehicleModelMaker = new vehicleModel.VehicleModelMaker.Create(item);
+                                    vehiclesList.push(vehicleModelMaker);
+                                });
+                                ko.utils.arrayPushAll(vehicles(), vehiclesList);
+                                vehicles.valueHasMutated();
+                                
                             },
                             error: function () {
                                 toastr.error("Failed to load oil maker companies data");
@@ -140,7 +165,6 @@ define("record/record.viewModel",
                 return {
                     isRecordLoaded: isRecordLoaded,
                     oilMakers: oilMakers,
-                    oilMakerCompaniesListForDialog: oilMakerCompaniesListForDialog,
                     oils: oils,
                     searchFilter: searchFilter,
                     oilMakerCompanyFilter: oilMakerCompanyFilter,
@@ -148,7 +172,6 @@ define("record/record.viewModel",
                     isLoadingOil: isLoadingOil,
                     pager: pager,
                     getBaseData: getBaseData,
-                    getOilMakerCompanies: getOilMakerCompanies,
                     getOils: getOils,
                     createRecord: createRecord,
                     searchOil: searchOil,
@@ -157,7 +180,8 @@ define("record/record.viewModel",
                     selectOil: selectOil,
                     onSaveOil: onSaveOil,
                     onCloseOilDialog: onCloseOilDialog,
-                    vehiclesMakersListForDialog: vehiclesMakersListForDialog,
+                    vehiclesMakersList: vehiclesMakersList,
+                    vehicles: vehicles,
                     initialize: initialize
                 };
 

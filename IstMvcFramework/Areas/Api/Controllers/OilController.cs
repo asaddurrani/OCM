@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Http;
@@ -13,10 +12,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
     public class OilController : ApiController
     {
         private readonly IOilService _oilService;
-        private readonly IOilMakerService _oilMakerService;
-        private readonly IVehicleMakerService _vehicleMakerService;
-        private readonly IVehicleModelMakerService _vehicleModelMakerService;
-        public OilController(IOilService oilService, IOilMakerService oilMakerService, IVehicleMakerService vehicleMakerService, IVehicleModelMakerService vehicleModelMakerService)
+        public OilController(IOilService oilService)
         {
             if (oilService == null)
             {
@@ -24,22 +20,17 @@ namespace IstMvcFramework.Areas.Api.Controllers
             }
 
             this._oilService = oilService;
-            this._oilMakerService = oilMakerService;
-            this._vehicleMakerService = vehicleMakerService;
-            this._vehicleModelMakerService = vehicleModelMakerService;
         }
         /// <summary>
         /// Get All
         /// </summary>
-        public Models.RecordBaseData Get()
+        public Models.OilResponse Get([FromUri] MainDomain.OilSearchRequest request)
         {
-            return new RecordBaseData
+            if (request == null || !ModelState.IsValid)
             {
-                OilMakerCompanies = _oilMakerService.GetAllOilMakers().OilMakers.Select(x=>x.CreateFrom()),
-                Oils = _oilService.GetAllOils().Oils.Select(x=>x.CreateFrom()),
-                VehicleMakers = _vehicleMakerService.GetAllVehicleMakers().VehicleMakers.Select(x=>x.CreateFrom()),
-                VehicleModelMaker = _vehicleModelMakerService.GetAllVehicleModelMakers().VehicleModelMakers.Select(x=>x.CreateFrom())
-            };
+                throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
+            }
+            return _oilService.GetAllOils().CreateFrom();
         }
 	}
 }
