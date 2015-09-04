@@ -35,11 +35,23 @@ define("record/record.viewModel",
                     isLoadingOil = ko.observable(false),
                     //pager
                     pager = ko.observable(),
-
+                    //Selected Record
+                    selectedRecord = ko.observable(),
                     //#endregion
 
                     //#region Utility Functions 
-
+                    //Computed Vehicle Models
+                    vehicleModelsForDialog = ko.computed(function() {
+                        //vehicles.filter(function (vehicle) {
+                        //    if (selectedRecord() == undefined ) {
+                        //        return;
+                        //    }
+                        //    if (selectedRecord().vehicleMakerId() == undefined) {
+                        //        return;
+                        //    }
+                        //    return vehicle.vehicleMakerId == selectedRecord().vehicleMakerId();
+                        //});
+                    }),
                     //get Base Data
                     getBaseData = function () {
                         getRecordBaseData();
@@ -114,7 +126,7 @@ define("record/record.viewModel",
                     },
                     //Create Record
                     createRecord = function () {
-                        //selectedOil(new model.Oil.Create({}));
+                        selectedRecord(new model.Record());
                         view.showRecordDialog();
                     },
                     //Search Oil
@@ -170,6 +182,7 @@ define("record/record.viewModel",
                     oilMakerCompanyFilter: oilMakerCompanyFilter,
                     selectedOil: selectedOil,
                     isLoadingOil: isLoadingOil,
+                    selectedRecord: selectedRecord,
                     pager: pager,
                     getBaseData: getBaseData,
                     getOils: getOils,
@@ -181,6 +194,7 @@ define("record/record.viewModel",
                     onSaveOil: onSaveOil,
                     onCloseOilDialog: onCloseOilDialog,
                     vehiclesMakersList: vehiclesMakersList,
+                    vehicleModelsForDialog: vehicleModelsForDialog,
                     vehicles: vehicles,
                     initialize: initialize
                 };

@@ -66,111 +66,112 @@
                         </table>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="firstName" class="control-label text-right" style="float: right">First Name</label>
+                <div id="recordData" data-bind="with: $root.selectedRecord">
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="firstName" class="control-label text-right" style="float: right">First Name</label>
+                            </div>
+                            <div class="col-lg-6" id="firstName">
+                                <input type="text" class="form-control" data-bind="value: firstName"/>
+                            </div>
                         </div>
-                        <div class="col-lg-6" id="firstName">
-                            <input type="text" class="form-control" />
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="lastName" class="control-label text-right" style="float: right">Last Name</label>
+                            </div>
+                            <div class="col-lg-6" id="lastName">
+                                <input type="text" class="form-control" data-bind="value: lastName" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="mobileNumber" class="control-label text-right" style="float: right">Mobile Number</label>
+                            </div>
+                            <div class="col-lg-6" id="mobileNumber">
+                                <input type="text" class="form-control" data-bind="value: mobileNumber" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="lastName" class="control-label text-right" style="float: right">Last Name</label>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="vehicleCompany" class="control-label text-right" style="float: right">Vehicle Company</label>
+                            </div>
+                            <div class="col-lg-6" id="vehicleCompany">
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersList ,optionsText: 'vehicleMakerName',optionsCaption: 'Choose Company' , optionsValue: 'vehicleMakerId', value: vehicleCompanyId"></select> 
+                            </div>
                         </div>
-                        <div class="col-lg-6" id="lastName">
-                            <input type="text" class="form-control" />
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="vehicleModel" class="control-label text-right" style="float: right">Vehicle Model</label>
+                            </div>
+                            <div class="col-lg-6" id="vehicleModel">
+                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="vehicledailyMilage" class="control-label text-right" style="float: right">Vehicle Daily Milage</label>
+                            </div>
+                            <div class="col-lg-6" id="vehicledailyMilage">
+                                <input type="text" class="form-control" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="mobileNumber" class="control-label text-right" style="float: right">Mobile Number</label>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="oilCompany" class="control-label text-right" style="float: right">Oil Company</label>
+                            </div>
+                            <div class="col-lg-6" id="oilCompany">
+                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                            </div>
                         </div>
-                        <div class="col-lg-6" id="mobileNumber">
-                            <input type="text" class="form-control" />
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="oilName" class="control-label text-right" style="float: right">Oil Name</label>
+                            </div>
+                            <div class="col-lg-6" id="oilName">
+                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="oilPower" class="control-label text-right" style="float: right">Power</label>
+                            </div>
+                            <div class="col-lg-6" id="oilPower">
+                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="oilChangeDate" class="control-label text-right" style="float: right">Oil Change Date</label>
+                            </div>
+                            <div class="col-lg-6" id="oilChangeDate">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="nextoilChangeDate" class="control-label text-right" style="float: right">Next Oil Change Date</label>
+                            </div>
+                            <div class="col-lg-6" id="nextoilChangeDate">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="SentSMS" class="control-label text-right" style="float: right">Sent SMS</label>
+                            </div>
+                            <div class="col-lg-6" id="SentSMS">
+                                <input type="checkbox" class="form-control" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="vehicleCompany" class="control-label text-right" style="float: right">Vehicle Company</label>
-                        </div>
-                        <div class="col-lg-6" id="vehicleCompany">
-                            <select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersList ,optionsText: 'vehicleMakerName',optionsCaption: 'Choose Company'"></select>  @*, optionsValue: vehicleMakerId*@
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="vehicleModel" class="control-label text-right" style="float: right">Vehicle Model</label>
-                        </div>
-                        <div class="col-lg-6" id="vehicleModel">
-                            @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="vehicledailyMilage" class="control-label text-right" style="float: right">Vehicle Daily Milage</label>
-                        </div>
-                        <div class="col-lg-6" id="vehicledailyMilage">
-                            <input type="text" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="oilCompany" class="control-label text-right" style="float: right">Oil Company</label>
-                        </div>
-                        <div class="col-lg-6" id="oilCompany">
-                            @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="oilName" class="control-label text-right" style="float: right">Oil Name</label>
-                        </div>
-                        <div class="col-lg-6" id="oilName">
-                            @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="oilPower" class="control-label text-right" style="float: right">Power</label>
-                        </div>
-                        <div class="col-lg-6" id="oilPower">
-                            @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="oilChangeDate" class="control-label text-right" style="float: right">Oil Change Date</label>
-                        </div>
-                        <div class="col-lg-6" id="oilChangeDate">
-                            <input type="text" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="nextoilChangeDate" class="control-label text-right" style="float: right">Next Oil Change Date</label>
-                        </div>
-                        <div class="col-lg-6" id="nextoilChangeDate">
-                            <input type="text" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="col-lg-6">
-                            <label for="SentSMS" class="control-label text-right" style="float: right">Sent SMS</label>
-                        </div>
-                        <div class="col-lg-6" id="SentSMS">
-                            <input type="checkbox" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bind="click: $root.onSaveOil">Save</button>

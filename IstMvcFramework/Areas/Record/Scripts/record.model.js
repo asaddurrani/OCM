@@ -282,14 +282,120 @@
     };
 
     // Oil Maker Factory
-    OilChangeRecords.Create = function (source) {
+    OilChangeRecords.Create = function(source) {
         return new OilChangeRecords(source.OilChangeRecordId, source.OilCustomerId, source.OilId, source.CustomerVehicleId);
+    },
+        //#endregion
+    
+    //#region Record
+    
+    // ReSharper disable once AssignToImplicitGlobalInFunctionScope    
+    Record = function () {
+        var
+            self,
+            firstName = ko.observable(''),
+            lastName = ko.observable(),
+            mobileNumber = ko.observable(),
+            vehicleCompanyId = ko.observable(),
+            vehicleModelId = ko.observable(),
+            vehicleDailyMilage = ko.observable(),
+            oilCompanyId = ko.observable(),
+            oilNameId = ko.observable(),
+            oilPower = ko.observable(),
+            oilChangeDate = ko.observable(),
+            nextOilChangeDate = ko.observable(),
+            sentSms = ko.observable(),
+        // Errors
+            errors = ko.validation.group({
+                firstName: firstName,
+                lastName: lastName,
+                mobileNumber: mobileNumber,
+                vehicleCompanyId: vehicleCompanyId,
+                vehicleModelId: vehicleModelId,
+                vehicleDailyMilage: vehicleDailyMilage,
+                oilCompanyId: oilCompanyId,
+                oilNameId: oilNameId,
+                oilPower: oilPower,
+                oilChangeDate: oilChangeDate,
+                nextOilChangeDate: nextOilChangeDate,
+                sentSms: sentSms,
+            }),
+            // Is Valid
+            isValid = ko.computed(function () {
+                return errors().length === 0;
+            }),
+            // True if the booking has been changed
+            // ReSharper disable InconsistentNaming
+            dirtyFlag = new ko.dirtyFlag({
+                // ReSharper restore InconsistentNaming
+                firstName: firstName,
+                lastName: lastName,
+                mobileNumber: mobileNumber,
+                vehicleCompanyId: vehicleCompanyId,
+                vehicleModelId: vehicleModelId,
+                vehicleDailyMilage: vehicleDailyMilage,
+                oilCompanyId: oilCompanyId,
+                oilNameId: oilNameId,
+                oilPower: oilPower,
+                oilChangeDate: oilChangeDate,
+                nextOilChangeDate: nextOilChangeDate,
+                sentSms: sentSms,
+            }),
+            // Has Changes
+            hasChanges = ko.computed(function () {
+                return dirtyFlag.isDirty();
+            }),
+            // Reset
+            reset = function () {
+                dirtyFlag.reset();
+            },
+            // Convert to server
+            convertToServerData = function () {
+                return {
+                    FirstName: firstName,
+                    LastName: lastName,
+                    MobileNumber: mobileNumber,
+                    VehicleCompanyId: vehicleCompanyId,
+                    VehicleModelId: vehicleModelId,
+                    VehicleDailyMilage: vehicleDailyMilage,
+                    OilCompanyId: oilCompanyId,
+                    OilNameId: oilNameId,
+                    OilPower: oilPower,
+                    OilChangeDate: oilChangeDate,
+                    NextOilChangeDate: nextOilChangeDate,
+                    SentSms: sentSms,
+                };
+            };
+
+        self = {
+            firstName: firstName,
+            lastName: lastName,
+            mobileNumber: mobileNumber,
+            vehicleCompanyId: vehicleCompanyId,
+            vehicleModelId: vehicleModelId,
+            vehicleDailyMilage: vehicleDailyMilage,
+            oilCompanyId: oilCompanyId,
+            oilNameId: oilNameId,
+            oilPower: oilPower,
+            oilChangeDate: oilChangeDate,
+            nextOilChangeDate: nextOilChangeDate,
+            sentSms: sentSms,
+            errors: errors,
+            isValid: isValid,
+            dirtyFlag: dirtyFlag,
+            hasChanges: hasChanges,
+            reset: reset,
+            convertToServerData: convertToServerData
+        };
+        return self;
     };
+    
     //#endregion
     
     return {
         Customer: Customer,
         CustomerVehicles: CustomerVehicles,
-        OilChangeRecords: OilChangeRecords
+        OilChangeRecords: OilChangeRecords,
+        Record: Record
     };
 });
