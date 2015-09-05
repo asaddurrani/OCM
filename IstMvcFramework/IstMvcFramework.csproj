@@ -215,6 +215,7 @@
     <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductController.cs" />
     <Compile Include="Areas\Api\Controllers\RecordBaseController.cs" />
+    <Compile Include="Areas\Api\Controllers\RecordByVehiclePlateNumberController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleModelMakerController.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
@@ -258,6 +259,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductResponse.cs" />
     <Compile Include="Models\RecordBaseData.cs" />
+    <Compile Include="Models\RecordModel.cs" />
     <Compile Include="Models\VehicleMaker.cs" />
     <Compile Include="Models\VehicleMakerResponse.cs" />
     <Compile Include="Models\VehicleModelMaker.cs" />
@@ -827,6 +829,7 @@
     <Folder Include="Areas\Api\Views\OilMaker\" />
     <Folder Include="Areas\Api\Views\Oil\" />
     <Folder Include="Areas\Api\Views\RecordBase\" />
+    <Folder Include="Areas\Api\Views\RecordByVehiclePlateNumber\" />
     <Folder Include="Areas\Api\Views\Shared\" />
     <Folder Include="Areas\Api\Views\VehicleMaker\" />
     <Folder Include="Areas\Api\Views\VehicleModelMaker\" />

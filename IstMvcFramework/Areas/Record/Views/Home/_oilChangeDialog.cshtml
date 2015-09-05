@@ -107,7 +107,7 @@
                                 <label for="vehicleModel" class="control-label text-right" style="float: right">Vehicle Model</label>
                             </div>
                             <div class="col-lg-6" id="vehicleModel">
-                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.vehicleModelsListForDialog, optionsText: 'vehicleModelName', optionsValue: 'vehicleId', optionsCaption: 'Choose Model', value: vehicleModelId"></select>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -115,7 +115,7 @@
                                 <label for="vehicledailyMilage" class="control-label text-right" style="float: right">Vehicle Daily Milage</label>
                             </div>
                             <div class="col-lg-6" id="vehicledailyMilage">
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" data-bind="value: vehicleDailyMilage" />
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                 <label for="oilCompany" class="control-label text-right" style="float: right">Oil Company</label>
                             </div>
                             <div class="col-lg-6" id="oilCompany">
-                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                                <select id="oilCompany" class="form-control" data-bind="options: $root.oilMakers,optionsText: 'oilMakerName',optionsValue: 'oilMakerId',optionsCaption: 'Choose Oil Company', value: oilCompanyId"></select>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -133,7 +133,7 @@
                                 <label for="oilName" class="control-label text-right" style="float: right">Oil Name</label>
                             </div>
                             <div class="col-lg-6" id="oilName">
-                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                                <select id="oilName" class="form-control" data-bind="options: $root.oilsModelsListForDialog,optionsText: 'oilName',optionsValue: 'oilId',optionsCaption: 'Choose Oil', value: oilNameId"></select>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -141,7 +141,7 @@
                                 <label for="oilPower" class="control-label text-right" style="float: right">Power</label>
                             </div>
                             <div class="col-lg-6" id="oilPower">
-                                @*<select id="vehicleMaker" class="form-control" data-bind="options: $root.vehiclesMakersListForDialog,optionsText: 'vehicleMakerName',optionsValue: vehicleMakerId,optionsCaption: 'Choose Maker'"></select>*@
+                                <input type="text"  class="form-control" data-bind="value: oilPower, enable: false" />
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                                 <label for="oilChangeDate" class="control-label text-right" style="float: right">Oil Change Date</label>
                             </div>
                             <div class="col-lg-6" id="oilChangeDate">
-                                <input type="text" class="form-control" />
+                                <input class="datepicker form-control" data-bind="datepicker: oilChangeDate" />
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -159,7 +159,7 @@
                                 <label for="nextoilChangeDate" class="control-label text-right" style="float: right">Next Oil Change Date</label>
                             </div>
                             <div class="col-lg-6" id="nextoilChangeDate">
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" data-bind="datepicker: nextOilChangeDate, enable: false" />
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -167,9 +167,28 @@
                                 <label for="SentSMS" class="control-label text-right" style="float: right">Sent SMS</label>
                             </div>
                             <div class="col-lg-6" id="SentSMS">
-                                <input type="checkbox" class="form-control" />
+                                <input type="checkbox" class="form-control" data-bind="checked: sentSms" />
                             </div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="meterReading" class="control-label text-right" style="float: right">Meter Reading</label>
+                            </div>
+                            <div class="col-lg-6" id="meterReading">
+                                <input type="text" class="form-control" data-bind="value: currentMeterReading" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-6">
+                                <label for="nextMeterReading" class="control-label text-right" style="float: right">Next Meter Reading</label>
+                            </div>
+                            <div class="col-lg-6" id="nextMeterReading">
+                                <input type="text" class="form-control" data-bind="value: nextMeterReading, enable: false" />
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </div>

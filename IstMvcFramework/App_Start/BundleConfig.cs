@@ -41,7 +41,7 @@ namespace IdentitySample
                .Include("~/Content/Centaurus/Centaurus/js/scripts.js")
                .Include("~/Content/Centaurus/Centaurus/js/jquery.nestable.js")
                .Include("~/Content/Centaurus/Centaurus/js/jquery.nouislider.js")
-               .Include("~/Content/Centaurus/Centaurus/js/jquerySlider.js")
+               //.Include("~/Content/Centaurus/Centaurus/js/jquerySlider.js")
                );
 
             bundles.Add(new StyleBundle("~/Content/Centaurus/Centaurus/css/bundleCentaurus/css")
@@ -71,7 +71,7 @@ namespace IdentitySample
                 .Include("~/Content/CSS/custom.css"));
             
             bundles.Add(new ScriptBundle("~/Bundle/BaseLibs")
-                .Include("~/Scripts/jquery-ui-1.10.4.js")
+                //.Include("~/Scripts/jquery-ui-1.10.4.js")
                 .Include("~/Scripts/json2.js")
                 .Include("~/Scripts/knockout-3.1.0.js")
                 .Include("~/Scripts/knockout.mapping-latest.js")

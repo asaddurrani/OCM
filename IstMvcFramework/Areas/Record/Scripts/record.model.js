@@ -304,7 +304,11 @@
             oilPower = ko.observable(),
             oilChangeDate = ko.observable(),
             nextOilChangeDate = ko.observable(),
-            sentSms = ko.observable(),
+            sentSms = ko.observable(true),
+            currentMeterReading = ko.observable(),
+            nextMeterReading = ko.observable(),
+            //extra Fields
+            selectedOilMilage = ko.observable(),
         // Errors
             errors = ko.validation.group({
                 firstName: firstName,
@@ -319,6 +323,8 @@
                 oilChangeDate: oilChangeDate,
                 nextOilChangeDate: nextOilChangeDate,
                 sentSms: sentSms,
+                currentMeterReading: currentMeterReading,
+                nextMeterReading: nextMeterReading
             }),
             // Is Valid
             isValid = ko.computed(function () {
@@ -340,6 +346,8 @@
                 oilChangeDate: oilChangeDate,
                 nextOilChangeDate: nextOilChangeDate,
                 sentSms: sentSms,
+                currentMeterReading: currentMeterReading,
+                nextMeterReading: nextMeterReading
             }),
             // Has Changes
             hasChanges = ko.computed(function () {
@@ -364,6 +372,8 @@
                     OilChangeDate: oilChangeDate,
                     NextOilChangeDate: nextOilChangeDate,
                     SentSms: sentSms,
+                    CurrentMeterReading: currentMeterReading,
+                    NextMeterReading: nextMeterReading
                 };
             };
 
@@ -380,6 +390,9 @@
             oilChangeDate: oilChangeDate,
             nextOilChangeDate: nextOilChangeDate,
             sentSms: sentSms,
+            currentMeterReading: currentMeterReading,
+            nextMeterReading: nextMeterReading,
+            selectedOilMilage: selectedOilMilage,
             errors: errors,
             isValid: isValid,
             dirtyFlag: dirtyFlag,

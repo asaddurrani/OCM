@@ -35,6 +35,12 @@ define("record/record.dataservice", function () {
                         dataType: 'json',
                         type: 'GET'
                     });
+                    // Define request to get record by vehicle plate number
+                    amplify.request.define('getRecordByVehiclePlateNumber', 'ajax', {
+                        url: '/Api/RecordByVehiclePlateNumber',
+                        dataType: 'json',
+                        type: 'GET'
+                    });
                     isInitialized = true;
                 }
             },
@@ -49,6 +55,15 @@ define("record/record.dataservice", function () {
             },
             // Get Record Base Data
             getRecordBaseData = function (callbacks) {
+                initialize();
+                return amplify.request({
+                    resourceId: 'getRecordBaseData',
+                    success: callbacks.success,
+                    error: callbacks.error
+                });
+            },
+            // Get request to get record by vehicle plate number
+            getRecordByVehiclePlateNumber = function (callbacks) {
                 initialize();
                 return amplify.request({
                     resourceId: 'getRecordBaseData',
@@ -71,7 +86,8 @@ define("record/record.dataservice", function () {
         return {
             getOilMakerCompanies: getOilMakerCompanies,
             getVehicleModelMaker: getVehicleModelMaker,
-            getRecordBaseData: getRecordBaseData
+            getRecordBaseData: getRecordBaseData,
+            getRecordByVehiclePlateNumber: getRecordByVehiclePlateNumber
         };
     })();
 

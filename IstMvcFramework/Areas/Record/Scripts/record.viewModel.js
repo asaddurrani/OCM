@@ -40,17 +40,53 @@ define("record/record.viewModel",
                     //#endregion
 
                     //#region Utility Functions 
+                    vehicleModelsListForDialog = ko.observableArray([]),
+                    oilsModelsListForDialog = ko.observableArray([]),
                     //Computed Vehicle Models
-                    vehicleModelsForDialog = ko.computed(function() {
-                        //vehicles.filter(function (vehicle) {
-                        //    if (selectedRecord() == undefined ) {
-                        //        return;
-                        //    }
-                        //    if (selectedRecord().vehicleMakerId() == undefined) {
-                        //        return;
-                        //    }
-                        //    return vehicle.vehicleMakerId == selectedRecord().vehicleMakerId();
-                        //});
+                    vehicleModelsForDialog = ko.computed(function () {
+                        if (selectedRecord() && selectedRecord().vehicleCompanyId && selectedRecord().vehicleCompanyId()) {
+                            _.each(vehicles(), function (vehicle) {
+                                if (vehicle.vehicleMakerId() == selectedRecord().vehicleCompanyId()) {
+                                    vehicleModelsListForDialog.splice(0, 0, vehicle);
+                                }
+                            });
+                        }
+                    }),
+                    //Computed Method For Oil
+                    // ReSharper disable once UnusedLocals
+                    oilModelsForDialog = ko.computed(function() {
+                        if (selectedRecord() && selectedRecord().oilCompanyId && selectedRecord().oilCompanyId()) {
+                            oilsModelsListForDialog.removeAll();
+                            _.each(oils(), function (oil) {
+                                if (oil.oilMakerId() == selectedRecord().oilCompanyId()) {
+                                    oilsModelsListForDialog.splice(0, 0, oil);
+                                }
+                            });
+                        }
+                    }),
+                    //Computed to compute oil Power
+                    // ReSharper disable once UnusedLocals
+                    oilPowerForDialog = ko.computed(function() {
+                        if (selectedRecord() && selectedRecord().oilNameId && selectedRecord().oilNameId()) {
+                            _.each(oilsModelsListForDialog(), function (oil) {
+                                if (oil.oilId() == selectedRecord().oilNameId()) {
+                                    selectedRecord().oilPower(oil.oilPower());
+                                    selectedRecord().selectedOilMilage(oil.oilAverageMilage());
+                                    toastr.info("Average Oil Milage : "+ oil.oilAverageMilage());
+                                }
+                            });
+                        }
+                    }),
+                    //Computed to compute next oil change date
+                    // ReSharper disable once UnusedLocals
+                    nextOilChangeDateComputation = ko.computed(function () {
+                        if (selectedRecord() && selectedRecord().oilChangeDate && selectedRecord().oilChangeDate()) {
+                            var oilMilage = selectedRecord().selectedOilMilage();
+                            var dailyVehicleRunning = selectedRecord().vehicleDailyMilage();
+                            var daysAfterWhichOilNeedsToChanged = oilMilage / dailyVehicleRunning;
+                            
+                            //todo do further calculation
+                        }
                     }),
                     //get Base Data
                     getBaseData = function () {
@@ -195,6 +231,8 @@ define("record/record.viewModel",
                     onCloseOilDialog: onCloseOilDialog,
                     vehiclesMakersList: vehiclesMakersList,
                     vehicleModelsForDialog: vehicleModelsForDialog,
+                    vehicleModelsListForDialog: vehicleModelsListForDialog,
+                    oilsModelsListForDialog: oilsModelsListForDialog,
                     vehicles: vehicles,
                     initialize: initialize
                 };
