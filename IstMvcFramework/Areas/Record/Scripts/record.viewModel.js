@@ -45,11 +45,14 @@ define("record/record.viewModel",
                     //Computed Vehicle Models
                     vehicleModelsForDialog = ko.computed(function () {
                         if (selectedRecord() && selectedRecord().vehicleCompanyId && selectedRecord().vehicleCompanyId()) {
+                            vehicleModelsListForDialog.removeAll();
                             _.each(vehicles(), function (vehicle) {
                                 if (vehicle.vehicleMakerId() == selectedRecord().vehicleCompanyId()) {
                                     vehicleModelsListForDialog.splice(0, 0, vehicle);
                                 }
                             });
+                        } else {
+                            vehicleModelsListForDialog.removeAll();
                         }
                     }),
                     //Computed Method For Oil
@@ -62,6 +65,8 @@ define("record/record.viewModel",
                                     oilsModelsListForDialog.splice(0, 0, oil);
                                 }
                             });
+                        } else {
+                            oilsModelsListForDialog.removeAll();
                         }
                     }),
                     //Computed to compute oil Power
@@ -75,6 +80,11 @@ define("record/record.viewModel",
                                     toastr.info("Average Oil Milage : "+ oil.oilAverageMilage());
                                 }
                             });
+                        } else {
+                            if (selectedRecord()) {
+                                selectedRecord().oilPower(undefined);
+                                selectedRecord().selectedOilMilage(undefined);
+                            }
                         }
                     }),
                     //Computed to compute next oil change date
