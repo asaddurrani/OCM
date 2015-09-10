@@ -28,6 +28,10 @@
         <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_OilChangeRecords_Oils" />
         <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_CustomerVehicles_VehicleModelMaker" />
         <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_Oils_OilNetWeight" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.AirFilter" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.BrakeOil" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilFilter" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" Width="1.5" PointX="4.75" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

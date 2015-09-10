@@ -24,6 +24,10 @@ namespace Repository
             unityContainer.RegisterType<IOilMakerCompanyRepository, OilMakerCompanyRepository>();
             unityContainer.RegisterType<IOilRepository, OilRepository>();
             unityContainer.RegisterType<IOilNetWeightRepository, OilNetWeightRepository>();
+            unityContainer.RegisterType<IAirFilterRepository, AirFilterRepository>();
+            unityContainer.RegisterType<IOilFilterRepository, OilFilterRepository>();
+            unityContainer.RegisterType<IBrakeOilRepository, BrakeOilRepository>();
+            unityContainer.RegisterType<IPowerSterringOilRepository, PowerSterringOilRepository>();
 
 
             unityContainer.RegisterType<DbContext, BaseDbContext>(new HierarchicalLifetimeManager());

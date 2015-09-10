@@ -40,5 +40,41 @@ namespace IstMvcFramework.Models
         /// Total Count
         /// </summary>
         public int VehicleModelMakerTotalCount { get; set; }
+        /// <summary>
+        /// Oils
+        /// </summary>
+        public IEnumerable<Models.AirFilter> AirFilters { get; set; }
+
+        /// <summary>
+        /// Total Count
+        /// </summary>
+        public int AirFiltersTotalCount { get; set; }
+        /// <summary>
+        /// Oils
+        /// </summary>
+        public IEnumerable<Models.OilFilter> OilFilters { get; set; }
+
+        /// <summary>
+        /// Total Count
+        /// </summary>
+        public int OilFiltersTotalCount { get; set; }
+        /// <summary>
+        /// Oils
+        /// </summary>
+        public IEnumerable<Models.BrakeOil> BrakeOils { get; set; }
+
+        /// <summary>
+        /// Total Count
+        /// </summary>
+        public int BrakeOilsTotalCount { get; set; }
+        /// <summary>
+        /// Oils
+        /// </summary>
+        public IEnumerable<Models.PowerSterringOil> PowerSterringOils { get; set; }
+
+        /// <summary>
+        /// Total Count
+        /// </summary>
+        public int PowerSterringOilsTotalCount { get; set; }
     }
 }

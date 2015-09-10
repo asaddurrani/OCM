@@ -10,12 +10,10 @@ define("record/record.viewModel",
             viewModel: (function () {
                 var // the view 
                     view,
-
                     //#region Observables 
 
                     //Is Loading Records
                     isRecordLoaded = ko.observable(false),
-                    
                     //Oil Maker Companies // Shell, Helix
                     oilMakers = ko.observableArray([]),
                     //oils // remula
@@ -24,7 +22,6 @@ define("record/record.viewModel",
                     vehiclesMakersList = ko.observableArray([]),
                     //vehicles // corolla, city, mehran
                     vehicles = ko.observableArray([]),
-                    
                     //search Filter
                     searchFilter = ko.observable(),
                     //oil Maker Company Filter
@@ -37,6 +34,13 @@ define("record/record.viewModel",
                     pager = ko.observable(),
                     //Selected Record
                     selectedRecord = ko.observable(),
+                    //ExtraItems
+                    extraItems = ko.observableArray([
+                        { id: '1', name: 'Oil Filter' },
+                        { id: '2', name: 'Air Filter' },
+                        { id: '3', name: 'Brake Oil' },
+                        { id: '4', name: 'Sterring Oil' }
+                    ]);
                     //#endregion
 
                     //#region Utility Functions 
@@ -220,7 +224,9 @@ define("record/record.viewModel",
                 //#endregion
 
 
-                return {
+                    return {
+                        extraItems:extraItems,
+                    //#region Return
                     isRecordLoaded: isRecordLoaded,
                     oilMakers: oilMakers,
                     oils: oils,
@@ -245,6 +251,7 @@ define("record/record.viewModel",
                     oilsModelsListForDialog: oilsModelsListForDialog,
                     vehicles: vehicles,
                     initialize: initialize
+                    //#endregion
                 };
 
             })()

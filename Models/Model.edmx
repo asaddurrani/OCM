@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="IstMvcFrameworkALI17Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AirFilter">
+          <Key>
+            <PropertyRef Name="AilFilterId" />
+          </Key>
+          <Property Name="AilFilterId" Type="int" Nullable="false" />
+          <Property Name="AirFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AirFilterPrice" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="AspNetRoles">
           <Key>
             <PropertyRef Name="Id" />
@@ -55,6 +63,15 @@
           <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
           <Property Name="AccessFailedCount" Type="int" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrakeOils">
+          <Key>
+            <PropertyRef Name="BrakeOilId" />
+          </Key>
+          <Property Name="BrakeOilId" Type="int" Nullable="false" />
+          <Property Name="BrakeOilName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BrakeOilCompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BrakeOilPrice" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="C__MigrationHistory">
           <Key>
@@ -111,6 +128,14 @@
           <Property Name="OilId" Type="int" />
           <Property Name="CustomerVehicleId" Type="int" />
         </EntityType>
+        <EntityType Name="OilFilters">
+          <Key>
+            <PropertyRef Name="OilFilterId" />
+          </Key>
+          <Property Name="OilFilterId" Type="int" Nullable="false" />
+          <Property Name="OilFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OilFilterPrice" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="OilMakerCompany">
           <Key>
             <PropertyRef Name="OilMakerId" />
@@ -137,6 +162,15 @@
           <Property Name="OilPrice" Type="float" />
           <Property Name="OilDescription" Type="nvarchar" MaxLength="250" />
           <Property Name="OilNetWeightId" Type="int" />
+        </EntityType>
+        <EntityType Name="PowerSterringOils">
+          <Key>
+            <PropertyRef Name="PowerStereringOilId" />
+          </Key>
+          <Property Name="PowerStereringOilId" Type="int" Nullable="false" />
+          <Property Name="PowerSterringOilName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PowerSterringOilCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="PowerSterringOilPrice" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -281,19 +315,23 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="IstMvcFrameworkALI17ModelStoreContainer">
+          <EntitySet Name="AirFilter" EntityType="Self.AirFilter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrakeOils" EntityType="Self.BrakeOils" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerVehicles" EntityType="Self.CustomerVehicles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilChangeRecords" EntityType="Self.OilChangeRecords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OilFilters" EntityType="Self.OilFilters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilMakerCompany" EntityType="Self.OilMakerCompany" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilNetWeight" EntityType="Self.OilNetWeight" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Oils" EntityType="Self.Oils" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PowerSterringOils" EntityType="Self.PowerSterringOils" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VehicleMakers" EntityType="Self.VehicleMakers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VehicleModelMaker" EntityType="Self.VehicleModelMaker" Schema="dbo" store:Type="Tables" />
@@ -386,6 +424,10 @@
             <End Role="OilMakerCompany" EntitySet="OilMakerCompanies" />
             <End Role="Oil" EntitySet="Oils" />
           </AssociationSet>
+          <EntitySet Name="AirFilters" EntityType="IstMvcFrameworkALI17Model.AirFilter" />
+          <EntitySet Name="BrakeOils" EntityType="IstMvcFrameworkALI17Model.BrakeOil" />
+          <EntitySet Name="OilFilters" EntityType="IstMvcFrameworkALI17Model.OilFilter" />
+          <EntitySet Name="PowerSterringOils" EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" />
         </EntityContainer>
         <EntityType Name="AspNetRole">
           <Key>
@@ -650,6 +692,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="AirFilter">
+          <Key>
+            <PropertyRef Name="AilFilterId" />
+          </Key>
+          <Property Name="AilFilterId" Type="Int32" Nullable="false" />
+          <Property Name="AirFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AirFilterPrice" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrakeOil">
+          <Key>
+            <PropertyRef Name="BrakeOilId" />
+          </Key>
+          <Property Name="BrakeOilId" Type="Int32" Nullable="false" />
+          <Property Name="BrakeOilName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BrakeOilCompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BrakeOilPrice" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OilFilter">
+          <Key>
+            <PropertyRef Name="OilFilterId" />
+          </Key>
+          <Property Name="OilFilterId" Type="Int32" Nullable="false" />
+          <Property Name="OilFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OilFilterPrice" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PowerSterringOil">
+          <Key>
+            <PropertyRef Name="PowerStereringOilId" />
+          </Key>
+          <Property Name="PowerStereringOilId" Type="Int32" Nullable="false" />
+          <Property Name="PowerSterringOilName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PowerSterringOilCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PowerSterringOilPrice" Type="Double" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -826,6 +902,44 @@
                 <ScalarProperty Name="OilMakerId" ColumnName="OilMakerId" />
                 <ScalarProperty Name="OilName" ColumnName="OilName" />
                 <ScalarProperty Name="OilId" ColumnName="OilId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AirFilters">
+            <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AirFilter">
+              <MappingFragment StoreEntitySet="AirFilter">
+                <ScalarProperty Name="AirFilterPrice" ColumnName="AirFilterPrice" />
+                <ScalarProperty Name="AirFilterName" ColumnName="AirFilterName" />
+                <ScalarProperty Name="AilFilterId" ColumnName="AilFilterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrakeOils">
+            <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.BrakeOil">
+              <MappingFragment StoreEntitySet="BrakeOils">
+                <ScalarProperty Name="BrakeOilPrice" ColumnName="BrakeOilPrice" />
+                <ScalarProperty Name="BrakeOilCompanyName" ColumnName="BrakeOilCompanyName" />
+                <ScalarProperty Name="BrakeOilName" ColumnName="BrakeOilName" />
+                <ScalarProperty Name="BrakeOilId" ColumnName="BrakeOilId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OilFilters">
+            <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilter">
+              <MappingFragment StoreEntitySet="OilFilters">
+                <ScalarProperty Name="OilFilterPrice" ColumnName="OilFilterPrice" />
+                <ScalarProperty Name="OilFilterName" ColumnName="OilFilterName" />
+                <ScalarProperty Name="OilFilterId" ColumnName="OilFilterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerSterringOils">
+            <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.PowerSterringOil">
+              <MappingFragment StoreEntitySet="PowerSterringOils">
+                <ScalarProperty Name="PowerSterringOilPrice" ColumnName="PowerSterringOilPrice" />
+                <ScalarProperty Name="PowerSterringOilCompany" ColumnName="PowerSterringOilCompany" />
+                <ScalarProperty Name="PowerSterringOilName" ColumnName="PowerSterringOilName" />
+                <ScalarProperty Name="PowerStereringOilId" ColumnName="PowerStereringOilId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Models.DomainModels;
-
 namespace Models
 {
     using System;
@@ -33,7 +31,7 @@ namespace Models
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<VehicleMaker> VehicleMakers { get; set; }
         public virtual DbSet<VehicleModelMaker> VehicleModelMakers { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -42,5 +40,9 @@ namespace Models
         public virtual DbSet<OilMakerCompany> OilMakerCompanies { get; set; }
         public virtual DbSet<OilNetWeight> OilNetWeights { get; set; }
         public virtual DbSet<Oil> Oils { get; set; }
+        public virtual DbSet<AirFilter> AirFilters { get; set; }
+        public virtual DbSet<BrakeOil> BrakeOils { get; set; }
+        public virtual DbSet<OilFilter> OilFilters { get; set; }
+        public virtual DbSet<PowerSterringOil> PowerSterringOils { get; set; }
     }
 }

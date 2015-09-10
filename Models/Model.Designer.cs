@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\Models\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Projects\OSM\OCM\Models\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

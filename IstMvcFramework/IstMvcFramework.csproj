@@ -251,11 +251,15 @@
     <Compile Include="ModelMappers\VehicleMakerResponse.cs" />
     <Compile Include="ModelMappers\VehicleMakerResponseMapper.cs" />
     <Compile Include="ModelMappers\VehicleModelMakerMapper.cs" />
+    <Compile Include="Models\AirFilter.cs" />
+    <Compile Include="Models\BrakeOil.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Oil.cs" />
+    <Compile Include="Models\OilFilter.cs" />
     <Compile Include="Models\OilMakerCompany.cs" />
     <Compile Include="Models\OilMakerResponse.cs" />
     <Compile Include="Models\OilResponse.cs" />
+    <Compile Include="Models\PowerSterringOil.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductResponse.cs" />
     <Compile Include="Models\RecordBaseData.cs" />

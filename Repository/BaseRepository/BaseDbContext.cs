@@ -36,6 +36,10 @@ namespace Repository.BaseRepository
         public DbSet<Models.DomainModels.OilMakerCompany> OilMakerCompanies { get; set; }
         public DbSet<Models.DomainModels.Oil> Oils { get; set; }
         public DbSet<Models.DomainModels.OilNetWeight> OilNetWeights { get; set; }        
+        public DbSet<Models.DomainModels.OilFilter> OilFilters { get; set; }        
+        public DbSet<Models.DomainModels.AirFilter> AirFilters { get; set; }        
+        public DbSet<Models.DomainModels.BrakeOil> BrakeOils { get; set; }        
+        public DbSet<Models.DomainModels.PowerSterringOil> PowerSterringOils { get; set; }        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
