@@ -188,8 +188,12 @@
     <Compile Include="RequestModels\OilSearchRequest.cs" />
     <Compile Include="RequestModels\ProductSearchRequest.cs" />
     <Compile Include="RequestModels\VehicleModelMakerSearchRequest.cs" />
+    <Compile Include="ResponseModels\AirFilterResponse.cs" />
+    <Compile Include="ResponseModels\BrakeOilResponse.cs" />
+    <Compile Include="ResponseModels\OilFilterResponse.cs" />
     <Compile Include="ResponseModels\OilMakerResponce.cs" />
     <Compile Include="ResponseModels\OilResponse.cs" />
+    <Compile Include="ResponseModels\PowerSterringOilResponse.cs" />
     <Compile Include="ResponseModels\ProductResponse.cs" />
     <Compile Include="ResponseModels\VehicalMakerResponse.cs" />
     <Compile Include="ResponseModels\VehicleModelMakerResponse.cs" />

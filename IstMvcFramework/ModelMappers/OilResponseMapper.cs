@@ -44,6 +44,130 @@ namespace IstMvcFramework.ModelMappers
 
         }
 
+    #endregion
+
+        #region Air Filter
+        /// <summary>
+        ///  Create web model from entity
+        /// </summary>
+        public static Models.AirFilter CreateFrom(this MainDomain.AirFilter source)
+        {
+            return new Models.AirFilter
+            {
+                AilFilterId = source.AilFilterId,
+                AirFilterName = source.AirFilterName,
+                AirFilterPrice = source.AirFilterPrice
+            };
+
+        }
+
+        /// <summary>
+        ///  Create entity from web model
+        /// </summary>
+        public static MainDomain.AirFilter CreateFrom(this Models.AirFilter source)
+        {
+            return new MainDomain.AirFilter
+            {
+
+                AilFilterId = source.AilFilterId,
+                AirFilterName = source.AirFilterName,
+                AirFilterPrice = source.AirFilterPrice
+            };
+
+        }
+        #endregion
+
+        #region OilFilter
+        /// <summary>
+        ///  Create web model from entity
+        /// </summary>
+        public static Models.OilFilter CreateFrom(this MainDomain.OilFilter source)
+        {
+            return new Models.OilFilter
+            {
+                OilFilterId = source.OilFilterId,
+                OilFilterName = source.OilFilterName,
+                OilFilterPrice = source.OilFilterPrice,
+            };
+
+        }
+
+        /// <summary>
+        ///  Create entity from web model
+        /// </summary>
+        public static MainDomain.OilFilter CreateFrom(this Models.OilFilter source)
+        {
+            return new MainDomain.OilFilter
+            {
+                OilFilterId = source.OilFilterId,
+                OilFilterName = source.OilFilterName,
+                OilFilterPrice = source.OilFilterPrice,
+            };
+
+        }
+        #endregion
+
+        #region Brake Oil
+        /// <summary>
+        ///  Create web model from entity
+        /// </summary>
+        public static Models.BrakeOil CreateFrom(this MainDomain.BrakeOil source)
+        {
+            return new Models.BrakeOil
+            {
+                BrakeOilId = source.BrakeOilId,
+                BrakeOilCompanyName = source.BrakeOilCompanyName,
+                BrakeOilName = source.BrakeOilName,
+                BrakeOilPrice = source.BrakeOilPrice            };
+
+        }
+
+        /// <summary>
+        ///  Create entity from web model
+        /// </summary>
+        public static MainDomain.BrakeOil CreateFrom(this Models.BrakeOil source)
+        {
+            return new MainDomain.BrakeOil
+            {
+                BrakeOilId = source.BrakeOilId,
+                BrakeOilCompanyName = source.BrakeOilCompanyName,
+                BrakeOilName = source.BrakeOilName,
+                BrakeOilPrice = source.BrakeOilPrice
+            };
+
+        }
+        #endregion
+
+        #region Power Sterring Oil
+        /// <summary>
+        ///  Create web model from entity
+        /// </summary>
+        public static Models.PowerSterringOil CreateFrom(this MainDomain.PowerSterringOil source)
+        {
+            return new Models.PowerSterringOil
+            {
+                PowerStereringOilId    = source.PowerStereringOilId,
+                PowerSterringOilCompany = source.PowerSterringOilCompany,
+                PowerSterringOilName = source.PowerSterringOilName,
+                PowerSterringOilPrice = source.PowerSterringOilPrice
+            };
+
+        }
+
+        /// <summary>
+        ///  Create entity from web model
+        /// </summary>
+        public static MainDomain.PowerSterringOil CreateFrom(this Models.PowerSterringOil source)
+        {
+            return new MainDomain.PowerSterringOil
+            {
+                PowerStereringOilId = source.PowerStereringOilId,
+                PowerSterringOilCompany = source.PowerSterringOilCompany,
+                PowerSterringOilName = source.PowerSterringOilName,
+                PowerSterringOilPrice = source.PowerSterringOilPrice
+            };
+
+        }
         #endregion
     }
 }

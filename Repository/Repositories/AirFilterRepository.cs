@@ -18,5 +18,23 @@ namespace Repository.Repositories
         {
             get { return db.AirFilters; }
         }
+        public AirFilterResponse GetAllAirFilters()
+        {
+            var airFiltersList = db.AirFilters.ToList();
+            return new AirFilterResponse
+            {
+                AirFilters = airFiltersList,
+                TotalCount = airFiltersList.Count
+            };
+        }
+
+        public AirFilter GetAirFilterById(int id)
+        {
+            if (id > 0)
+            {
+                return DbSet.Find(id);
+            }
+            return null;
+        }
     }
 }

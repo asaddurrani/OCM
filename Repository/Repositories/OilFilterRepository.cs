@@ -18,5 +18,23 @@ namespace Repository.Repositories
         {
             get { return db.OilFilters; }
         }
+        public OilFilterResponse GetAllOilFilters()
+        {
+            var oilFiltersList = db.OilFilters.ToList();
+            return new OilFilterResponse
+            {
+                OilFilters = oilFiltersList,
+                TotalCount = oilFiltersList.Count
+            };
+        }
+
+        public OilFilter GetOilFilterById(int id)
+        {
+            if (id > 0)
+            {
+                return DbSet.Find(id);
+            }
+            return null;
+        }
     }
 }

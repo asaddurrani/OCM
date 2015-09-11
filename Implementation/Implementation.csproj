@@ -116,9 +116,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Identity\IdentityOperation.cs" />
+    <Compile Include="Services\AirFilterService.cs" />
+    <Compile Include="Services\BrakeOilService.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\OilFilterService.cs" />
     <Compile Include="Services\OilMakerService.cs" />
     <Compile Include="Services\OilService.cs" />
+    <Compile Include="Services\PowerSteeringOilService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\VehicleModelMakerService.cs" />

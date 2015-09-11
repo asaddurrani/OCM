@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Models.DomainModels;
+using Models.ResponseModels;
 
 namespace Interfaces.Repository
 {
     public interface IAirFilterRepository : IBaseRepository<Models.DomainModels.AirFilter, int>
     {
+        AirFilterResponse GetAllAirFilters();
+        AirFilter GetAirFilterById(int id);
     }
 }

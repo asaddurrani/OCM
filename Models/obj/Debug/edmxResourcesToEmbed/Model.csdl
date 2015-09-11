@@ -48,6 +48,10 @@
       <End Role="OilMakerCompany" EntitySet="OilMakerCompanies" />
       <End Role="Oil" EntitySet="Oils" />
     </AssociationSet>
+    <EntitySet Name="AirFilters" EntityType="IstMvcFrameworkALI17Model.AirFilter" />
+    <EntitySet Name="BrakeOils" EntityType="IstMvcFrameworkALI17Model.BrakeOil" />
+    <EntitySet Name="OilFilters" EntityType="IstMvcFrameworkALI17Model.OilFilter" />
+    <EntitySet Name="PowerSterringOils" EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" />
   </EntityContainer>
   <EntityType Name="AspNetRole">
     <Key>
@@ -312,4 +316,38 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="AirFilter">
+    <Key>
+      <PropertyRef Name="AilFilterId" />
+    </Key>
+    <Property Name="AilFilterId" Type="Int32" Nullable="false" />
+    <Property Name="AirFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AirFilterPrice" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrakeOil">
+    <Key>
+      <PropertyRef Name="BrakeOilId" />
+    </Key>
+    <Property Name="BrakeOilId" Type="Int32" Nullable="false" />
+    <Property Name="BrakeOilName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrakeOilCompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrakeOilPrice" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OilFilter">
+    <Key>
+      <PropertyRef Name="OilFilterId" />
+    </Key>
+    <Property Name="OilFilterId" Type="Int32" Nullable="false" />
+    <Property Name="OilFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OilFilterPrice" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PowerSterringOil">
+    <Key>
+      <PropertyRef Name="PowerStereringOilId" />
+    </Key>
+    <Property Name="PowerStereringOilId" Type="Int32" Nullable="false" />
+    <Property Name="PowerSterringOilName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PowerSterringOilCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PowerSterringOilPrice" Type="Double" Nullable="false" />
+  </EntityType>
 </Schema>

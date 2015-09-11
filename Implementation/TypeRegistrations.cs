@@ -21,6 +21,10 @@ namespace Implementation
             unityContainer.RegisterType<ICategoryService, CategoryService>();
             unityContainer.RegisterType<IOilMakerService, OilMakerService>();
             unityContainer.RegisterType<IOilService, OilService>();
+            unityContainer.RegisterType<IAirFilterService, AirFilterService>();
+            unityContainer.RegisterType<IOilFilterService, OilFilterService>();
+            unityContainer.RegisterType<IPowerSteeringOilService, PowerSteeringOilService>();
+            unityContainer.RegisterType<IBrakeOilService, BrakeOilService>();
             unityContainer.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
             
         }

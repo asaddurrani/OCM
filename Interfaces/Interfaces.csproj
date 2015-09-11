@@ -47,9 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IServices\IAirFilterService.cs" />
+    <Compile Include="IServices\IBrakeOilService.cs" />
     <Compile Include="IServices\ICategoryService.cs" />
+    <Compile Include="IServices\IOilFilterService.cs" />
     <Compile Include="IServices\IOilMakerService.cs" />
     <Compile Include="IServices\IOilService.cs" />
+    <Compile Include="IServices\IPowerSteeringOilService.cs" />
     <Compile Include="IServices\IProductService.cs" />
     <Compile Include="IServices\IVehicleMakerService.cs" />
     <Compile Include="IServices\IVehicleModelMakerService.cs" />

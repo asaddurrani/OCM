@@ -96,5 +96,6 @@ D:\Projects\OSM\OCM\Models\bin\Debug\System.Web.Razor.xml
 D:\Projects\OSM\OCM\Models\bin\Debug\System.Web.WebPages.xml
 D:\Projects\OSM\OCM\Models\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Projects\OSM\OCM\Models\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\OSM\OCM\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Projects\OSM\OCM\Models\obj\Debug\Models.dll
 D:\Projects\OSM\OCM\Models\obj\Debug\Models.pdb

@@ -18,5 +18,23 @@ namespace Repository.Repositories
         {
             get { return db.PowerSterringOils; }
         }
+        public PowerSterringOilResponse GetAllOils()
+        {
+            var powerSterringOilResponseList = db.PowerSterringOils.ToList();
+            return new PowerSterringOilResponse
+            {
+                PowerSterringOils = powerSterringOilResponseList,
+                TotalCount = powerSterringOilResponseList.Count
+            };
+        }
+
+        public PowerSterringOil GetPowerSterringOilById(int id)
+        {
+            if (id > 0)
+            {
+                return DbSet.Find(id);
+            }
+            return null;
+        }
     }
 }

@@ -174,5 +174,43 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AirFilters">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.AirFilter">
+        <MappingFragment StoreEntitySet="AirFilter">
+          <ScalarProperty Name="AirFilterPrice" ColumnName="AirFilterPrice" />
+          <ScalarProperty Name="AirFilterName" ColumnName="AirFilterName" />
+          <ScalarProperty Name="AilFilterId" ColumnName="AilFilterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrakeOils">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.BrakeOil">
+        <MappingFragment StoreEntitySet="BrakeOils">
+          <ScalarProperty Name="BrakeOilPrice" ColumnName="BrakeOilPrice" />
+          <ScalarProperty Name="BrakeOilCompanyName" ColumnName="BrakeOilCompanyName" />
+          <ScalarProperty Name="BrakeOilName" ColumnName="BrakeOilName" />
+          <ScalarProperty Name="BrakeOilId" ColumnName="BrakeOilId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OilFilters">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilter">
+        <MappingFragment StoreEntitySet="OilFilters">
+          <ScalarProperty Name="OilFilterPrice" ColumnName="OilFilterPrice" />
+          <ScalarProperty Name="OilFilterName" ColumnName="OilFilterName" />
+          <ScalarProperty Name="OilFilterId" ColumnName="OilFilterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerSterringOils">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.PowerSterringOil">
+        <MappingFragment StoreEntitySet="PowerSterringOils">
+          <ScalarProperty Name="PowerSterringOilPrice" ColumnName="PowerSterringOilPrice" />
+          <ScalarProperty Name="PowerSterringOilCompany" ColumnName="PowerSterringOilCompany" />
+          <ScalarProperty Name="PowerSterringOilName" ColumnName="PowerSterringOilName" />
+          <ScalarProperty Name="PowerStereringOilId" ColumnName="PowerStereringOilId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
