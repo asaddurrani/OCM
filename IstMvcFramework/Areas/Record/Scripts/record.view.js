@@ -21,6 +21,48 @@ define("record/record.view",
                 hideRecordDialog = function () {
                     $("#recordDialog").modal("hide");
                 },
+                //Show Oil Section
+                showOilSection = function () {
+                    $("#OilSection").show(700);
+                },
+                 // Hide Oil Section
+                hideOilSection = function () {
+                    $("#OilSection").hide(700);
+                },
+                //Show Air Filter Section
+                showAirFilterSection = function () {
+                    $("#AirFilterSection").show(700);
+                },
+                 // Hide Air Filter Section
+                hideAirFilterSection = function () {
+                    $("#AirFilterSection").hide(700);
+                },
+                //Show Oil Filter Section
+                showOilFilterSection = function () {
+                    $("#OilFilterSection").show(700);
+                },
+                 // Hide Oil Filter Section
+                hideOilFilterSection = function () {
+                    $("#OilFilterSection").hide(700);
+                },
+                
+                //Show Brake Oil Section
+                showBrakeOilSection = function () {
+                    $("#BrakeOilSection").show(700);
+                },
+                 // Hide Brake Oil Section
+                hideBrakeOilSection = function () {
+                    $("#BrakeOilSection").hide(700);
+                },
+                
+                //Show Power Sterring Oil Section
+                showPowerSteeringOilSection = function () {
+                    $("#PowerSteeringOilSection").show(700);
+                },
+                 // Hide Power Steering Oil Section
+                hidePowerSteeringOilSection = function () {
+                    $("#PowerSteeringOilSection").hide(700);
+                },
 
                 // Initialize
                 initialize = function () {
@@ -39,6 +81,16 @@ define("record/record.view",
                 bindingRoot: bindingRoot,
                 showRecordDialog: showRecordDialog,
                 hideRecordDialog: hideRecordDialog,
+                showOilSection: showOilSection,
+                hideOilSection: hideOilSection,
+                showAirFilterSection: showAirFilterSection,
+                hideAirFilterSection: hideAirFilterSection,
+                showOilFilterSection: showOilFilterSection,
+                hideOilFilterSection: hideOilFilterSection,
+                showBrakeOilSection: showBrakeOilSection,
+                hideBrakeOilSection: hideBrakeOilSection,
+                showPowerSteeringOilSection: showPowerSteeringOilSection,
+                hidePowerSteeringOilSection: hidePowerSteeringOilSection,
                 viewModel: viewModel
             };
         })(recordViewModel);

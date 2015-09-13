@@ -34,14 +34,68 @@ define("record/record.viewModel",
                     pager = ko.observable(),
                     //Selected Record
                     selectedRecord = ko.observable(),
+                    //Record have Oil
+                    recordContainsOil = ko.observable(),
+                    //record have air filter
+                    recordContainsAirFilter = ko.observable(),
+                    //record have oil filter
+                    recordContainsOilFilter = ko.observable(),
+                    //record have brake oil 
+                    recordContainsBrakeOil = ko.observable(),
+                    //record have power sterring oil
+                    recordContainsPowerSterringOil = ko.observable(),
+                    
                     //ExtraItems
                     extraItems = ko.observableArray([
                         { id: '1', name: 'Oil Filter' },
                         { id: '2', name: 'Air Filter' },
                         { id: '3', name: 'Brake Oil' },
                         { id: '4', name: 'Sterring Oil' }
-                    ]);
-                    //#endregion
+                    ]),
+                //#endregion
+                
+                //#region Regions Show and Collapsed
+                showOilSection = function() {
+                    recordContainsOil(1);
+                    view.showOilSection();
+                },
+                hideOilSection = function() {
+                    recordContainsOil(0);
+                    view.hideOilSection();
+                },
+                showAirFilterSection = function () {
+                    recordContainsAirFilter(1);
+                    view.showAirFilterSection();
+                },
+                hideAirFilterSection = function () {
+                    recordContainsAirFilter(0);
+                    view.hideAirFilterSection();
+                },
+                showOilFilterSection = function () {
+                    recordContainsOilFilter(1);
+                    view.showOilFilterSection();
+                },
+                hideOilFilterSection = function () {
+                    recordContainsOilFilter(0);
+                    view.hideOilFilterSection();
+                },
+                showBrakeOilSection = function () {
+                    recordContainsBrakeOil(1);
+                    view.showBrakeOilSection();
+                },
+                hideBrakeOilSection = function () {
+                    recordContainsBrakeOil(0);
+                    view.hideBrakeOilSection();
+                },
+                showPowerSterringOilSection = function () {
+                    recordContainsPowerSterringOil(1);
+                    view.showPowerSteeringOilSection();
+                },
+                hidePowerSterringOilSection = function () {
+                    recordContainsPowerSterringOil(0);
+                    view.hidePowerSteeringOilSection();
+                },
+                //#endregion
 
                     //#region Utility Functions 
                     vehicleModelsListForDialog = ko.observableArray([]),
@@ -225,7 +279,22 @@ define("record/record.viewModel",
 
 
                     return {
-                        extraItems:extraItems,
+                        extraItems: extraItems,
+                        recordContainsOil: recordContainsOil,
+                        recordContainsAirFilter: recordContainsAirFilter,
+                        recordContainsOilFilter: recordContainsOilFilter,
+                        recordContainsBrakeOil: recordContainsBrakeOil,
+                        recordContainsPowerSterringOil: recordContainsPowerSterringOil,
+                        showOilSection: showOilSection,
+                        hideOilSection: hideOilSection,
+                        showAirFilterSection: showAirFilterSection,
+                        hideAirFilterSection: hideAirFilterSection,
+                        showOilFilterSection: showOilFilterSection,
+                        hideOilFilterSection: hideOilFilterSection,
+                        showBrakeOilSection: showBrakeOilSection,
+                        hideBrakeOilSection: hideBrakeOilSection,
+                        showPowerSterringOilSection: showPowerSterringOilSection,
+                        hidePowerSterringOilSection: hidePowerSterringOilSection,
                     //#region Return
                     isRecordLoaded: isRecordLoaded,
                     oilMakers: oilMakers,

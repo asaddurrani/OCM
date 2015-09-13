@@ -21,6 +21,45 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success" @*data-bind="click: searchOil"*@>Search</button>
+                <div class="btn-group" data-toggle="buttons">
+                    <label data-bind="css: { active: (recordContainsOil() == 1)}, click: function () { recordContainsOil(1); }, clickBubble: false" class="btn btn-primary">
+                        Yes
+                    </label>
+                    <label data-bind="css: { active: (recordContainsOil() == 0)}, click: function () { recordContainsOil(0); }, clickBubble: false" class="btn btn-primary">
+                        No
+                    </label>
+                </div>
+                
+                @*<div class="col-lg-6">
+                    <div class="radio">
+                        <input type="radio" name="optionsRadios" id="optionYes" value="true" data-bind="checked: $root.selectedStore().isIncludeVAT">
+                        <label for="optionYes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="optionsRadios" id="optionNo" value="false" data-bind="checked: $root.selectedStore().isIncludeVAT">
+                        <label for="optionNo">
+                            No
+                        </label>
+                    </div>
+                    <span class="help-block text-right">Would you like to include VAT/GST accros store prices?</span>
+                </div>*@
+                <div class="col-lg-6">
+                    <div class="radio">
+                        <input type="radio" name="optionsRadios" id="optionYes" value="true" data-bind="checked: false">
+                        <label for="optionYes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="optionsRadios" id="optionNo" value="false" data-bind="checked:true">
+                        <label for="optionNo">
+                            No
+                        </label>
+                    </div>
+                    <span class="help-block text-right">Would you like to include VAT/GST accros store prices?</span>
+                </div>
             </form>
         </div>
     </div>

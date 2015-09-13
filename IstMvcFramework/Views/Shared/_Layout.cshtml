@@ -12,7 +12,7 @@
     @Scripts.Render("~/Bundle/BaseLibs")
     @Scripts.Render("~/Bundle/CentaurusLibs")
     <script src="~/Scripts/jquery-2.1.0.min.js"></script>
-    @Scripts.Render("~/bundles/bootstrap" + (IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    @*@Scripts.Render("~/bundles/bootstrap" + (IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "-rtl" : ""))*@
 
     <script src="~/Scripts/App/requireConfig.js"></script>
     <script src="~/Scripts/App/architecture.js"></script>
@@ -23,6 +23,7 @@
    
     @*<script src="~/Scripts/jquery.blockUI.js"></script>*@
     <script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+    @Scripts.Render("~/bundles/bootstrap" + (IstMvcFramework.Helper.CultureHelper.IsRighToLeft() ? "-rtl" : ""))
     <link rel="stylesheet" href="~/Content/Centaurus/Centaurus/css/libs/fullcalendar.css" type="text/css" />
     <link rel="stylesheet" href="~/Content/Centaurus/Centaurus/css/libs/fullcalendar.print.css" type="text/css" media="print" />
     @Styles.Render("~/Content/Centaurus/Centaurus/css/bundleCentaurus/css")

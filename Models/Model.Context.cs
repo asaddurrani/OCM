@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Models.DomainModels;
+
 namespace Models
 {
     using System;
