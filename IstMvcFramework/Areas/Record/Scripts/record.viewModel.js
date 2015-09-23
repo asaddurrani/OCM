@@ -22,6 +22,14 @@ define("record/record.viewModel",
                     vehiclesMakersList = ko.observableArray([]),
                     //vehicles // corolla, city, mehran
                     vehicles = ko.observableArray([]),
+                    //Air Filters
+                    airFilters = ko.observableArray([]),
+                    //Oil Filters
+                    oilFilters = ko.observableArray([]),
+                    //Brake oils
+                    brakeOils = ko.observableArray([]),
+                    //Power Sterring Oils
+                    powerSteeringoils = ko.observableArray([]),
                     //search Filter
                     searchFilter = ko.observable(),
                     //oil Maker Company Filter
@@ -44,7 +52,7 @@ define("record/record.viewModel",
                     recordContainsBrakeOil = ko.observable(),
                     //record have power sterring oil
                     recordContainsPowerSterringOil = ko.observable(),
-                    
+
                     //ExtraItems
                     extraItems = ko.observableArray([
                         { id: '1', name: 'Oil Filter' },
@@ -53,49 +61,49 @@ define("record/record.viewModel",
                         { id: '4', name: 'Sterring Oil' }
                     ]),
                 //#endregion
-                
-                //#region Regions Show and Collapsed
-                showOilSection = function() {
-                    recordContainsOil(1);
-                    view.showOilSection();
-                },
-                hideOilSection = function() {
-                    recordContainsOil(0);
-                    view.hideOilSection();
-                },
-                showAirFilterSection = function () {
-                    recordContainsAirFilter(1);
-                    view.showAirFilterSection();
-                },
-                hideAirFilterSection = function () {
-                    recordContainsAirFilter(0);
-                    view.hideAirFilterSection();
-                },
-                showOilFilterSection = function () {
-                    recordContainsOilFilter(1);
-                    view.showOilFilterSection();
-                },
-                hideOilFilterSection = function () {
-                    recordContainsOilFilter(0);
-                    view.hideOilFilterSection();
-                },
-                showBrakeOilSection = function () {
-                    recordContainsBrakeOil(1);
-                    view.showBrakeOilSection();
-                },
-                hideBrakeOilSection = function () {
-                    recordContainsBrakeOil(0);
-                    view.hideBrakeOilSection();
-                },
-                showPowerSterringOilSection = function () {
-                    recordContainsPowerSterringOil(1);
-                    view.showPowerSteeringOilSection();
-                },
-                hidePowerSterringOilSection = function () {
-                    recordContainsPowerSterringOil(0);
-                    view.hidePowerSteeringOilSection();
-                },
-                //#endregion
+
+                    //#region Regions Show and Collapsed
+                    showOilSection = function () {
+                        recordContainsOil(1);
+                        view.showOilSection();
+                    },
+                    hideOilSection = function () {
+                        recordContainsOil(0);
+                        view.hideOilSection();
+                    },
+                    showAirFilterSection = function () {
+                        recordContainsAirFilter(1);
+                        view.showAirFilterSection();
+                    },
+                    hideAirFilterSection = function () {
+                        recordContainsAirFilter(0);
+                        view.hideAirFilterSection();
+                    },
+                    showOilFilterSection = function () {
+                        recordContainsOilFilter(1);
+                        view.showOilFilterSection();
+                    },
+                    hideOilFilterSection = function () {
+                        recordContainsOilFilter(0);
+                        view.hideOilFilterSection();
+                    },
+                    showBrakeOilSection = function () {
+                        recordContainsBrakeOil(1);
+                        view.showBrakeOilSection();
+                    },
+                    hideBrakeOilSection = function () {
+                        recordContainsBrakeOil(0);
+                        view.hideBrakeOilSection();
+                    },
+                    showPowerSterringOilSection = function () {
+                        recordContainsPowerSterringOil(1);
+                        view.showPowerSteeringOilSection();
+                    },
+                    hidePowerSterringOilSection = function () {
+                        recordContainsPowerSterringOil(0);
+                        view.hidePowerSteeringOilSection();
+                    },
+                    //#endregion
 
                     //#region Utility Functions 
                     vehicleModelsListForDialog = ko.observableArray([]),
@@ -115,7 +123,7 @@ define("record/record.viewModel",
                     }),
                     //Computed Method For Oil
                     // ReSharper disable once UnusedLocals
-                    oilModelsForDialog = ko.computed(function() {
+                    oilModelsForDialog = ko.computed(function () {
                         if (selectedRecord() && selectedRecord().oilCompanyId && selectedRecord().oilCompanyId()) {
                             oilsModelsListForDialog.removeAll();
                             _.each(oils(), function (oil) {
@@ -129,13 +137,13 @@ define("record/record.viewModel",
                     }),
                     //Computed to compute oil Power
                     // ReSharper disable once UnusedLocals
-                    oilPowerForDialog = ko.computed(function() {
+                    oilPowerForDialog = ko.computed(function () {
                         if (selectedRecord() && selectedRecord().oilNameId && selectedRecord().oilNameId()) {
                             _.each(oilsModelsListForDialog(), function (oil) {
                                 if (oil.oilId() == selectedRecord().oilNameId()) {
                                     selectedRecord().oilPower(oil.oilPower());
                                     selectedRecord().selectedOilMilage(oil.oilAverageMilage());
-                                    toastr.info("Average Oil Milage : "+ oil.oilAverageMilage());
+                                    toastr.info("Average Oil Milage : " + oil.oilAverageMilage());
                                 }
                             });
                         } else {
@@ -152,7 +160,7 @@ define("record/record.viewModel",
                             var oilMilage = selectedRecord().selectedOilMilage();
                             var dailyVehicleRunning = selectedRecord().vehicleDailyMilage();
                             var daysAfterWhichOilNeedsToChanged = oilMilage / dailyVehicleRunning;
-                            
+
                             //todo do further calculation
                         }
                     }),
@@ -160,36 +168,36 @@ define("record/record.viewModel",
                     getBaseData = function () {
                         getRecordBaseData();
                     },
-                    getRecordBaseData = function() {
+                    getRecordBaseData = function () {
                         dataservice.getRecordBaseData({
                             success: function (data) {
-                                
+
                                 var oilMakerCompaniesList = [];
                                 var oilsList = [];
                                 var vehicleMakersList = [];
                                 var vehiclesList = [];
-                               
+
                                 _.each(data.OilMakerCompanies, function (item) {
                                     var oilMaker = new oilModel.OilMakerCompany.Create(item);
                                     oilMakerCompaniesList.push(oilMaker);
                                 });
                                 ko.utils.arrayPushAll(oilMakers(), oilMakerCompaniesList);
                                 oilMakers.valueHasMutated();
-                                
+
                                 _.each(data.Oils, function (item) {
                                     var oil = new oilModel.Oil.Create(item);
                                     oilsList.push(oil);
                                 });
                                 ko.utils.arrayPushAll(oils(), oilsList);
                                 oils.valueHasMutated();
-                                
+
                                 _.each(data.VehicleMakers, function (item) {
                                     var vehicleMaker = new vehicleModel.VehicleMaker.Create(item);
                                     vehicleMakersList.push(vehicleMaker);
                                 });
                                 ko.utils.arrayPushAll(vehiclesMakersList(), vehicleMakersList);
                                 vehiclesMakersList.valueHasMutated();
-                                
+
                                 _.each(data.VehicleModelMaker, function (item) {
                                     var vehicleModelMaker = new vehicleModel.VehicleModelMaker.Create(item);
                                     vehiclesList.push(vehicleModelMaker);
@@ -197,6 +205,18 @@ define("record/record.viewModel",
                                 ko.utils.arrayPushAll(vehicles(), vehiclesList);
                                 vehicles.valueHasMutated();
                                 
+                                //airFilters oilFilters brakeOils powerSteeringoils  
+                                ko.utils.arrayPushAll(airFilters(), data.AirFilters);
+                                airFilters.valueHasMutated();
+                                
+                                ko.utils.arrayPushAll(oilFilters(), data.OilFilters);
+                                oilFilters.valueHasMutated();
+                                
+                                ko.utils.arrayPushAll(brakeOils(), data.BrakeOils);
+                                brakeOils.valueHasMutated();
+                                
+                                ko.utils.arrayPushAll(powerSteeringoils(), data.PowerSterringOils);
+                                powerSteeringoils.valueHasMutated();
                             },
                             error: function () {
                                 toastr.error("Failed to load oil maker companies data");
@@ -278,24 +298,30 @@ define("record/record.viewModel",
                 //#endregion
 
 
-                    return {
-                        extraItems: extraItems,
-                        recordContainsOil: recordContainsOil,
-                        recordContainsAirFilter: recordContainsAirFilter,
-                        recordContainsOilFilter: recordContainsOilFilter,
-                        recordContainsBrakeOil: recordContainsBrakeOil,
-                        recordContainsPowerSterringOil: recordContainsPowerSterringOil,
-                        showOilSection: showOilSection,
-                        hideOilSection: hideOilSection,
-                        showAirFilterSection: showAirFilterSection,
-                        hideAirFilterSection: hideAirFilterSection,
-                        showOilFilterSection: showOilFilterSection,
-                        hideOilFilterSection: hideOilFilterSection,
-                        showBrakeOilSection: showBrakeOilSection,
-                        hideBrakeOilSection: hideBrakeOilSection,
-                        showPowerSterringOilSection: showPowerSterringOilSection,
-                        hidePowerSterringOilSection: hidePowerSterringOilSection,
+                return {
+
+                    airFilters: airFilters,
+                    oilFilters: oilFilters,
+                    brakeOils: brakeOils,
+                    powerSteeringoils: powerSteeringoils,
                     //#region Return
+                    extraItems: extraItems,
+                    recordContainsOil: recordContainsOil,
+                    recordContainsAirFilter: recordContainsAirFilter,
+                    recordContainsOilFilter: recordContainsOilFilter,
+                    recordContainsBrakeOil: recordContainsBrakeOil,
+                    recordContainsPowerSterringOil: recordContainsPowerSterringOil,
+                    showOilSection: showOilSection,
+                    hideOilSection: hideOilSection,
+                    showAirFilterSection: showAirFilterSection,
+                    hideAirFilterSection: hideAirFilterSection,
+                    showOilFilterSection: showOilFilterSection,
+                    hideOilFilterSection: hideOilFilterSection,
+                    showBrakeOilSection: showBrakeOilSection,
+                    hideBrakeOilSection: hideBrakeOilSection,
+                    showPowerSterringOilSection: showPowerSterringOilSection,
+                    hidePowerSterringOilSection: hidePowerSterringOilSection,
+
                     isRecordLoaded: isRecordLoaded,
                     oilMakers: oilMakers,
                     oils: oils,
