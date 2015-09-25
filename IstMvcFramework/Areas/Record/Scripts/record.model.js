@@ -115,8 +115,8 @@
 
     //#region Customer Vehicles entity
     // ReSharper disable once AssignToImplicitGlobalInFunctionScope
-    CustomerVehicles = function (specifiedCustomerVehicleId,specifiedCustomerId,specifiedVehicleId,specifiedVehiclePlateAlphabets,specifiedVehiclePlateNumbers,
-        specifiedVehiclePlateYear,specifiedVehicleManufacturingYear,specifiedVehicleDailyRunningKms) {
+    CustomerVehicles = function (specifiedCustomerVehicleId, specifiedCustomerId, specifiedVehicleId, specifiedVehiclePlateAlphabets, specifiedVehiclePlateNumbers,
+        specifiedVehiclePlateYear, specifiedVehicleManufacturingYear, specifiedVehicleDailyRunningKms) {
         // ReSharper restore InconsistentNaming
         var // Reference to this object
             self,
@@ -212,7 +212,7 @@
         source.VehiclePlateYear, source.VehicleManufacturingYear, source.VehicleDailyRunningKms);
     };
     //#endregion
-    
+
     //#region Oil Change Records entity
     // ReSharper disable once AssignToImplicitGlobalInFunctionScope
     OilChangeRecords = function (specifiedOilChangeRecordId, specifiedOilCustomerId, specifiedOilId, specifiedCustomerVehicleId) {
@@ -282,13 +282,13 @@
     };
 
     // Oil Maker Factory
-    OilChangeRecords.Create = function(source) {
+    OilChangeRecords.Create = function (source) {
         return new OilChangeRecords(source.OilChangeRecordId, source.OilCustomerId, source.OilId, source.CustomerVehicleId);
     },
-        //#endregion
-    
+    //#endregion
+
     //#region Record
-    
+
     // ReSharper disable once AssignToImplicitGlobalInFunctionScope    
     Record = function () {
         var
@@ -309,6 +309,16 @@
             nextMeterReading = ko.observable(),
             //extra Fields
             selectedOilMilage = ko.observable(),
+            oilQty = ko.observable(1),
+            airFilterId = ko.observable(),
+            airFilterQty = ko.observable(1),
+            oilFilterId = ko.observable(),
+            oilFilterQty = ko.observable(1),
+            brakeOilId = ko.observable(),
+            brakeOilQty = ko.observable(1),
+            powerStereringOilId = ko.observable(),
+            powerSterringOilQty = ko.observable(1),
+
         // Errors
             errors = ko.validation.group({
                 firstName: firstName,
@@ -324,7 +334,17 @@
                 nextOilChangeDate: nextOilChangeDate,
                 sentSms: sentSms,
                 currentMeterReading: currentMeterReading,
-                nextMeterReading: nextMeterReading
+                nextMeterReading: nextMeterReading,
+                airFilterId: airFilterId,
+                oilFilterId: oilFilterId,
+                brakeOilId: brakeOilId,
+                powerStereringOilId: powerStereringOilId,
+                oilQty: oilQty,
+                airFilterQty: airFilterQty,
+                oilFilterQty: oilFilterQty,
+                brakeOilQty: brakeOilQty,
+                powerSterringOilQty: powerSterringOilQty
+
             }),
             // Is Valid
             isValid = ko.computed(function () {
@@ -347,7 +367,17 @@
                 nextOilChangeDate: nextOilChangeDate,
                 sentSms: sentSms,
                 currentMeterReading: currentMeterReading,
-                nextMeterReading: nextMeterReading
+                nextMeterReading: nextMeterReading,
+                airFilterId: airFilterId,
+                oilFilterId: oilFilterId,
+                brakeOilId: brakeOilId,
+                powerStereringOilId: powerStereringOilId,
+                oilQty: oilQty,
+                airFilterQty: airFilterQty,
+                oilFilterQty: oilFilterQty,
+                brakeOilQty: brakeOilQty,
+                powerSterringOilQty: powerSterringOilQty
+                
             }),
             // Has Changes
             hasChanges = ko.computed(function () {
@@ -373,7 +403,16 @@
                     NextOilChangeDate: nextOilChangeDate,
                     SentSms: sentSms,
                     CurrentMeterReading: currentMeterReading,
-                    NextMeterReading: nextMeterReading
+                    NextMeterReading: nextMeterReading,
+                    AirFilterId: airFilterId,
+                    OilFilterId: oilFilterId,
+                    BrakeOilId: brakeOilId,
+                    PowerStereringOilId: powerStereringOilId,
+                    OilQty: oilQty,
+                    AirFilterQty: airFilterQty,
+                    OilFilterQty: oilFilterQty,
+                    BrakeOilQty: brakeOilQty,
+                    PowerSterringOilQty: powerSterringOilQty
                 };
             };
 
@@ -393,6 +432,15 @@
             currentMeterReading: currentMeterReading,
             nextMeterReading: nextMeterReading,
             selectedOilMilage: selectedOilMilage,
+            airFilterId: airFilterId,
+            oilFilterId: oilFilterId,
+            brakeOilId: brakeOilId,
+            powerStereringOilId: powerStereringOilId,
+            oilQty: oilQty,
+            airFilterQty: airFilterQty,
+            oilFilterQty: oilFilterQty,
+            brakeOilQty: brakeOilQty,
+            powerSterringOilQty: powerSterringOilQty,
             errors: errors,
             isValid: isValid,
             dirtyFlag: dirtyFlag,
@@ -402,9 +450,9 @@
         };
         return self;
     };
-    
+
     //#endregion
-    
+
     return {
         Customer: Customer,
         CustomerVehicles: CustomerVehicles,

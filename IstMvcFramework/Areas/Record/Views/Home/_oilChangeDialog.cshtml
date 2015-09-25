@@ -240,9 +240,9 @@
                         </div>
                         <div id="AirFilterSection" class="col-sm-7">
                             <div class="col-sm-4">
-                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.airFilters ,optionsText: 'AirFilterName' , optionsValue: 'AilFilterId', value: vehicleCompanyId" style="width: 85%;"></select>
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.airFilters ,optionsText: 'AirFilterName' , optionsValue: 'AilFilterId',optionsCaption: 'Select Air Filter', value: airFilterId" style="width: 85%;"></select>
                             </div>
-                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" /></div>
+                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" data-bind="value: $root.selectedRecordAirFilterPrice, enable: false" /></div>
                         </div>
                     </div>
 
@@ -259,9 +259,10 @@
 
                         <div id="OilFilterSection" class="col-sm-7">
                             <div class="col-sm-4">
-                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.airFilters ,optionsText: 'AirFilterName' , optionsValue: 'AilFilterId', value: vehicleCompanyId" style="width: 85%;"></select>
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.oilFilters ,optionsText: 'OilFilterName' , optionsValue: 'OilFilterId',optionsCaption: 'Select Oil Filter', value: oilFilterId" style="width: 85%;"></select>
                             </div>
-                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" /></div>
+                            <div class="col-sm-2"><input type="text" class="form-control" data-bind="value: oilQty" /></div>
+                            <div class="col-sm-3"><input type="text" class="form-control" style="width: 67%" data-bind="value: $root.selectedRecordOilFilterPrice, enable: false" /></div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -276,9 +277,9 @@
                         </div>
                         <div id="BrakeOilSection" class="col-sm-7">
                             <div class="col-sm-4">
-                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.airFilters ,optionsText: 'AirFilterName' , optionsValue: 'AilFilterId', value: vehicleCompanyId" style="width: 85%;"></select>
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.brakeOils ,optionsText: 'BrakeOilName' , optionsValue: 'BrakeOilId',optionsCaption: 'Select Brake Oils', value: brakeOilId" style="width: 85%;"></select>
                             </div>
-                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" /></div>
+                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" data-bind="value: $root.selectedRecordbrakeOilPrice, enable: false" /></div>
                         </div>
                     </div>
 
@@ -294,9 +295,9 @@
                         </div>
                         <div id="PowerSteeringOilSection" class="col-sm-7">
                             <div class="col-sm-4">
-                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.airFilters ,optionsText: 'AirFilterName' , optionsValue: 'AilFilterId', value: vehicleCompanyId" style="width: 85%;"></select>
+                                <select id="vehicleMaker" class="form-control" data-bind="options: $root.powerSteeringoils ,optionsText: 'PowerSterringOilName' , optionsValue: 'PowerStereringOilId',optionsCaption: 'Select Power Sterring Oil', value: powerStereringOilId" style="width: 85%;"></select>
                             </div>
-                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" /></div>
+                            <div class="col-sm-6"><input type="text" class="form-control" style="width: 40%" data-bind="value: $root.selectedRecordPowerSterringOilPrice, enable: false" /></div>
                         </div>
                     </div>
                 </div>

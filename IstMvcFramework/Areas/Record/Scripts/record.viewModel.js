@@ -43,15 +43,15 @@ define("record/record.viewModel",
                     //Selected Record
                     selectedRecord = ko.observable(),
                     //Record have Oil
-                    recordContainsOil = ko.observable(),
+                    recordContainsOil = ko.observable(false),
                     //record have air filter
-                    recordContainsAirFilter = ko.observable(),
+                    recordContainsAirFilter = ko.observable(false),
                     //record have oil filter
-                    recordContainsOilFilter = ko.observable(),
+                    recordContainsOilFilter = ko.observable(false),
                     //record have brake oil 
-                    recordContainsBrakeOil = ko.observable(),
+                    recordContainsBrakeOil = ko.observable(false),
                     //record have power sterring oil
-                    recordContainsPowerSterringOil = ko.observable(),
+                    recordContainsPowerSterringOil = ko.observable(false),
 
                     //ExtraItems
                     extraItems = ko.observableArray([
@@ -60,48 +60,88 @@ define("record/record.viewModel",
                         { id: '3', name: 'Brake Oil' },
                         { id: '4', name: 'Sterring Oil' }
                     ]),
+                    //Selected Record Air Filter Price
+                    selectedRecordAirFilterPrice = ko.observable(),
+                    //Selected Record Oil Filter Price
+                    selectedRecordOilFilterPrice = ko.observable(),
+                    //Selected Record Brake Oil Price
+                    selectedRecordbrakeOilPrice = ko.observable(),
+                    //Selected Record Power Sterring oil Price
+                    selectedRecordPowerSterringOilPrice = ko.observable(),
                 //#endregion
 
                     //#region Regions Show and Collapsed
                     showOilSection = function () {
-                        recordContainsOil(1);
+                        recordContainsOil(true);
                         view.showOilSection();
                     },
                     hideOilSection = function () {
-                        recordContainsOil(0);
+                        recordContainsOil(false);
                         view.hideOilSection();
+                        resetOilFieldsOnClosingSection();
                     },
                     showAirFilterSection = function () {
-                        recordContainsAirFilter(1);
+                        recordContainsAirFilter(true);
                         view.showAirFilterSection();
                     },
                     hideAirFilterSection = function () {
-                        recordContainsAirFilter(0);
+                        recordContainsAirFilter(false);
                         view.hideAirFilterSection();
+                        resetAirFilterFieldsOnClosingSection();
                     },
                     showOilFilterSection = function () {
-                        recordContainsOilFilter(1);
+                        recordContainsOilFilter(true);
                         view.showOilFilterSection();
                     },
                     hideOilFilterSection = function () {
-                        recordContainsOilFilter(0);
+                        recordContainsOilFilter(false);
                         view.hideOilFilterSection();
+                        resetOilFilterFieldsOnClosingSection();
                     },
                     showBrakeOilSection = function () {
-                        recordContainsBrakeOil(1);
+                        recordContainsBrakeOil(true);
                         view.showBrakeOilSection();
                     },
                     hideBrakeOilSection = function () {
-                        recordContainsBrakeOil(0);
+                        recordContainsBrakeOil(false);
                         view.hideBrakeOilSection();
+                        resetBrakeOilFieldsOnClosingSection();
                     },
                     showPowerSterringOilSection = function () {
-                        recordContainsPowerSterringOil(1);
+                        recordContainsPowerSterringOil(true);
                         view.showPowerSteeringOilSection();
                     },
                     hidePowerSterringOilSection = function () {
-                        recordContainsPowerSterringOil(0);
+                        recordContainsPowerSterringOil(false);
                         view.hidePowerSteeringOilSection();
+                        resetPowerSteeringOilFieldsOnClosingSection();
+                    },
+                    // ReSharper disable once UnusedLocals
+                    resetOilFieldsOnClosingSection = function() {
+                        selectedRecord().vehicleCompanyId(undefined);
+                        selectedRecord().vehicleDailyMilage(undefined);
+                        selectedRecord().oilCompanyId(undefined);
+                        selectedRecord().oilChangeDate(undefined);
+                        selectedRecord().nextOilChangeDate(undefined);
+                        selectedRecord().sentSms(true);
+                        selectedRecord().currentMeterReading(true);
+                        selectedRecord().nextMeterReading(true);
+                    },
+                    resetOilFilterFieldsOnClosingSection= function() {
+                        selectedRecord().oilFilterId(undefined);
+                        selectedRecordOilFilterPrice(0);
+                    },
+                    resetAirFilterFieldsOnClosingSection= function() {
+                        selectedRecord().airFilterId(undefined);
+                        selectedRecordAirFilterPrice(0);
+                    },
+                    resetBrakeOilFieldsOnClosingSection= function() {
+                        selectedRecord().brakeOilId(undefined);
+                        selectedRecordbrakeOilPrice(0);
+                    },
+                    resetPowerSteeringOilFieldsOnClosingSection= function() {
+                        selectedRecord().powerStereringOilId(undefined);
+                        selectedRecordPowerSterringOilPrice(0);
                     },
                     //#endregion
 
@@ -121,6 +161,48 @@ define("record/record.viewModel",
                             vehicleModelsListForDialog.removeAll();
                         }
                     }),
+                    //#region Region to calculate prices of oils
+                    // ReSharper disable once UnusedLocals
+                    selectedRecordAirFilterPriceVal = ko.computed(function() {
+                        if (selectedRecord() != undefined && selectedRecord().airFilterId() != undefined) {
+                            _.each(airFilters(), function (airFilter) {
+                                if (airFilter.AilFilterId == selectedRecord().airFilterId()) {
+                                    selectedRecordAirFilterPrice(airFilter.AirFilterPrice);
+                                }
+                            });
+                        }
+                    }),
+                    // ReSharper disable once UnusedLocals
+                    selectedRecordOilFilterPriceVal = ko.computed(function () {
+                        if (selectedRecord() != undefined && selectedRecord().oilFilterId() != undefined) {
+                            _.each(oilFilters(), function (oilFilter) {
+                                if (oilFilter.OilFilterId == selectedRecord().oilFilterId()) {
+                                    selectedRecordOilFilterPrice(oilFilter.OilFilterPrice);
+                                }
+                            });
+                        }
+                    }),
+                    // ReSharper disable once UnusedLocals
+                    selectedRecordbrakeOilPriceVal = ko.computed(function () {
+                        if (selectedRecord() != undefined && selectedRecord().brakeOilId() != undefined) {
+                            _.each(brakeOils(), function (brakeOil) {
+                                if (brakeOil.BrakeOilId == selectedRecord().brakeOilId()) {
+                                    selectedRecordbrakeOilPrice(brakeOil.BrakeOilPrice);
+                                }
+                            });
+                        }
+                    }),
+                    // ReSharper disable once UnusedLocals
+                    selectedRecordPowerSterringOilPriceVal = ko.computed(function () {
+                        if (selectedRecord() != undefined && selectedRecord().powerStereringOilId() != undefined) {
+                            _.each(powerSteeringoils(), function (powerSterringOil) {
+                                if (powerSterringOil.PowerStereringOilId == selectedRecord().powerStereringOilId()) {
+                                    selectedRecordPowerSterringOilPrice(powerSterringOil.PowerSterringOilPrice);
+                                }
+                            });
+                        }
+                    }),
+                    //#endregion
                     //Computed Method For Oil
                     // ReSharper disable once UnusedLocals
                     oilModelsForDialog = ko.computed(function () {
@@ -345,6 +427,10 @@ define("record/record.viewModel",
                     vehicleModelsListForDialog: vehicleModelsListForDialog,
                     oilsModelsListForDialog: oilsModelsListForDialog,
                     vehicles: vehicles,
+                    selectedRecordAirFilterPrice: selectedRecordAirFilterPrice,
+                    selectedRecordOilFilterPrice: selectedRecordOilFilterPrice,
+                    selectedRecordbrakeOilPrice: selectedRecordbrakeOilPrice,
+                    selectedRecordPowerSterringOilPrice: selectedRecordPowerSterringOilPrice,
                     initialize: initialize
                     //#endregion
                 };
