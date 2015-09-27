@@ -167,9 +167,13 @@ define("record/record.viewModel",
                         if (selectedRecord() != undefined && selectedRecord().airFilterId() != undefined) {
                             _.each(airFilters(), function (airFilter) {
                                 if (airFilter.AilFilterId == selectedRecord().airFilterId()) {
-                                    selectedRecordAirFilterPrice(airFilter.AirFilterPrice);
+                                    selectedRecordAirFilterPrice(airFilter.AirFilterPrice * selectedRecord().airFilterQty());
                                 }
                             });
+                        }
+                        if (selectedRecord() != undefined && selectedRecord().airFilterId() == undefined) {
+                            selectedRecordAirFilterPrice(0);
+                            selectedRecord().airFilterQty(1);
                         }
                     }),
                     // ReSharper disable once UnusedLocals
@@ -177,9 +181,13 @@ define("record/record.viewModel",
                         if (selectedRecord() != undefined && selectedRecord().oilFilterId() != undefined) {
                             _.each(oilFilters(), function (oilFilter) {
                                 if (oilFilter.OilFilterId == selectedRecord().oilFilterId()) {
-                                    selectedRecordOilFilterPrice(oilFilter.OilFilterPrice);
+                                    selectedRecordOilFilterPrice(oilFilter.OilFilterPrice * selectedRecord().oilFilterQty());
                                 }
                             });
+                        }
+                        if (selectedRecord() != undefined && selectedRecord().oilFilterId() == undefined) {
+                            selectedRecordOilFilterPrice(0);
+                            selectedRecord().oilFilterQty(1);
                         }
                     }),
                     // ReSharper disable once UnusedLocals
@@ -187,9 +195,13 @@ define("record/record.viewModel",
                         if (selectedRecord() != undefined && selectedRecord().brakeOilId() != undefined) {
                             _.each(brakeOils(), function (brakeOil) {
                                 if (brakeOil.BrakeOilId == selectedRecord().brakeOilId()) {
-                                    selectedRecordbrakeOilPrice(brakeOil.BrakeOilPrice);
+                                    selectedRecordbrakeOilPrice(brakeOil.BrakeOilPrice * selectedRecord().brakeOilQty());
                                 }
                             });
+                        }
+                        if (selectedRecord() != undefined && selectedRecord().brakeOilId() == undefined) {
+                            selectedRecordbrakeOilPrice(0);
+                            selectedRecord().brakeOilQty(1);
                         }
                     }),
                     // ReSharper disable once UnusedLocals
@@ -197,11 +209,36 @@ define("record/record.viewModel",
                         if (selectedRecord() != undefined && selectedRecord().powerStereringOilId() != undefined) {
                             _.each(powerSteeringoils(), function (powerSterringOil) {
                                 if (powerSterringOil.PowerStereringOilId == selectedRecord().powerStereringOilId()) {
-                                    selectedRecordPowerSterringOilPrice(powerSterringOil.PowerSterringOilPrice);
+                                    selectedRecordPowerSterringOilPrice(powerSterringOil.PowerSterringOilPrice * selectedRecord().powerSterringOilQty());
                                 }
                             });
                         }
+                        if (selectedRecord() != undefined && selectedRecord().powerStereringOilId() == undefined) {
+                            selectedRecordPowerSterringOilPrice(0);
+                            selectedRecord().powerSterringOilQty(1);
+                        }
                     }),
+                    //vallidate qty field
+                    validateQtyFields = ko.computed(function () {
+                        if (selectedRecord() !== undefined ) {
+                            if (selectedRecord().airFilterQty() != undefined && !(isNormalInteger(selectedRecord().airFilterQty()))) {
+                                selectedRecord().airFilterQty(1);
+                            }
+                            if (selectedRecord().oilFilterQty() != undefined && !(isNormalInteger(selectedRecord().oilFilterQty()))) {
+                                selectedRecord().oilFilterQty(1);
+                            }
+                            if (selectedRecord().brakeOilQty() != undefined && !(isNormalInteger(selectedRecord().brakeOilQty()))) {
+                                selectedRecord().brakeOilQty(1);
+                            }
+                            if (selectedRecord().powerSterringOilQty() != undefined && !(isNormalInteger(selectedRecord().powerSterringOilQty()))) {
+                                selectedRecord().powerSterringOilQty(1);
+                            }
+                        }
+                    }),
+                isNormalInteger = function (str) {
+                    var n = ~~Number(str);
+                    return String(n) === str && n >= 0;
+                },
                     //#endregion
                     //Computed Method For Oil
                     // ReSharper disable once UnusedLocals
