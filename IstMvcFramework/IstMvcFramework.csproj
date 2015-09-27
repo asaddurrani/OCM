@@ -712,6 +712,7 @@
     <Content Include="Areas\Vehicle\Views\web.config" />
     <Content Include="Areas\Vehicle\Views\Home\_VehicleEditor.cshtml" />
     <Content Include="Areas\Oil\Views\Oil\_oilDialog.cshtml" />
+    <Content Include="Dbbackups\27-9-2015\IstMvc212" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
