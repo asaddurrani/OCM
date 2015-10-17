@@ -103,7 +103,6 @@ require(["ko", "knockout-validation"], function (ko) {
             return false;
         return string.substring(0, startsWith.length) === startsWith;
     };
-
     // jquery date picker binding. Usage: <input data-bind="datepicker: myDate, datepickerOptions: { minDate: new Date() }" />. Source: http://jsfiddle.net/rniemeyer/NAgNV/
     ko.bindingHandlers.datepicker = {
         init: function (element, valueAccessor, allBindingsAccessor) {

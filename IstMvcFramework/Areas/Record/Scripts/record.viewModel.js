@@ -117,7 +117,7 @@ define("record/record.viewModel",
                         resetPowerSteeringOilFieldsOnClosingSection();
                     },
                     // ReSharper disable once UnusedLocals
-                    resetOilFieldsOnClosingSection = function() {
+                    resetOilFieldsOnClosingSection = function () {
                         selectedRecord().vehicleCompanyId(undefined);
                         selectedRecord().vehicleDailyMilage(undefined);
                         selectedRecord().oilCompanyId(undefined);
@@ -127,19 +127,19 @@ define("record/record.viewModel",
                         selectedRecord().currentMeterReading(true);
                         selectedRecord().nextMeterReading(true);
                     },
-                    resetOilFilterFieldsOnClosingSection= function() {
+                    resetOilFilterFieldsOnClosingSection = function () {
                         selectedRecord().oilFilterId(undefined);
                         selectedRecordOilFilterPrice(0);
                     },
-                    resetAirFilterFieldsOnClosingSection= function() {
+                    resetAirFilterFieldsOnClosingSection = function () {
                         selectedRecord().airFilterId(undefined);
                         selectedRecordAirFilterPrice(0);
                     },
-                    resetBrakeOilFieldsOnClosingSection= function() {
+                    resetBrakeOilFieldsOnClosingSection = function () {
                         selectedRecord().brakeOilId(undefined);
                         selectedRecordbrakeOilPrice(0);
                     },
-                    resetPowerSteeringOilFieldsOnClosingSection= function() {
+                    resetPowerSteeringOilFieldsOnClosingSection = function () {
                         selectedRecord().powerStereringOilId(undefined);
                         selectedRecordPowerSterringOilPrice(0);
                     },
@@ -163,7 +163,7 @@ define("record/record.viewModel",
                     }),
                     //#region Region to calculate prices of oils
                     // ReSharper disable once UnusedLocals
-                    selectedRecordAirFilterPriceVal = ko.computed(function() {
+                    selectedRecordAirFilterPriceVal = ko.computed(function () {
                         if (selectedRecord() != undefined && selectedRecord().airFilterId() != undefined) {
                             _.each(airFilters(), function (airFilter) {
                                 if (airFilter.AilFilterId == selectedRecord().airFilterId()) {
@@ -220,7 +220,7 @@ define("record/record.viewModel",
                     }),
                     //vallidate qty field
                     validateQtyFields = ko.computed(function () {
-                        if (selectedRecord() !== undefined ) {
+                        if (selectedRecord() !== undefined) {
                             if (selectedRecord().airFilterQty() != undefined && !(isNormalInteger(selectedRecord().airFilterQty()))) {
                                 selectedRecord().airFilterQty(1);
                             }
@@ -235,7 +235,7 @@ define("record/record.viewModel",
                             }
                         }
                     }),
-                isNormalInteger = function (str) {
+                    isNormalInteger = function (str) {
                     var n = ~~Number(str);
                     return String(n) === str && n >= 0;
                 },
@@ -274,15 +274,15 @@ define("record/record.viewModel",
                     }),
                     //Computed to compute next oil change date
                     // ReSharper disable once UnusedLocals
-                    nextOilChangeDateComputation = ko.computed(function () {
-                        if (selectedRecord() && selectedRecord().oilChangeDate && selectedRecord().oilChangeDate()) {
-                            var oilMilage = selectedRecord().selectedOilMilage();
-                            var dailyVehicleRunning = selectedRecord().vehicleDailyMilage();
-                            var daysAfterWhichOilNeedsToChanged = oilMilage / dailyVehicleRunning;
-
-                            //todo do further calculation
-                        }
-                    }),
+                    //nextOilChangeDateComputation = ko.computed(function () {
+                    //    if (selectedRecord() && selectedRecord().oilChangeDate() != undefined) {
+                    //        var oilMilage = selectedRecord().selectedOilMilage();
+                    //        var dailyVehicleRunning = selectedRecord().vehicleDailyMilage();
+                    //        var daysAfterWhichOilNeedsToChanged = oilMilage / dailyVehicleRunning;
+                    //        debugger
+                    //        //todo do further calculation
+                    //    }
+                    //}),
                     //get Base Data
                     getBaseData = function () {
                         getRecordBaseData();
@@ -323,17 +323,17 @@ define("record/record.viewModel",
                                 });
                                 ko.utils.arrayPushAll(vehicles(), vehiclesList);
                                 vehicles.valueHasMutated();
-                                
+
                                 //airFilters oilFilters brakeOils powerSteeringoils  
                                 ko.utils.arrayPushAll(airFilters(), data.AirFilters);
                                 airFilters.valueHasMutated();
-                                
+
                                 ko.utils.arrayPushAll(oilFilters(), data.OilFilters);
                                 oilFilters.valueHasMutated();
-                                
+
                                 ko.utils.arrayPushAll(brakeOils(), data.BrakeOils);
                                 brakeOils.valueHasMutated();
-                                
+
                                 ko.utils.arrayPushAll(powerSteeringoils(), data.PowerSterringOils);
                                 powerSteeringoils.valueHasMutated();
                             },
