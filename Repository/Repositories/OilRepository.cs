@@ -1,6 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using Interfaces.Repository;
 using Microsoft.Practices.Unity;
 using Models.DomainModels;
@@ -11,7 +14,8 @@ namespace Repository.Repositories
 {
     public class OilRepository : BaseRepository<Oil>, IOilRepository
     {
-        public OilRepository(IUnityContainer container) : base(container)
+        public OilRepository(IUnityContainer container)
+            : base(container)
         {
         }
 
@@ -21,7 +25,22 @@ namespace Repository.Repositories
         }
 
 
-        public OilResponse GetAllOils()
+        public OilResponse GetAllOils(Models.RequestModels.OilSearchRequest request)
+        {
+            int fromRow = (request.PageNo - 1) * request.PageSize;
+            int toRow = request.PageSize;
+            Expression<Func<Oil, bool>> query =
+                s => (!request.OilId.HasValue || s.OilId == request.OilId) &&
+                     (string.IsNullOrEmpty(request.SearchString) || s.OilName.Contains(request.SearchString)) &&
+                     (request.OilMakerCompany == null || s.OilMakerId == request.OilMakerCompany);
+            IEnumerable<Oil> oils = request.IsAsc ? DbSet.Where(query).Include("OilMakerCompany")
+                                            .OrderBy(oil => oil.OilId).Skip(fromRow).Take(toRow).ToList()
+                                            : DbSet.Where(query).Include("OilMakerCompany")
+                                                .OrderByDescending(oil => oil.OilId).Skip(fromRow).Take(toRow).ToList();
+            return new OilResponse { Oils = oils, TotalCount = DbSet.Count(query) };
+        }
+
+        public OilResponse GetAllRecords()
         {
             var oilsList = db.Oils.ToList();
             return new OilResponse

@@ -42,7 +42,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
             return new RecordBaseData
             {
                 OilMakerCompanies = _oilMakerService.GetAllOilMakers().OilMakers.Select(x=>x.CreateFrom()),
-                Oils = _oilService.GetAllOils().Oils.Select(x=>x.CreateFrom()),
+                Oils = _oilService.GetAll().Oils.Select(x => x.CreateFrom()),
                 VehicleMakers = _vehicleMakerService.GetAllVehicleMakers().VehicleMakers.Select(x=>x.CreateFrom()),
                 VehicleModelMaker = _vehicleModelMakerService.GetAllVehicleModelMakers(new MainDomain.VehicleModelMakerSearchRequest()).VehicleModelMakers.Select(x=>x.CreateFrom()),
                 AirFilters = _airFilterService.GetAllAirFilters().AirFilters.Select(x=>x.CreateFrom()),

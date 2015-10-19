@@ -62,28 +62,29 @@ define("oil/oil.viewModel",
                     },
                     //Get Oils
                     getOils = function () {
-                        //isLoadingOil(true);
-                        //dataservice.getOils({
-                        //    SearchString: searchFilter(),
-                        //    PageSize: pager().pageSize(),
-                        //    PageNo: pager().currentPage()
-                        //}, {
-                        //    success: function (data) {
-                        //        oils.removeAll();
-                        //        if (data != null) {
-                        //            pager().totalCount(data.TotalCount);
-                        //            _.each(data.Oils, function (item) {
-                        //                var module = new model.Oil.Create(item);
-                        //                oils.push(module);
-                        //            });
-                        //        }
-                        //        isLoadingOil(false);
-                        //    },
-                        //    error: function (response) {
-                        //        isLoadingOil(false);
-                        //        toastr.error("Error: Failed to Load Oils Data." + response);
-                        //    }
-                        //});
+                        isLoadingOil(true);
+                        dataservice.getOils({
+                            SearchString: searchFilter(),
+                            PageSize: pager().pageSize(),
+                            PageNo: pager().currentPage(),
+                            OilMakerCompany: oilMakerCompanyFilter()
+                        }, {
+                            success: function (data) {
+                                oils.removeAll();
+                                if (data != null) {
+                                    pager().totalCount(data.TotalCount);
+                                    _.each(data.Oils, function (item) {
+                                        var module = new model.Oil.Create(item);
+                                        oils.push(module);
+                                    });
+                                }
+                                isLoadingOil(false);
+                            },
+                            error: function (response) {
+                                isLoadingOil(false);
+                                toastr.error("Error: Failed to Load Oils Data." + response);
+                            }
+                        });
                     },
                     //Create Oil
                     createOil = function () {
@@ -117,7 +118,6 @@ define("oil/oil.viewModel",
                                 selectedOil().convertToServerData(),
                                 {
                                     success: function (data) {
-                                        debugger
                                         if (data) {
                                             var savedOil = model.Oil.Create(data);
                                             if (selectedOil().oilId() <= 0 || selectedOil().oilId() == undefined) {
@@ -164,6 +164,7 @@ define("oil/oil.viewModel",
 
                 return {
                     isOilLoaded: isOilLoaded,
+                    //#region Return
                     oilMakers: oilMakers,
                     oilMakerCompaniesListForDialog: oilMakerCompaniesListForDialog,
                     oils: oils,
@@ -183,6 +184,7 @@ define("oil/oil.viewModel",
                     onSaveOil: onSaveOil,
                     onCloseOilDialog: onCloseOilDialog,
                     initialize: initialize
+                    //#endregion
                 };
 
             })()

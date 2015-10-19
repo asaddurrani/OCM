@@ -30,7 +30,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
             {
                 throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
             }
-            return _oilService.GetAllOils().CreateFrom();
+            return _oilService.GetAllOils(request).CreateFrom();
         }
 
         //[ApiException]

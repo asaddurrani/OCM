@@ -15,9 +15,14 @@ namespace Implementation.Services
 
         }
 
-        public OilResponse GetAllOils()
+        public OilResponse GetAllOils(Models.RequestModels.OilSearchRequest request)
         {
-            return _oilRepository.GetAllOils();
+            return _oilRepository.GetAllOils(request);
+        }
+
+        public OilResponse GetAll()
+        {
+            return _oilRepository.GetAllRecords();
         }
 
         public Oil GetOilById(int id)
