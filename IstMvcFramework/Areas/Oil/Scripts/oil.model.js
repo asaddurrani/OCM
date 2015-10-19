@@ -146,6 +146,7 @@
             oilPrice: oilPrice,
             oilDescription: oilDescription,
             oilNetWeightId: oilNetWeightId,
+            oilMakerCompanyName: oilMakerCompanyName,
             errors: errors,
             isValid: isValid,
             dirtyFlag: dirtyFlag,

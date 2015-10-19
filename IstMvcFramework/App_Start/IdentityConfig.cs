@@ -15,12 +15,12 @@ using Implementation.Identity;
 
 namespace IdentitySample.Models
 {
-    public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
+    public class ApplicationSignInManager : SignInManager<ApplicationUsers, string>
     {
         public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager) :
             base(userManager, authenticationManager) { }
 
-        public override Task<ClaimsIdentity> CreateUserIdentityAsync(ApplicationUser user)
+        public override Task<ClaimsIdentity> CreateUserIdentityAsync(ApplicationUsers user)
         {
             return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
         }

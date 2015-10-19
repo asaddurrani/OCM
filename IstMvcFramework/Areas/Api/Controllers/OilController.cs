@@ -32,5 +32,16 @@ namespace IstMvcFramework.Areas.Api.Controllers
             }
             return _oilService.GetAllOils().CreateFrom();
         }
+
+        //[ApiException]
+        [HttpPost]
+        public Models.Oil Post(Models.Oil oil)
+        {
+            if (!ModelState.IsValid)
+            {
+                throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
+            }
+            return _oilService.Save(oil.CreateFrom()).CreateFrom();
+        }
 	}
 }

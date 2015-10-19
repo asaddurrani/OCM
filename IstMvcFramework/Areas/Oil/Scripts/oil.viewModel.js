@@ -33,7 +33,7 @@ define("oil/oil.viewModel",
                     pager = ko.observable(),
 
                     //#endregion
-                    
+
                     //#region Utility Functions 
 
                     //get Base Data
@@ -112,10 +112,37 @@ define("oil/oil.viewModel",
                     },
                     //On Save Oil
                     onSaveOil = function () {
-                        if (selectedOil().isValid()) {
-                            view.hideOilDialog();
+                        if (doBeforeSelect()) {
+                            dataservice.saveOil(
+                                selectedOil().convertToServerData(),
+                                {
+                                    success: function (data) {
+                                        debugger
+                                        if (data) {
+                                            var savedOil = model.Oil.Create(data);
+                                            if (selectedOil().oilId() <= 0 || selectedOil().oilId() == undefined) {
+                                                oils.splice(0, 0, savedOil);
+                                            }
+                                            toastr.success("Saved Successfully");
+                                            view.hideOilDialog();
+                                        }
+                                    },
+                                    error: function (response) {
+                                        toastr.error("Error: Failed To Save Oil " + response);
+                                    }
+                                });
                         }
                     },
+                    // Do Before Logic
+                    doBeforeSelect = function () {
+                        var flag = true;
+                        if (!selectedOil().isValid()) {
+                            selectedOil().errors.showAllMessages();
+                            flag = false;
+                        }
+                        return flag;
+                    },
+
                     //On Close Dialog
                     onCloseOilDialog = function () {
                         view.hideOilDialog();
@@ -154,7 +181,7 @@ define("oil/oil.viewModel",
                     onEditOil: onEditOil,
                     selectOil: selectOil,
                     onSaveOil: onSaveOil,
-                    onCloseOilDialog: onCloseOilDialog, 
+                    onCloseOilDialog: onCloseOilDialog,
                     initialize: initialize
                 };
 

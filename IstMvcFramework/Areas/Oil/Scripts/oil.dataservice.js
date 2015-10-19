@@ -23,7 +23,13 @@ define("oil/oil.dataservice", function () {
                         dataType: 'json',
                         type: 'GET'
                     });
-
+                    // Define request to Save Oil
+                    amplify.request.define('saveOil', 'ajax', {
+                        url: '/Api/Oil',
+                        dataType: 'json',
+                        decoder: amplify.request.decoders.istStatusDecoder,
+                        type: 'POST'
+                    });
                     isInitialized = true;
                 }
             },
@@ -34,6 +40,16 @@ define("oil/oil.dataservice", function () {
                     resourceId: 'getOilMakerCompanies',
                     success: callbacks.success,
                     error: callbacks.error
+                });
+            },
+            // Save Oil
+            saveOil = function (param, callbacks) {
+                initialize();
+                return amplify.request({
+                    resourceId: 'saveOil',
+                    success: callbacks.success,
+                    error: callbacks.error,
+                    data: param
                 });
             },
             // Get Oils
@@ -51,6 +67,7 @@ define("oil/oil.dataservice", function () {
         return {
             getOilMakerCompanies: getOilMakerCompanies,
             getOils: getOils,
+            saveOil: saveOil
         };
     })();
 

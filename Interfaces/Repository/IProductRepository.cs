@@ -7,10 +7,10 @@ using Models.ResponseModels;
 
 namespace Interfaces.Repository
 {
-    public interface IProductRepository : IBaseRepository<Products, int>
+    public interface IProductRepository : IBaseRepository<Product, int>
     {
         ProductResponse GetAllProducts(ProductSearchRequest productSearchRequest);
-        IQueryable<Products> GetProductsByCategory(int catID);
-        Products GetProductByName(string name, int id);
+        IQueryable<Product> GetProductsByCategory(int catID);
+        Product GetProductByName(string name, int id);
     }
 }

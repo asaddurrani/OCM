@@ -13,13 +13,13 @@ namespace Models.ResponseModels
         /// </summary>
         public ProductResponse()
         {
-            Products = new List<Models.DomainModels.Products>();
+            Products = new List<Models.DomainModels.Product>();
         }
 
         /// <summary>
         /// Products
         /// </summary>
-        public IEnumerable<Models.DomainModels.Products> Products { get; set; }
+        public IEnumerable<Models.DomainModels.Product> Products { get; set; }
 
         /// <summary>
         /// Total Count

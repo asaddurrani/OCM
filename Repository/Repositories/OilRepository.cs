@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using Interfaces.Repository;
 using Microsoft.Practices.Unity;
@@ -34,9 +35,39 @@ namespace Repository.Repositories
         {
             if (id > 0)
             {
-                return DbSet.Find(id);
+                return DbSet.Include("OilMakerCompany").FirstOrDefault(x => x.OilId == id);
             }
             return null;
+        }
+
+        public Oil Save(Oil oil)
+        {
+            if (oil.OilId > 0)
+            {
+                #region Update Record
+                Oil oilDbVersion = GetOilById(oil.OilId);
+                oilDbVersion.OilName = oil.OilName;
+                oilDbVersion.OilMakerId = oil.OilMakerId;
+                oilDbVersion.OilAverageMilage = oil.OilAverageMilage;
+                oilDbVersion.OilPower = oil.OilPower;
+                oilDbVersion.OilPrice = oil.OilPrice;
+                oilDbVersion.OilDescription = oil.OilDescription;
+                oilDbVersion.OilNetWeightId = oil.OilNetWeightId;
+                DbSet.AddOrUpdate(oilDbVersion);
+                db.SaveChanges();
+
+                #endregion
+            }
+            else
+            {
+                #region Add New Record
+
+                DbSet.Add(oil);
+                db.SaveChanges();
+
+                #endregion
+            }
+            return GetOilById(oil.OilId);
         }
     }
 }

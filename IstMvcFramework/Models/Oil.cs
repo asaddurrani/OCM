@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace IstMvcFramework.Models
+﻿namespace IstMvcFramework.Models
 {
     public class Oil
     {
@@ -15,5 +10,6 @@ namespace IstMvcFramework.Models
         public double? OilPrice { get; set; }
         public string OilDescription { get; set; }
         public int? OilNetWeightId { get; set; }
+        public string OilMakerCompanyName { get; set; }
     }
 }

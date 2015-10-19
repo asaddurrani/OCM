@@ -7,12 +7,12 @@ namespace Interfaces.IServices
 {
     public interface IProductService
     {
-        ProductResponse LoadAllProducts(ProductSearchRequest productSearchRequest);
-        Products FindProduct(int id);
-        IEnumerable<Products> FindProductsByCategory(int catId); 
-        void DeleteProduct(Products product);
-        bool AddProduct(Products product);
-        bool Update(Products product);//,Category category
+        //ProductResponse LoadAllProducts(ProductSearchRequest productSearchRequest);
+        Product FindProduct(int id);
+        IEnumerable<Product> FindProductsByCategory(int catId); 
+        void DeleteProduct(Product product);
+        bool AddProduct(Product product);
+        bool Update(Product product);//,Category category
 
     }
 }

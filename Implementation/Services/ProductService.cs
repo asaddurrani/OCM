@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using Interfaces.IServices;
-using Interfaces.Operation;
 using Interfaces.Repository;
 using Models.DomainModels;
 using Models.RequestModels;
@@ -20,20 +19,20 @@ namespace Implementation.Services
 
         }
 
-        public ProductResponse LoadAllProducts(ProductSearchRequest productSearchRequest)
-        {
+        //public ProductResponse LoadAllProducts(ProductSearchRequest productSearchRequest)
+        //{
 
-            return productRepository.GetAllProducts(productSearchRequest);
-        }
+        //    return productRepository.GetAllProducts(productSearchRequest);
+        //}
 
-        public Products FindProduct(int id)
+        public Product FindProduct(int id)
         {
             return productRepository.Find(id);
         }
 
-        public void DeleteProduct(Products product)
+        public void DeleteProduct(Product product)
         {
-            Products productDbVersion = FindProduct(product.Id);
+            Product productDbVersion = FindProduct(product.Id);
             if (productDbVersion == null)
             {
                 throw new InvalidOperationException(string.Format(CultureInfo.InvariantCulture, "Product with Id {0} not found!", product.Id));
@@ -43,7 +42,7 @@ namespace Implementation.Services
             productRepository.SaveChanges();
         }
 
-        public bool AddProduct(Products product)
+        public bool AddProduct(Product product)
         {
             if(ValidateProduct(product))
             {
@@ -54,13 +53,13 @@ namespace Implementation.Services
             return false;
         }
 
-        private bool ValidateProduct(Products product)
+        private bool ValidateProduct(Product product)
         {
-            Products productDbVersion = productRepository.GetProductByName(product.Name, product.Id);
+            Product productDbVersion = productRepository.GetProductByName(product.Name, product.Id);
             return productDbVersion == null;
         }
 
-        public bool Update(Products product)
+        public bool Update(Product product)
         {
 
             //Product productDbVersion =  productRepository.Find(product.Id);
@@ -93,7 +92,7 @@ namespace Implementation.Services
             return false;
         }
 
-        public IEnumerable<Products> FindProductsByCategory(int catId)
+        public IEnumerable<Product> FindProductsByCategory(int catId)
         {
             return productRepository.GetProductsByCategory(catId);
         }

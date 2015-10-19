@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="AilFilterId" />
     </Key>
-    <Property Name="AilFilterId" Type="int" Nullable="false" />
+    <Property Name="AilFilterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="AirFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="AirFilterPrice" Type="float" Nullable="false" />
   </EntityType>
@@ -63,7 +63,7 @@
     <Key>
       <PropertyRef Name="BrakeOilId" />
     </Key>
-    <Property Name="BrakeOilId" Type="int" Nullable="false" />
+    <Property Name="BrakeOilId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BrakeOilName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="BrakeOilCompanyName" Type="nvarchar" MaxLength="50" />
     <Property Name="BrakeOilPrice" Type="float" Nullable="false" />
@@ -89,7 +89,7 @@
     <Key>
       <PropertyRef Name="CustomerId" />
     </Key>
-    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CustomerFirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="CustomerMiddleName" Type="nvarchar" MaxLength="50" />
     <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" />
@@ -105,7 +105,7 @@
     <Key>
       <PropertyRef Name="CustomerVehicleId" />
     </Key>
-    <Property Name="CustomerVehicleId" Type="int" Nullable="false" />
+    <Property Name="CustomerVehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="VehicleId" Type="bigint" />
     <Property Name="VehiclePlateAlphabets" Type="nvarchar" MaxLength="50" />
@@ -118,7 +118,7 @@
     <Key>
       <PropertyRef Name="OilChangeRecordId" />
     </Key>
-    <Property Name="OilChangeRecordId" Type="int" Nullable="false" />
+    <Property Name="OilChangeRecordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilCustomerId" Type="int" />
     <Property Name="OilId" Type="int" />
     <Property Name="CustomerVehicleId" Type="int" />
@@ -127,7 +127,7 @@
     <Key>
       <PropertyRef Name="OilFilterId" />
     </Key>
-    <Property Name="OilFilterId" Type="int" Nullable="false" />
+    <Property Name="OilFilterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="OilFilterPrice" Type="float" Nullable="false" />
   </EntityType>
@@ -135,21 +135,21 @@
     <Key>
       <PropertyRef Name="OilMakerId" />
     </Key>
-    <Property Name="OilMakerId" Type="int" Nullable="false" />
+    <Property Name="OilMakerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilMakerName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="OilNetWeight">
     <Key>
       <PropertyRef Name="OilNetWeightId" />
     </Key>
-    <Property Name="OilNetWeightId" Type="int" Nullable="false" />
+    <Property Name="OilNetWeightId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilNetWeight" Type="float" />
   </EntityType>
   <EntityType Name="Oils">
     <Key>
       <PropertyRef Name="OilId" />
     </Key>
-    <Property Name="OilId" Type="int" Nullable="false" />
+    <Property Name="OilId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilName" Type="nvarchar" MaxLength="50" />
     <Property Name="OilMakerId" Type="int" />
     <Property Name="OilAverageMilage" Type="int" />
@@ -162,7 +162,7 @@
     <Key>
       <PropertyRef Name="PowerStereringOilId" />
     </Key>
-    <Property Name="PowerStereringOilId" Type="int" Nullable="false" />
+    <Property Name="PowerStereringOilId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PowerSterringOilName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PowerSterringOilCompany" Type="nvarchar" MaxLength="50" />
     <Property Name="PowerSterringOilPrice" Type="float" Nullable="false" />
@@ -181,7 +181,7 @@
     <Key>
       <PropertyRef Name="VehicleMakerId" />
     </Key>
-    <Property Name="VehicleMakerId" Type="bigint" Nullable="false" />
+    <Property Name="VehicleMakerId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="VehicleMakerName" Type="nvarchar" MaxLength="50" />
     <Property Name="RecordCreatedDate" Type="datetime" />
     <Property Name="RecCreatedBy" Type="bigint" />
@@ -190,7 +190,7 @@
     <Key>
       <PropertyRef Name="VehicleId" />
     </Key>
-    <Property Name="VehicleId" Type="bigint" Nullable="false" />
+    <Property Name="VehicleId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="VehicleMakerId" Type="bigint" />
     <Property Name="VehicleModelName" Type="nvarchar" MaxLength="50" />
     <Property Name="FuilingTypeId" Type="bigint" />

@@ -1,16 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿
+
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Interfaces.Repository;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Practices.Unity;
 using Models.DomainModels;
-using Models.IdentityModels;
 
 namespace Repository.BaseRepository
 {
 
-    public sealed class BaseDbContext : IdentityDbContext<ApplicationUser>
+    public sealed class BaseDbContext : IdentityDbContext<Models.IdentityModels.ApplicationUsers>
     {
         private IUnityContainer container;
         public BaseDbContext(string connectionString,IUnityContainer container)
@@ -26,13 +26,13 @@ namespace Repository.BaseRepository
         //        return container.Resolve<IApplicationEntities>();
         //    }
         //}
-        public DbSet<Models.DomainModels.Products> Products { get; set; }
+        public DbSet<Models.DomainModels.Product> Products { get; set; }
         public DbSet<Models.DomainModels.VehicleMaker> VehicleMakers { get; set; }
         public DbSet<Models.DomainModels.VehicleModelMaker> VehicleModelMakers { get; set; }
         public DbSet<Models.DomainModels.Category> Categories { get; set; }
-        public DbSet<Models.DomainModels.Customer> Customers { get; set; }
-        public DbSet<Models.DomainModels.CustomerVehicle> CustomerVehicles { get; set; }
-        public DbSet<Models.DomainModels.OilChangeRecord> OilChangeRecords { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<CustomerVehicle> CustomerVehicles { get; set; }
+        public DbSet<OilChangeRecord> OilChangeRecords { get; set; }
         public DbSet<Models.DomainModels.OilMakerCompany> OilMakerCompanies { get; set; }
         public DbSet<Models.DomainModels.Oil> Oils { get; set; }
         public DbSet<Models.DomainModels.OilNetWeight> OilNetWeights { get; set; }        
@@ -45,8 +45,8 @@ namespace Repository.BaseRepository
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Entity<Products>().HasKey(p => p.Id);
-            modelBuilder.Entity<Products>().Property(c => c.Id)
+            modelBuilder.Entity<Product>().HasKey(p => p.Id);
+            modelBuilder.Entity<Product>().Property(c => c.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }

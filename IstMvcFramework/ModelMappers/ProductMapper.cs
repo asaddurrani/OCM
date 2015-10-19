@@ -10,7 +10,7 @@ namespace IstMvcFramework.ModelMappers
         /// <summary>
         ///  Create web model from entity
         /// </summary>
-        public static Models.Product CreateFrom(this MainDomain.Products source)
+        public static Models.Product CreateFrom(this MainDomain.Product source)
         {
              return new Models.Product
             {
@@ -27,9 +27,9 @@ namespace IstMvcFramework.ModelMappers
         /// <summary>
         ///  Create entity from web model
         /// </summary>
-        public static MainDomain.Products CreateFrom(this Models.Product source)
+        public static MainDomain.Product CreateFrom(this Models.Product source)
         {
-             return new MainDomain.Products
+             return new MainDomain.Product
             {
                 Id = source.Id,
                 Name = source.Name,

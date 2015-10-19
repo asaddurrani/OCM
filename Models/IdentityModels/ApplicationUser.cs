@@ -9,9 +9,9 @@ namespace Models.IdentityModels
     /// <summary>
     /// Application User
     /// </summary>
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUsers : IdentityUser
     {
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUsers> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);

@@ -1,6 +1,5 @@
 ﻿using Implementation.Services;
 using Interfaces.IServices;
-using Interfaces.Operation;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Practices.Unity;

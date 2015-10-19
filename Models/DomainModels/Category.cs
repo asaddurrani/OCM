@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Models.DomainModels
 {
-    public class Category
+    public partial class Category
     {
-        /// <summary>
-        /// Id
-        /// </summary>
+        public Category()
+        {
+            this.Products = new HashSet<Product>();
+        }
+
         public int Id { get; set; }
-        /// <summary>
-        /// Name
-        /// </summary>
         public string Name { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

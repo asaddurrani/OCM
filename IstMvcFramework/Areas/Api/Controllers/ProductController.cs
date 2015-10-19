@@ -28,15 +28,15 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get Products
         /// </summary>
-        public Models.ProductResponse Get([FromUri] MainDomain.ProductSearchRequest request)
-        {
-            if (request == null || !ModelState.IsValid)
-            {
-                throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
-            }
+        //public Models.ProductResponse Get([FromUri] MainDomain.ProductSearchRequest request)
+        //{
+        //    if (request == null || !ModelState.IsValid)
+        //    {
+        //        throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
+        //    }
 
-            return productService.LoadAllProducts(request).CreateFrom();
-        }
+        //    return productService.LoadAllProducts(request).CreateFrom();
+        //}
 
         /// <summary>
         /// Update a product

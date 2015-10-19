@@ -19,9 +19,9 @@ namespace Implementation.Identity
         private static IUnityContainer unityContainer;
         public static IUnityContainer UnityContainer { get { return unityContainer; } set { unityContainer = value; } }
     }
-    public class ApplicationUserManager : UserManager<ApplicationUser>
+    public class ApplicationUserManager : UserManager<ApplicationUsers>
     {
-             public ApplicationUserManager(IUserStore<ApplicationUser> store)
+             public ApplicationUserManager(IUserStore<ApplicationUsers> store)
             : base(store)
         {
             
@@ -42,9 +42,9 @@ namespace Implementation.Identity
 
 
 
-            var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
+            var manager = new ApplicationUserManager(new UserStore<ApplicationUsers>(db));
             // Configure validation logic for usernames
-            manager.UserValidator = new UserValidator<ApplicationUser>(manager)
+            manager.UserValidator = new UserValidator<ApplicationUsers>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
                 RequireUniqueEmail = true
@@ -64,11 +64,11 @@ namespace Implementation.Identity
             manager.MaxFailedAccessAttemptsBeforeLockout = 5;
             // Register two factor authentication providers. This application uses Phone and Emails as a step of receiving a code for verifying the user
             // You can write your own provider and plug in here.
-            manager.RegisterTwoFactorProvider("PhoneCode", new PhoneNumberTokenProvider<ApplicationUser>
+            manager.RegisterTwoFactorProvider("PhoneCode", new PhoneNumberTokenProvider<ApplicationUsers>
             {
                 MessageFormat = "Your security code is: {0}"
             });
-            manager.RegisterTwoFactorProvider("EmailCode", new EmailTokenProvider<ApplicationUser>
+            manager.RegisterTwoFactorProvider("EmailCode", new EmailTokenProvider<ApplicationUsers>
             {
                 Subject = "SecurityCode",
                 BodyFormat = "Your security code is {0}"
@@ -79,7 +79,7 @@ namespace Implementation.Identity
             if (dataProtectionProvider != null)
             {
                 manager.UserTokenProvider =
-                    new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
+                    new DataProtectorTokenProvider<ApplicationUsers>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
             return manager;
         }

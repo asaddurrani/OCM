@@ -1,4 +1,5 @@
-﻿using MainDomain = Models.DomainModels;
+﻿using IstMvcFramework.Models;
+using MainDomain = Models.DomainModels;
 
 namespace IstMvcFramework.ModelMappers
 {
@@ -20,7 +21,8 @@ namespace IstMvcFramework.ModelMappers
                 OilName = source.OilName,
                 OilNetWeightId = source.OilNetWeightId,
                 OilPower = source.OilPower,
-                OilPrice = source.OilPrice
+                OilPrice = source.OilPrice,
+                OilMakerCompanyName = source.OilMakerCompany != null ? source.OilMakerCompany.OilMakerName : string.Empty
             };
 
         }

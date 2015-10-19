@@ -24,5 +24,12 @@ namespace Implementation.Services
         {
             return _oilRepository.GetOilById(id);
         }
+        public Oil Save(Oil oil)
+        {
+            var oilReturn = _oilRepository.Save(oil);
+            return oilReturn;
+        }
+
+       
     }
 }
