@@ -209,6 +209,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\AirFilter\AirFilterAreaRegistration.cs" />
+    <Compile Include="Areas\AirFilter\Controllers\AirFilterController.cs" />
     <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
     <Compile Include="Areas\Api\Controllers\OilController.cs" />
     <Compile Include="Areas\Api\Controllers\OilMakerController.cs" />
@@ -218,9 +220,12 @@
     <Compile Include="Areas\Api\Controllers\RecordByVehiclePlateNumberController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleModelMakerController.cs" />
+    <Compile Include="Areas\BrakeOil\BrakeOilAreaRegistration.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
+    <Compile Include="Areas\OilFilter\OilFilterAreaRegistration.cs" />
     <Compile Include="Areas\Oil\Controllers\OilController.cs" />
     <Compile Include="Areas\Oil\OilAreaRegistration.cs" />
+    <Compile Include="Areas\PowerSteeringOil\PowerSteeringOilAreaRegistration.cs" />
     <Compile Include="Areas\Record\Controllers\HomeController.cs" />
     <Compile Include="Areas\Record\ProductAreaRegistration.cs" />
     <Compile Include="Areas\Product\Controllers\HomeController.cs" />
@@ -293,9 +298,21 @@
     <Compile Include="TypeRegistrations.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\AirFilter\Scripts\AirFilter.dataservice.js" />
+    <Content Include="Areas\AirFilter\Scripts\AirFilter.model.js" />
+    <Content Include="Areas\AirFilter\Scripts\AirFilter.view.js" />
+    <Content Include="Areas\AirFilter\Scripts\AirFilter.viewModel.js" />
+    <Content Include="Areas\BrakeOil\Scripts\BrakeOil.dataservice.js" />
+    <Content Include="Areas\BrakeOil\Scripts\BrakeOil.model.js" />
+    <Content Include="Areas\BrakeOil\Scripts\BrakeOil.view.js" />
+    <Content Include="Areas\BrakeOil\Scripts\BrakeOil.viewModel.js" />
     <Content Include="Areas\Common\Scripts\confirmation.view.js" />
     <Content Include="Areas\Common\Scripts\confirmation.viewModel.js" />
     <Content Include="Areas\Common\Scripts\pagination.js" />
+    <Content Include="Areas\OilFilter\Scripts\OilFilter.dataservice.js" />
+    <Content Include="Areas\OilFilter\Scripts\OilFilter.model.js" />
+    <Content Include="Areas\OilFilter\Scripts\OilFilter.view.js" />
+    <Content Include="Areas\OilFilter\Scripts\OilFilter.viewModel.js" />
     <Content Include="Areas\Oil\Scripts\oil.dataservice.js" />
     <Content Include="Areas\Oil\Scripts\oil.model.js" />
     <Content Include="Areas\Oil\Scripts\oil.view.js" />
@@ -305,6 +322,10 @@
     <Content Include="Areas\Oil\Scripts\product.view.js" />
     <Content Include="Areas\Oil\Scripts\product.viewModel.js" />
     <Content Include="Areas\Oil\Scripts\productWithKoMapping.model.js" />
+    <Content Include="Areas\PowerSteeringOil\Scripts\PowerSteeringOil.dataservice.js" />
+    <Content Include="Areas\PowerSteeringOil\Scripts\PowerSteeringOil.model.js" />
+    <Content Include="Areas\PowerSteeringOil\Scripts\PowerSteeringOil.view.js" />
+    <Content Include="Areas\PowerSteeringOil\Scripts\PowerSteeringOil.viewModel.js" />
     <Content Include="Areas\Product\Scripts\product.dataservice.js" />
     <Content Include="Areas\Product\Scripts\productWithKoMapping.model.js" />
     <Content Include="Areas\Product\Scripts\product.model.js" />
@@ -830,6 +851,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AirFilter\Models\" />
+    <Folder Include="Areas\AirFilter\Views\AirFilter\" />
+    <Folder Include="Areas\AirFilter\Views\Shared\" />
     <Folder Include="Areas\Api\Models\" />
     <Folder Include="Areas\Api\Views\OilMaker\" />
     <Folder Include="Areas\Api\Views\Oil\" />
@@ -838,9 +862,18 @@
     <Folder Include="Areas\Api\Views\Shared\" />
     <Folder Include="Areas\Api\Views\VehicleMaker\" />
     <Folder Include="Areas\Api\Views\VehicleModelMaker\" />
+    <Folder Include="Areas\BrakeOil\Controllers\" />
+    <Folder Include="Areas\BrakeOil\Models\" />
+    <Folder Include="Areas\BrakeOil\Views\" />
     <Folder Include="Areas\Common\Controllers\" />
     <Folder Include="Areas\Common\Models\" />
+    <Folder Include="Areas\OilFilter\Controllers\" />
+    <Folder Include="Areas\OilFilter\Models\" />
+    <Folder Include="Areas\OilFilter\Views\" />
     <Folder Include="Areas\Oil\Models\" />
+    <Folder Include="Areas\PowerSteeringOil\Controllers\" />
+    <Folder Include="Areas\PowerSteeringOil\Models\" />
+    <Folder Include="Areas\PowerSteeringOil\Views\" />
     <Folder Include="Areas\Product\Models\" />
     <Folder Include="Areas\Record\Models\" />
     <Folder Include="Areas\Vehicle\Models\" />
