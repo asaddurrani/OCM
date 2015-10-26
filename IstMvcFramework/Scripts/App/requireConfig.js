@@ -13,6 +13,10 @@
             "vehicle": "/Areas/Vehicle/Scripts",
             "oil": "/Areas/Oil/Scripts",
             "record": "/Areas/Record/Scripts",
+            "airFilter": "/Areas/AirFilter/Scripts",
+            "brakeOil": "/Areas/BrakeOil/Scripts",
+            "oilFilter": "/Areas/OilFilter/Scripts",
+            "powerSteeringOil": "/Areas/Record/Scripts",
         }
 
     });

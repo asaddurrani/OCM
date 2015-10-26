@@ -878,6 +878,7 @@
     <Folder Include="Areas\Record\Models\" />
     <Folder Include="Areas\Vehicle\Models\" />
     <Folder Include="Content\Centaurus\base\minified\images\" />
+    <Folder Include="Dbbackups\26-10-2015\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
