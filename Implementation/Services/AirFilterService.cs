@@ -24,5 +24,10 @@ namespace Implementation.Services
         {
             return _airFilterRepository.GetAirFilterById(id);
         }
+        public AirFilter Save(AirFilter oil)
+        {
+            var airFilter = _airFilterRepository.Save(oil);
+            return airFilter;
+        }
     }
 }

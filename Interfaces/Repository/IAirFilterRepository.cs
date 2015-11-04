@@ -7,5 +7,6 @@ namespace Interfaces.Repository
     {
         AirFilterResponse GetAllAirFilters();
         AirFilter GetAirFilterById(int id);
+        AirFilter Save(AirFilter airFilter);
     }
 }

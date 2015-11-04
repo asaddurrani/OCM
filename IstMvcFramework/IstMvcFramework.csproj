@@ -212,6 +212,7 @@
     <Compile Include="Areas\AirFilter\AirFilterAreaRegistration.cs" />
     <Compile Include="Areas\AirFilter\Controllers\AirFilterController.cs" />
     <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
+    <Compile Include="Areas\Api\Controllers\AirFilterController.cs" />
     <Compile Include="Areas\Api\Controllers\OilController.cs" />
     <Compile Include="Areas\Api\Controllers\OilMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
@@ -246,6 +247,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\CultureHelper.cs" />
+    <Compile Include="ModelMappers\AirFilterMapper.cs" />
     <Compile Include="ModelMappers\CategoryMapper.cs" />
     <Compile Include="ModelMappers\OilMakerCompanyMapper.cs" />
     <Compile Include="ModelMappers\OilMakerCompanyResponseMapper.cs" />
@@ -257,6 +259,7 @@
     <Compile Include="ModelMappers\VehicleMakerResponseMapper.cs" />
     <Compile Include="ModelMappers\VehicleModelMakerMapper.cs" />
     <Compile Include="Models\AirFilter.cs" />
+    <Compile Include="Models\AirFilterResponse.cs" />
     <Compile Include="Models\BrakeOil.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Oil.cs" />
@@ -855,6 +858,7 @@
     <Folder Include="Areas\AirFilter\Views\AirFilter\" />
     <Folder Include="Areas\AirFilter\Views\Shared\" />
     <Folder Include="Areas\Api\Models\" />
+    <Folder Include="Areas\Api\Views\AirFilter\" />
     <Folder Include="Areas\Api\Views\OilMaker\" />
     <Folder Include="Areas\Api\Views\Oil\" />
     <Folder Include="Areas\Api\Views\RecordBase\" />

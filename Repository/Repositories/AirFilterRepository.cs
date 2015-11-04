@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using Interfaces.Repository;
 using Microsoft.Practices.Unity;
@@ -35,6 +36,31 @@ namespace Repository.Repositories
                 return DbSet.Find(id);
             }
             return null;
+        }
+
+        public AirFilter Save(AirFilter airFilter)
+        {
+            if (airFilter.AilFilterId > 0)
+            {
+                #region Update Record
+                AirFilter airFilterDbVersion = GetAirFilterById(airFilter.AilFilterId);
+                airFilterDbVersion.AirFilterName = airFilter.AirFilterName;
+                airFilterDbVersion.AirFilterPrice = airFilter.AirFilterPrice;
+                DbSet.AddOrUpdate(airFilterDbVersion);
+                db.SaveChanges();
+
+                #endregion
+            }
+            else
+            {
+                #region Add New Record
+
+                DbSet.Add(airFilter);
+                db.SaveChanges();
+
+                #endregion
+            }
+            return GetAirFilterById(airFilter.AilFilterId);
         }
     }
 }

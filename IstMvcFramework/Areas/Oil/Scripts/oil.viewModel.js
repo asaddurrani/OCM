@@ -163,8 +163,8 @@ define("oil/oil.viewModel",
 
 
                 return {
-                    isOilLoaded: isOilLoaded,
                     //#region Return
+                    isOilLoaded: isOilLoaded,
                     oilMakers: oilMakers,
                     oilMakerCompaniesListForDialog: oilMakerCompaniesListForDialog,
                     oils: oils,
