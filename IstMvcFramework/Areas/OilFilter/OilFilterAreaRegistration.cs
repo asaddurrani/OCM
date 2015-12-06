@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace IstMvcFramework.Areas.BrakeOil
+namespace IstMvcFramework.Areas.OilFilter
 {
-    public class BrakeOilAreaRegistration : AreaRegistration
+    public class OilFilterAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {
             get
             {
-                return "BrakeOil";
+                return "OilFilter";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "BrakeOil_default",
-                "BrakeOil/{controller}/{action}/{id}",
+                "OilFilter_default",
+                "OilFilter/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

@@ -222,10 +222,13 @@
     <Compile Include="Areas\Api\Controllers\VehicleMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\VehicleModelMakerController.cs" />
     <Compile Include="Areas\BrakeOil\BrakeOilAreaRegistration.cs" />
+    <Compile Include="Areas\BrakeOil\Controllers\BrakeOilController.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
+    <Compile Include="Areas\OilFilter\Controllers\OilFilterController.cs" />
     <Compile Include="Areas\OilFilter\OilFilterAreaRegistration.cs" />
     <Compile Include="Areas\Oil\Controllers\OilController.cs" />
     <Compile Include="Areas\Oil\OilAreaRegistration.cs" />
+    <Compile Include="Areas\PowerSteeringOil\Controllers\PowerSteeringOilController.cs" />
     <Compile Include="Areas\PowerSteeringOil\PowerSteeringOilAreaRegistration.cs" />
     <Compile Include="Areas\Record\Controllers\HomeController.cs" />
     <Compile Include="Areas\Record\ProductAreaRegistration.cs" />
@@ -737,6 +740,26 @@
     <Content Include="Areas\Vehicle\Views\Home\_VehicleEditor.cshtml" />
     <Content Include="Areas\Oil\Views\Oil\_oilDialog.cshtml" />
     <Content Include="Dbbackups\27-9-2015\IstMvc212" />
+    <Content Include="Areas\OilFilter\Views\OilFilter\_oilDialog.cshtml" />
+    <Content Include="Areas\OilFilter\Views\OilFilter\Index.cshtml" />
+    <Content Include="Areas\OilFilter\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\OilFilter\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\OilFilter\Views\web.config" />
+    <Content Include="Areas\AirFilter\Views\AirFilter\_airFilterDialog.cshtml" />
+    <Content Include="Areas\AirFilter\Views\AirFilter\Index.cshtml" />
+    <Content Include="Areas\AirFilter\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\AirFilter\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\AirFilter\Views\web.config" />
+    <Content Include="Areas\PowerSteeringOil\Views\PowerSteeringOil\_oilDialog.cshtml" />
+    <Content Include="Areas\PowerSteeringOil\Views\PowerSteeringOil\Index.cshtml" />
+    <Content Include="Areas\PowerSteeringOil\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\PowerSteeringOil\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\PowerSteeringOil\Views\web.config" />
+    <Content Include="Areas\BrakeOil\Views\BrakeOil\_brakeOilDialog.cshtml" />
+    <Content Include="Areas\BrakeOil\Views\BrakeOil\Index.cshtml" />
+    <Content Include="Areas\BrakeOil\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\BrakeOil\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BrakeOil\Views\web.config" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
@@ -855,8 +878,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AirFilter\Models\" />
-    <Folder Include="Areas\AirFilter\Views\AirFilter\" />
-    <Folder Include="Areas\AirFilter\Views\Shared\" />
     <Folder Include="Areas\Api\Models\" />
     <Folder Include="Areas\Api\Views\AirFilter\" />
     <Folder Include="Areas\Api\Views\OilMaker\" />
@@ -866,18 +887,12 @@
     <Folder Include="Areas\Api\Views\Shared\" />
     <Folder Include="Areas\Api\Views\VehicleMaker\" />
     <Folder Include="Areas\Api\Views\VehicleModelMaker\" />
-    <Folder Include="Areas\BrakeOil\Controllers\" />
     <Folder Include="Areas\BrakeOil\Models\" />
-    <Folder Include="Areas\BrakeOil\Views\" />
     <Folder Include="Areas\Common\Controllers\" />
     <Folder Include="Areas\Common\Models\" />
-    <Folder Include="Areas\OilFilter\Controllers\" />
     <Folder Include="Areas\OilFilter\Models\" />
-    <Folder Include="Areas\OilFilter\Views\" />
     <Folder Include="Areas\Oil\Models\" />
-    <Folder Include="Areas\PowerSteeringOil\Controllers\" />
     <Folder Include="Areas\PowerSteeringOil\Models\" />
-    <Folder Include="Areas\PowerSteeringOil\Views\" />
     <Folder Include="Areas\Product\Models\" />
     <Folder Include="Areas\Record\Models\" />
     <Folder Include="Areas\Vehicle\Models\" />
@@ -946,7 +961,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>43063</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:43063/</IISUrl>
+          <IISUrl>http://localhost:43064/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

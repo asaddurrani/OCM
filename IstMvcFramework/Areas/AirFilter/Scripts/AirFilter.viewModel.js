@@ -1,7 +1,7 @@
 ﻿/*
     Module with the view model for the Vehicle
 */
-define("oil/oil.viewModel",
+define("airFilter/airFilter.viewModel",
     ["jquery", "amplify", "ko", "airFilter/airFilter.dataservice", "airFilter/airFilter.model", "common/confirmation.viewModel", "common/pagination"],
     function ($, amplify, ko, dataservice, model, confirmation, pagination) {
 
@@ -64,7 +64,7 @@ define("oil/oil.viewModel",
                     //Create Air Filter
                     createAirFilter = function () {
                         selectedAirFilter(new model.AirFilter.Create({}));
-                        view.showOilDialog();
+                        view.showAirFilterDialog();
                     },
                     //Search Air Filter
                     searchAirFilter = function () {
@@ -96,7 +96,7 @@ define("oil/oil.viewModel",
                                         if (data) {
                                             var savedAirFilter = model.AirFilter.Create(data);
                                             if (selectedAirFilter().airFilterId() <= 0 || selectedAirFilter().airFilterId() == undefined) {
-                                                airFilter.splice(0, 0, savedAirFilter);
+                                                airFilters.splice(0, 0, savedAirFilter);
                                             }
                                             toastr.success("Saved Successfully");
                                             view.hideAirFilterDialog();

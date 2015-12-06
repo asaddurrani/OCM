@@ -29,7 +29,7 @@ define("airFilter/airFilter.view",
                     }
 
                     // Handle Sorting
-                    handleSorting("airFilterTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getVehicles);
+                    //handleSorting("airFilterTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getVehicles);
                 };
 
             initialize();

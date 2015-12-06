@@ -29,7 +29,7 @@ define("brakeOil/brakeOil.view",
                     }
 
                     // Handle Sorting
-                    handleSorting("brakeOilTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getVehicles);
+                    //handleSorting("brakeOilTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getVehicles);
                 };
 
             initialize();
@@ -37,7 +37,7 @@ define("brakeOil/brakeOil.view",
 
             return {
                 bindingRoot: bindingRoot,
-                showAirFilterDialog: showBrakeOilDialog,
+                showBrakeOilDialog: showBrakeOilDialog,
                 hideBrakeOilDialog: hideBrakeOilDialog,
                 viewModel: viewModel
             };
