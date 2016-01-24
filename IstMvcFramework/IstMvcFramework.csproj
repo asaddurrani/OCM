@@ -214,6 +214,8 @@
     <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
     <Compile Include="Areas\Api\Controllers\AirFilterController.cs" />
     <Compile Include="Areas\Api\Controllers\OilController.cs" />
+    <Compile Include="Areas\Api\Controllers\OilFilterController.cs" />
+    <Compile Include="Areas\Api\Controllers\OilFilterMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\OilMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductController.cs" />
@@ -267,6 +269,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Oil.cs" />
     <Compile Include="Models\OilFilter.cs" />
+    <Compile Include="Models\OilFilterResponse.cs" />
     <Compile Include="Models\OilMakerCompany.cs" />
     <Compile Include="Models\OilMakerResponse.cs" />
     <Compile Include="Models\OilResponse.cs" />
@@ -740,7 +743,7 @@
     <Content Include="Areas\Vehicle\Views\Home\_VehicleEditor.cshtml" />
     <Content Include="Areas\Oil\Views\Oil\_oilDialog.cshtml" />
     <Content Include="Dbbackups\27-9-2015\IstMvc212" />
-    <Content Include="Areas\OilFilter\Views\OilFilter\_oilDialog.cshtml" />
+    <Content Include="Areas\OilFilter\Views\OilFilter\_oilFilterDialog.cshtml" />
     <Content Include="Areas\OilFilter\Views\OilFilter\Index.cshtml" />
     <Content Include="Areas\OilFilter\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\OilFilter\Views\_ViewStart.cshtml" />
@@ -880,6 +883,8 @@
     <Folder Include="Areas\AirFilter\Models\" />
     <Folder Include="Areas\Api\Models\" />
     <Folder Include="Areas\Api\Views\AirFilter\" />
+    <Folder Include="Areas\Api\Views\OilFilterMaker\" />
+    <Folder Include="Areas\Api\Views\OilFilter\" />
     <Folder Include="Areas\Api\Views\OilMaker\" />
     <Folder Include="Areas\Api\Views\Oil\" />
     <Folder Include="Areas\Api\Views\RecordBase\" />

@@ -3,7 +3,7 @@
     var
     //#region Oil Filter entity
     // ReSharper disable InconsistentNaming
-    OilFilter = function (specifiedOilFilterId, specifiedOilFilterName, specifiedOilFilterPrice) {
+    OilFilter = function (specifiedOilFilterId, specifiedOilFilterName, specifiedOilFilterPrice, specifiedOilFilterMakerCompanyId) {
         // ReSharper restore InconsistentNaming
         var // Reference to this object
             self,
@@ -13,11 +13,14 @@
             oilFilterName = ko.observable(specifiedOilFilterName),
             //Oil Filter Price
             oilFilterPrice = ko.observable(specifiedOilFilterPrice),
+            //Oil Filter Maker CompanyId
+            oilFilterMakerCompanyId = ko.observable(specifiedOilFilterMakerCompanyId),
             // Errors
             errors = ko.validation.group({
                 oilFilterId: oilFilterId,
                 oilFilterName: oilFilterName,
-                oilFilterPrice: oilFilterPrice
+                oilFilterPrice: oilFilterPrice,
+                oilFilterMakerCompanyId: oilFilterMakerCompanyId
             }),
             // Is Valid
             isValid = ko.computed(function () {
@@ -29,7 +32,8 @@
                 // ReSharper restore InconsistentNaming
                 oilMakerId: oilFilterId,
                 oilFilterName: oilFilterName,
-                oilFilterPrice: oilFilterPrice
+                oilFilterPrice: oilFilterPrice,
+                oilFilterMakerCompanyId: oilFilterMakerCompanyId
             }),
             // Has Changes
             hasChanges = ko.computed(function () {
@@ -44,7 +48,8 @@
                 return {
                     OilFilterId: oilFilterId(),
                     OilFilterName: oilFilterName(),
-                    OilFilterPrice: oilFilterPrice()
+                    OilFilterPrice: oilFilterPrice(),
+                    OilFilterMakerCompanyId: oilFilterMakerCompanyId()
                 };
             };
 
@@ -52,6 +57,7 @@
             oilFilterId: oilFilterId,
             oilFilterName: oilFilterName,
             oilFilterPrice: oilFilterPrice,
+            oilFilterMakerCompanyId: oilFilterMakerCompanyId,
             errors: errors,
             isValid: isValid,
             dirtyFlag: dirtyFlag,
@@ -64,11 +70,73 @@
 
     // Oil Filter Factory
     OilFilter.Create = function (source) {
-        return new OilFilter(source.OilFilterId, source.OilFilterName, source.OilFilterPrice);
-    };
+        return new OilFilter(source.OilFilterId, source.OilFilterName, source.OilFilterPrice, source.OilFilterMakerCompanyId);
+    },
     //#endregion
 
+    //#region Oil Filter Maker entity
+    // ReSharper disable InconsistentNaming
+    OilFilterMakerCompany = function (specifiedOilFilterMakerId, specifiedOilFilterMakerName) {
+        // ReSharper restore InconsistentNaming
+        var // Reference to this object
+            self,
+            // Unique key
+            oilFilterMakerId = ko.observable(specifiedOilFilterMakerId),
+            // Oil Maker Name
+            oilFilterMakerName = ko.observable(specifiedOilFilterMakerName),
+
+            // Errors
+            errors = ko.validation.group({
+                oilFilterMakerId: oilFilterMakerId,
+                oilFilterMakerName: oilFilterMakerName
+            }),
+            // Is Valid
+            isValid = ko.computed(function () {
+                return errors().length === 0;
+            }),
+            // True if the booking has been changed
+            // ReSharper disable InconsistentNaming
+            dirtyFlag = new ko.dirtyFlag({
+                // ReSharper restore InconsistentNaming
+                oilFilterMakerId: oilFilterMakerId,
+                oilFilterMakerName: oilFilterMakerName
+            }),
+            // Has Changes
+            hasChanges = ko.computed(function () {
+                return dirtyFlag.isDirty();
+            }),
+            // Reset
+            reset = function () {
+                dirtyFlag.reset();
+            },
+            // Convert to server
+            convertToServerData = function () {
+                return {
+                    OilFilterMakerId: oilFilterMakerId(),
+                    OilFilterMakerName: oilFilterMakerName()
+                };
+            };
+
+        self = {
+            oilFilterMakerId: oilFilterMakerId,
+            oilFilterMakerName: oilFilterMakerName,
+            errors: errors,
+            isValid: isValid,
+            dirtyFlag: dirtyFlag,
+            hasChanges: hasChanges,
+            reset: reset,
+            convertToServerData: convertToServerData
+        };
+        return self;
+    },
+
+    // Oil Maker Factory
+    OilFilterMakerCompany.Create = function (source) {
+        return new OilMakerCompany(source.OilMakerId, source.OilMakerName);
+    };
+    //#endregion
     return {
         OilFilter: OilFilter,
+        OilFilterMakerCompany: OilFilterMakerCompany
     };
 });

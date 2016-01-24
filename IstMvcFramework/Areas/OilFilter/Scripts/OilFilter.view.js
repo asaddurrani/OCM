@@ -29,7 +29,7 @@ define("oilFilter/oilFilter.view",
                     }
 
                     // Handle Sorting
-                    handleSorting("oilFilterTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getVehicles);
+                    handleSorting("oilFilterTable", viewModel.sortOn, viewModel.sortIsAsc, viewModel.getOilFilters);
                 };
 
             initialize();

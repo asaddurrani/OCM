@@ -7,5 +7,6 @@ namespace Interfaces.Repository
     {
         OilFilterResponse GetAllOilFilters();
         OilFilter GetOilFilterById(int id);
+        OilFilter Save(OilFilter oil);
     }
 }

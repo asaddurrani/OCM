@@ -52,6 +52,11 @@
     <EntitySet Name="BrakeOils" EntityType="IstMvcFrameworkALI17Model.BrakeOil" />
     <EntitySet Name="OilFilters" EntityType="IstMvcFrameworkALI17Model.OilFilter" />
     <EntitySet Name="PowerSterringOils" EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" />
+    <EntitySet Name="OilFilterMakerCompanies" EntityType="IstMvcFrameworkALI17Model.OilFilterMakerCompany" />
+    <AssociationSet Name="FK_OilFilters_OilFilterMakerCompany" Association="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany">
+      <End Role="OilFilterMakerCompany" EntitySet="OilFilterMakerCompanies" />
+      <End Role="OilFilter" EntitySet="OilFilters" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="AspNetRole">
     <Key>
@@ -340,6 +345,8 @@
     <Property Name="OilFilterId" Type="Int32" Nullable="false" />
     <Property Name="OilFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="OilFilterPrice" Type="Double" Nullable="false" />
+    <Property Name="OilFilterMakerCompanyId" Type="Int32" />
+    <NavigationProperty Name="OilFilterMakerCompany" Relationship="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany" FromRole="OilFilter" ToRole="OilFilterMakerCompany" />
   </EntityType>
   <EntityType Name="PowerSterringOil">
     <Key>
@@ -350,4 +357,25 @@
     <Property Name="PowerSterringOilCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="PowerSterringOilPrice" Type="Double" Nullable="false" />
   </EntityType>
+  <EntityType Name="OilFilterMakerCompany">
+    <Key>
+      <PropertyRef Name="OilFilterMakerCompanyId" />
+    </Key>
+    <Property Name="OilFilterMakerCompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OilFilterMakerCompanyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OilFilterMakerCompanyDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OilFilters" Relationship="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany" FromRole="OilFilterMakerCompany" ToRole="OilFilter" />
+  </EntityType>
+  <Association Name="FK_OilFilters_OilFilterMakerCompany">
+    <End Type="IstMvcFrameworkALI17Model.OilFilterMakerCompany" Role="OilFilterMakerCompany" Multiplicity="0..1" />
+    <End Type="IstMvcFrameworkALI17Model.OilFilter" Role="OilFilter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OilFilterMakerCompany">
+        <PropertyRef Name="OilFilterMakerCompanyId" />
+      </Principal>
+      <Dependent Role="OilFilter">
+        <PropertyRef Name="OilFilterMakerCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

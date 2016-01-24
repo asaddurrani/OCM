@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using Interfaces.Repository;
 using Microsoft.Practices.Unity;
@@ -35,6 +36,32 @@ namespace Repository.Repositories
                 return DbSet.Find(id);
             }
             return null;
+        }
+        public OilFilter Save(OilFilter oilFilter)
+        {
+            if (oilFilter.OilFilterId > 0)
+            {
+                #region Update Record
+                OilFilter oilFilterDbVersion = GetOilFilterById(oilFilter.OilFilterId);
+                oilFilterDbVersion.OilFilterName = oilFilter.OilFilterName;
+                oilFilterDbVersion.OilFilterPrice = oilFilter.OilFilterPrice;
+                oilFilterDbVersion.OilFilterMakerCompanyId = oilFilter.OilFilterMakerCompanyId;
+                
+                DbSet.AddOrUpdate(oilFilterDbVersion);
+                db.SaveChanges();
+
+                #endregion
+            }
+            else
+            {
+                #region Add New Record
+
+                DbSet.Add(oilFilter);
+                db.SaveChanges();
+
+                #endregion
+            }
+            return GetOilFilterById(oilFilter.OilFilterId);
         }
     }
 }

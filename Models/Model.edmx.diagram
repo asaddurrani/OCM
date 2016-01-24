@@ -32,6 +32,8 @@
         <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.BrakeOil" Width="1.5" PointX="2.75" PointY="10.75" />
         <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilFilter" Width="1.5" PointX="12.75" PointY="4.75" />
         <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IstMvcFrameworkALI17Model.OilFilterMakerCompany" Width="1.5" PointX="10.5" PointY="12.875" />
+        <AssociationConnector Association="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

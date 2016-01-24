@@ -119,6 +119,7 @@
     <Compile Include="Services\AirFilterService.cs" />
     <Compile Include="Services\BrakeOilService.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\OilFilterMakerService.cs" />
     <Compile Include="Services\OilFilterService.cs" />
     <Compile Include="Services\OilMakerService.cs" />
     <Compile Include="Services\OilService.cs" />

@@ -1,4 +1,5 @@
-﻿using Models.ResponseModels;
+﻿using Models.DomainModels;
+using Models.ResponseModels;
 
 namespace Interfaces.IServices
 {
@@ -6,5 +7,6 @@ namespace Interfaces.IServices
     {
         OilFilterResponse GetAllOilFilters();
         Models.DomainModels.OilFilter GetOilFilterById(int id);
+        OilFilter Save(OilFilter oil);
     }
 }

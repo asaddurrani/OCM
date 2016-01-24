@@ -22,5 +22,10 @@ namespace Implementation.Services
         {
             return _oilFilterRepository.GetOilFilterById(id);
         }
+        public OilFilter Save(OilFilter oil)
+        {
+            var oilFilterReturn = _oilFilterRepository.Save(oil);
+            return oilFilterReturn;
+        }
     }
 }

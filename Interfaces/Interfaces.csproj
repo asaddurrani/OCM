@@ -50,6 +50,7 @@
     <Compile Include="IServices\IAirFilterService.cs" />
     <Compile Include="IServices\IBrakeOilService.cs" />
     <Compile Include="IServices\ICategoryService.cs" />
+    <Compile Include="IServices\IOilFilterMakerService.cs" />
     <Compile Include="IServices\IOilFilterService.cs" />
     <Compile Include="IServices\IOilMakerService.cs" />
     <Compile Include="IServices\IOilService.cs" />

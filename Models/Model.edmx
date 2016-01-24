@@ -128,6 +128,14 @@
           <Property Name="OilId" Type="int" />
           <Property Name="CustomerVehicleId" Type="int" />
         </EntityType>
+        <EntityType Name="OilFilterMakerCompany">
+          <Key>
+            <PropertyRef Name="OilFilterMakerCompanyId" />
+          </Key>
+          <Property Name="OilFilterMakerCompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OilFilterMakerCompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OilFilterMakerCompanyDescription" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="OilFilters">
           <Key>
             <PropertyRef Name="OilFilterId" />
@@ -135,6 +143,7 @@
           <Property Name="OilFilterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OilFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="OilFilterPrice" Type="float" Nullable="false" />
+          <Property Name="OilFilterMakerCompanyId" Type="int" />
         </EntityType>
         <EntityType Name="OilMakerCompany">
           <Key>
@@ -290,6 +299,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_OilFilters_OilFilterMakerCompany">
+          <End Role="OilFilterMakerCompany" Type="Self.OilFilterMakerCompany" Multiplicity="0..1" />
+          <End Role="OilFilters" Type="Self.OilFilters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OilFilterMakerCompany">
+              <PropertyRef Name="OilFilterMakerCompanyId" />
+            </Principal>
+            <Dependent Role="OilFilters">
+              <PropertyRef Name="OilFilterMakerCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Oils_OilNetWeight">
           <End Role="OilMakerCompany" Type="Self.OilMakerCompany" Multiplicity="0..1" />
           <End Role="Oils" Type="Self.Oils" Multiplicity="*" />
@@ -327,6 +348,7 @@
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerVehicles" EntityType="Self.CustomerVehicles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilChangeRecords" EntityType="Self.OilChangeRecords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OilFilterMakerCompany" EntityType="Self.OilFilterMakerCompany" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilFilters" EntityType="Self.OilFilters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilMakerCompany" EntityType="Self.OilMakerCompany" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OilNetWeight" EntityType="Self.OilNetWeight" Schema="dbo" store:Type="Tables" />
@@ -362,6 +384,10 @@
           <AssociationSet Name="FK_OilChangeRecords_Oils" Association="Self.FK_OilChangeRecords_Oils">
             <End Role="Customers" EntitySet="Customers" />
             <End Role="OilChangeRecords" EntitySet="OilChangeRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OilFilters_OilFilterMakerCompany" Association="Self.FK_OilFilters_OilFilterMakerCompany">
+            <End Role="OilFilterMakerCompany" EntitySet="OilFilterMakerCompany" />
+            <End Role="OilFilters" EntitySet="OilFilters" />
           </AssociationSet>
           <AssociationSet Name="FK_Oils_OilNetWeight" Association="Self.FK_Oils_OilNetWeight">
             <End Role="OilMakerCompany" EntitySet="OilMakerCompany" />
@@ -428,6 +454,11 @@
           <EntitySet Name="BrakeOils" EntityType="IstMvcFrameworkALI17Model.BrakeOil" />
           <EntitySet Name="OilFilters" EntityType="IstMvcFrameworkALI17Model.OilFilter" />
           <EntitySet Name="PowerSterringOils" EntityType="IstMvcFrameworkALI17Model.PowerSterringOil" />
+          <EntitySet Name="OilFilterMakerCompanies" EntityType="IstMvcFrameworkALI17Model.OilFilterMakerCompany" />
+          <AssociationSet Name="FK_OilFilters_OilFilterMakerCompany" Association="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany">
+            <End Role="OilFilterMakerCompany" EntitySet="OilFilterMakerCompanies" />
+            <End Role="OilFilter" EntitySet="OilFilters" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AspNetRole">
           <Key>
@@ -716,6 +747,8 @@
           <Property Name="OilFilterId" Type="Int32" Nullable="false" />
           <Property Name="OilFilterName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="OilFilterPrice" Type="Double" Nullable="false" />
+          <Property Name="OilFilterMakerCompanyId" Type="Int32" />
+          <NavigationProperty Name="OilFilterMakerCompany" Relationship="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany" FromRole="OilFilter" ToRole="OilFilterMakerCompany" />
         </EntityType>
         <EntityType Name="PowerSterringOil">
           <Key>
@@ -726,6 +759,27 @@
           <Property Name="PowerSterringOilCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PowerSterringOilPrice" Type="Double" Nullable="false" />
         </EntityType>
+        <EntityType Name="OilFilterMakerCompany">
+          <Key>
+            <PropertyRef Name="OilFilterMakerCompanyId" />
+          </Key>
+          <Property Name="OilFilterMakerCompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OilFilterMakerCompanyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OilFilterMakerCompanyDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OilFilters" Relationship="IstMvcFrameworkALI17Model.FK_OilFilters_OilFilterMakerCompany" FromRole="OilFilterMakerCompany" ToRole="OilFilter" />
+        </EntityType>
+        <Association Name="FK_OilFilters_OilFilterMakerCompany">
+          <End Type="IstMvcFrameworkALI17Model.OilFilterMakerCompany" Role="OilFilterMakerCompany" Multiplicity="0..1" />
+          <End Type="IstMvcFrameworkALI17Model.OilFilter" Role="OilFilter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OilFilterMakerCompany">
+              <PropertyRef Name="OilFilterMakerCompanyId" />
+            </Principal>
+            <Dependent Role="OilFilter">
+              <PropertyRef Name="OilFilterMakerCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -927,6 +981,7 @@
           <EntitySetMapping Name="OilFilters">
             <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilter">
               <MappingFragment StoreEntitySet="OilFilters">
+                <ScalarProperty Name="OilFilterMakerCompanyId" ColumnName="OilFilterMakerCompanyId" />
                 <ScalarProperty Name="OilFilterPrice" ColumnName="OilFilterPrice" />
                 <ScalarProperty Name="OilFilterName" ColumnName="OilFilterName" />
                 <ScalarProperty Name="OilFilterId" ColumnName="OilFilterId" />
@@ -940,6 +995,15 @@
                 <ScalarProperty Name="PowerSterringOilCompany" ColumnName="PowerSterringOilCompany" />
                 <ScalarProperty Name="PowerSterringOilName" ColumnName="PowerSterringOilName" />
                 <ScalarProperty Name="PowerStereringOilId" ColumnName="PowerStereringOilId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OilFilterMakerCompanies">
+            <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilterMakerCompany">
+              <MappingFragment StoreEntitySet="OilFilterMakerCompany">
+                <ScalarProperty Name="OilFilterMakerCompanyDescription" ColumnName="OilFilterMakerCompanyDescription" />
+                <ScalarProperty Name="OilFilterMakerCompanyName" ColumnName="OilFilterMakerCompanyName" />
+                <ScalarProperty Name="OilFilterMakerCompanyId" ColumnName="OilFilterMakerCompanyId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

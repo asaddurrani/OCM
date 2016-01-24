@@ -196,6 +196,7 @@
     <EntitySetMapping Name="OilFilters">
       <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilter">
         <MappingFragment StoreEntitySet="OilFilters">
+          <ScalarProperty Name="OilFilterMakerCompanyId" ColumnName="OilFilterMakerCompanyId" />
           <ScalarProperty Name="OilFilterPrice" ColumnName="OilFilterPrice" />
           <ScalarProperty Name="OilFilterName" ColumnName="OilFilterName" />
           <ScalarProperty Name="OilFilterId" ColumnName="OilFilterId" />
@@ -209,6 +210,15 @@
           <ScalarProperty Name="PowerSterringOilCompany" ColumnName="PowerSterringOilCompany" />
           <ScalarProperty Name="PowerSterringOilName" ColumnName="PowerSterringOilName" />
           <ScalarProperty Name="PowerStereringOilId" ColumnName="PowerStereringOilId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OilFilterMakerCompanies">
+      <EntityTypeMapping TypeName="IstMvcFrameworkALI17Model.OilFilterMakerCompany">
+        <MappingFragment StoreEntitySet="OilFilterMakerCompany">
+          <ScalarProperty Name="OilFilterMakerCompanyDescription" ColumnName="OilFilterMakerCompanyDescription" />
+          <ScalarProperty Name="OilFilterMakerCompanyName" ColumnName="OilFilterMakerCompanyName" />
+          <ScalarProperty Name="OilFilterMakerCompanyId" ColumnName="OilFilterMakerCompanyId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

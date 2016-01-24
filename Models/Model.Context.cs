@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Models.DomainModels;
-
 namespace Models
 {
     using System;
@@ -46,5 +44,6 @@ namespace Models
         public virtual DbSet<BrakeOil> BrakeOils { get; set; }
         public virtual DbSet<OilFilter> OilFilters { get; set; }
         public virtual DbSet<PowerSterringOil> PowerSterringOils { get; set; }
+        public virtual DbSet<OilFilterMakerCompany> OilFilterMakerCompanies { get; set; }
     }
 }

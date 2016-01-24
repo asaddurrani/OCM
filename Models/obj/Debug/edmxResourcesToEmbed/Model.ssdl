@@ -123,6 +123,14 @@
     <Property Name="OilId" Type="int" />
     <Property Name="CustomerVehicleId" Type="int" />
   </EntityType>
+  <EntityType Name="OilFilterMakerCompany">
+    <Key>
+      <PropertyRef Name="OilFilterMakerCompanyId" />
+    </Key>
+    <Property Name="OilFilterMakerCompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OilFilterMakerCompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OilFilterMakerCompanyDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
   <EntityType Name="OilFilters">
     <Key>
       <PropertyRef Name="OilFilterId" />
@@ -130,6 +138,7 @@
     <Property Name="OilFilterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OilFilterName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="OilFilterPrice" Type="float" Nullable="false" />
+    <Property Name="OilFilterMakerCompanyId" Type="int" />
   </EntityType>
   <EntityType Name="OilMakerCompany">
     <Key>
@@ -285,6 +294,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_OilFilters_OilFilterMakerCompany">
+    <End Role="OilFilterMakerCompany" Type="Self.OilFilterMakerCompany" Multiplicity="0..1" />
+    <End Role="OilFilters" Type="Self.OilFilters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OilFilterMakerCompany">
+        <PropertyRef Name="OilFilterMakerCompanyId" />
+      </Principal>
+      <Dependent Role="OilFilters">
+        <PropertyRef Name="OilFilterMakerCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Oils_OilNetWeight">
     <End Role="OilMakerCompany" Type="Self.OilMakerCompany" Multiplicity="0..1" />
     <End Role="Oils" Type="Self.Oils" Multiplicity="*" />
@@ -322,6 +343,7 @@
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerVehicles" EntityType="Self.CustomerVehicles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OilChangeRecords" EntityType="Self.OilChangeRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OilFilterMakerCompany" EntityType="Self.OilFilterMakerCompany" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OilFilters" EntityType="Self.OilFilters" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OilMakerCompany" EntityType="Self.OilMakerCompany" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OilNetWeight" EntityType="Self.OilNetWeight" Schema="dbo" store:Type="Tables" />
@@ -357,6 +379,10 @@
     <AssociationSet Name="FK_OilChangeRecords_Oils" Association="Self.FK_OilChangeRecords_Oils">
       <End Role="Customers" EntitySet="Customers" />
       <End Role="OilChangeRecords" EntitySet="OilChangeRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OilFilters_OilFilterMakerCompany" Association="Self.FK_OilFilters_OilFilterMakerCompany">
+      <End Role="OilFilterMakerCompany" EntitySet="OilFilterMakerCompany" />
+      <End Role="OilFilters" EntitySet="OilFilters" />
     </AssociationSet>
     <AssociationSet Name="FK_Oils_OilNetWeight" Association="Self.FK_Oils_OilNetWeight">
       <End Role="OilMakerCompany" EntitySet="OilMakerCompany" />
