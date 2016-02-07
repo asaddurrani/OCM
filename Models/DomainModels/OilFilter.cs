@@ -6,5 +6,7 @@
         public string OilFilterName { get; set; }
         public double OilFilterPrice { get; set; }
         public int? OilFilterMakerCompanyId { get; set; }
+
+        public virtual OilFilterMakerCompany OilFilterMakerCompany { get; set; }
     }
 }

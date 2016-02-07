@@ -124,6 +124,7 @@
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\CustomerVehicleRepository.cs" />
     <Compile Include="Repositories\OilChangeRecordRepository.cs" />
+    <Compile Include="Repositories\OilFilterMakerRepository.cs" />
     <Compile Include="Repositories\OilFilterRepository.cs" />
     <Compile Include="Repositories\OilMakerCompanyRepository.cs" />
     <Compile Include="Repositories\OilNetWeightRepository.cs" />

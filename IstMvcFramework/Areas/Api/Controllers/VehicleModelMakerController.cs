@@ -5,6 +5,7 @@ using System.Web.Http;
 using Interfaces.IServices;
 using IstMvcFramework.ModelMappers;
 using IstMvcFramework.Models;
+using IstMvcFramework.Models.Response;
 using MainDomain = Models.RequestModels;
 
 namespace IstMvcFramework.Areas.Api.Controllers
@@ -29,7 +30,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-        public Models.VehicleModelMakerResponse Get([FromUri] MainDomain.VehicleModelMakerSearchRequest request)
+        public VehicleModelMakerResponse Get([FromUri] MainDomain.VehicleModelMakerSearchRequest request)
         {
             return _vehicleModelMakerService.GetAllVehicleModelMakers(request).CreateFrom();
         }

@@ -1,7 +1,6 @@
 ﻿using Interfaces.IServices;
 using Interfaces.Repository;
 using Models.DomainModels;
-using Models.RequestModels;
 using Models.ResponseModels;
 
 
@@ -9,24 +8,32 @@ namespace Implementation.Services
 {
     public class OilFilterMakerService : IOilFilterMakerService
     {
-        public OilFilterMakerResponse GetAllOilFilters(OilFilterMakerSearchRequest request)
+         private readonly IOilFilterMakerRepository _oilFilterMakerRepository;
+
+        public OilFilterMakerService(IOilFilterMakerRepository oilFilterMakerRepository)
         {
-            throw new System.NotImplementedException();
+            _oilFilterMakerRepository = oilFilterMakerRepository;
         }
 
-        public OilFilter GetOilFilterById(int id)
+
+        public OilFilterMakerResponse GetAllOilFilters(Models.RequestModels.OilFilterMakerSearchRequest request)
         {
-            throw new System.NotImplementedException();
+            return _oilFilterMakerRepository.GetAllOilFilterMakerCompanies();
         }
 
-        public OilFilter Save(OilFilter oil)
+        public OilFilterMakerCompany GetOilFilterById(int id)
+        {
+            return _oilFilterMakerRepository.GetOilFilterMakerCompanyById(id);
+        }
+
+        public OilFilterMakerCompany Save(OilFilterMakerCompany oil)
         {
             throw new System.NotImplementedException();
         }
 
         public OilFilterMakerResponse GetAll()
         {
-            throw new System.NotImplementedException();
+            return _oilFilterMakerRepository.GetAllOilFilterMakerCompanies();
         }
     }
 }

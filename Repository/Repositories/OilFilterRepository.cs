@@ -21,7 +21,7 @@ namespace Repository.Repositories
         }
         public OilFilterResponse GetAllOilFilters()
         {
-            var oilFiltersList = db.OilFilters.ToList();
+            var oilFiltersList = db.OilFilters.Include("OilFilterMakerCompany").ToList();
             return new OilFilterResponse
             {
                 OilFilters = oilFiltersList,

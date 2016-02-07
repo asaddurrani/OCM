@@ -5,6 +5,7 @@ using System.Web.Http;
 using Interfaces.IServices;
 using IstMvcFramework.ModelMappers;
 using IstMvcFramework.Models;
+using IstMvcFramework.Models.Response;
 using MainDomain = Models.RequestModels;
 
 namespace IstMvcFramework.Areas.Api.Controllers
@@ -25,7 +26,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-         public Models.AirFilterResponse Get([FromUri] MainDomain.AirFilterSearchRequest request)
+         public AirFilterResponse Get([FromUri] MainDomain.AirFilterSearchRequest request)
         {
             if (request == null || !ModelState.IsValid)
             {

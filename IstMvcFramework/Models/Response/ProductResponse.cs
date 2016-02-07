@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IstMvcFramework.Models
+namespace IstMvcFramework.Models.Response
 {
     /// <summary>
     /// Product Response

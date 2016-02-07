@@ -90,6 +90,8 @@ namespace IstMvcFramework.ModelMappers
                 OilFilterId = source.OilFilterId,
                 OilFilterName = source.OilFilterName,
                 OilFilterPrice = source.OilFilterPrice,
+                OilFilterMakerCompanyId = source.OilFilterMakerCompany.OilFilterMakerCompanyId,
+                OilFilterMakerCompanyName = source.OilFilterMakerCompany.OilFilterMakerCompanyName
             };
 
         }

@@ -6,6 +6,7 @@ using Interfaces.IServices;
 using IstMvcFramework.ModelMappers;
 using IstMvcFramework.Models;
 using MainDomain = Models.RequestModels;
+using VehicleMakerResponse = IstMvcFramework.Models.Response.VehicleMakerResponse;
 
 namespace IstMvcFramework.Areas.Api.Controllers
 {
@@ -29,7 +30,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-        public Models.VehicleMakerResponse Get([FromUri] MainDomain.VehicleModelMakerSearchRequest request)
+        public VehicleMakerResponse Get([FromUri] MainDomain.VehicleModelMakerSearchRequest request)
         {
             if (request == null || !ModelState.IsValid)
             {

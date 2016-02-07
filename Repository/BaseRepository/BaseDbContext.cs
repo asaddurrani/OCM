@@ -40,6 +40,7 @@ namespace Repository.BaseRepository
         public DbSet<Models.DomainModels.AirFilter> AirFilters { get; set; }        
         public DbSet<Models.DomainModels.BrakeOil> BrakeOils { get; set; }        
         public DbSet<Models.DomainModels.PowerSterringOil> PowerSterringOils { get; set; }        
+        public DbSet<Models.DomainModels.OilFilterMakerCompany> OilFilterMakerCompanies { get; set; }        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

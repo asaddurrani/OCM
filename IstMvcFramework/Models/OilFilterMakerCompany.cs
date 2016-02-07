@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Models.DomainModels
+namespace IstMvcFramework.Models
 {
     public class OilFilterMakerCompany
     {
@@ -9,6 +9,5 @@ namespace Models.DomainModels
         public string OilFilterMakerCompanyDescription { get; set; }
 
         public virtual ICollection<OilFilter> OilFilters { get; set; }
-
     }
 }

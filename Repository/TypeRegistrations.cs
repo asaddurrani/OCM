@@ -1,10 +1,6 @@
 ﻿using System.Data.Entity;
-using System.Web.Mvc;
 using Interfaces.Repository;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Practices.Unity;
-using Models.IdentityModels;
 using Repository.BaseRepository;
 using Repository.Repositories;
 
@@ -28,6 +24,7 @@ namespace Repository
             unityContainer.RegisterType<IOilFilterRepository, OilFilterRepository>();
             unityContainer.RegisterType<IBrakeOilRepository, BrakeOilRepository>();
             unityContainer.RegisterType<IPowerSterringOilRepository, PowerSterringOilRepository>();
+            unityContainer.RegisterType<IOilFilterMakerRepository, OilFilterMakerRepository>();
 
 
             unityContainer.RegisterType<DbContext, BaseDbContext>(new HierarchicalLifetimeManager());

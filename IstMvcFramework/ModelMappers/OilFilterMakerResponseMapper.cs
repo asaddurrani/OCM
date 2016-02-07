@@ -1,22 +1,24 @@
 ﻿using System.Linq;
+using IstMvcFramework.Models;
 using IstMvcFramework.Models.Response;
 using MainDomain = Models.ResponseModels;
 
 namespace IstMvcFramework.ModelMappers
 {
-    public static class AirFilterMapper
+    public static class OilFilterMakerResponseMapper
     {
+
         #region Public
 
         /// <summary>
         ///  Create web model from entity
         /// </summary>
-        public static AirFilterResponse CreateFrom(this MainDomain.AirFilterResponse source)
+        public static Models.Response.OilFilterMakerResponse CreateFrom(this MainDomain.OilFilterMakerResponse source)
         {
-            return new AirFilterResponse
+            return new Models.Response.OilFilterMakerResponse
             {
                 TotalCount = source.TotalCount,
-                AirFilters = source.AirFilters.Select(p => p.CreateFrom())
+                OilFilterMakerCompanies = source.OilFilterMakerCompanies.Select(x=>x.CreateFrom())
             };
 
         }

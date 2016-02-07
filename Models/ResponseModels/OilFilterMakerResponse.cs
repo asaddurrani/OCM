@@ -9,13 +9,13 @@ namespace Models.ResponseModels
         /// </summary>
         public OilFilterMakerResponse()
         {
-            OilFilterMakerCompanies = new List<DomainModels.OilFilterMakerCompany>();
+            OilFilterMakerCompanies = new List<Models.DomainModels.OilFilterMakerCompany>();
         }
 
         /// <summary>
         /// Oils
         /// </summary>
-        public IEnumerable<DomainModels.OilFilterMakerCompany> OilFilterMakerCompanies { get; set; }
+        public IEnumerable<Models.DomainModels.OilFilterMakerCompany> OilFilterMakerCompanies { get; set; }
 
         /// <summary>
         /// Total Count

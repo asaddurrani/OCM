@@ -5,6 +5,7 @@ using System.Web.Http;
 using Interfaces.IServices;
 using IstMvcFramework.ModelMappers;
 using IstMvcFramework.Models;
+using IstMvcFramework.Models.Response;
 using MainDomain = Models.RequestModels;
 
 namespace IstMvcFramework.Areas.Api.Controllers
@@ -24,7 +25,7 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-        public Models.OilMakerResponse Get([FromUri] MainDomain.OilMakerSearchRequest request)
+        public OilMakerResponse Get([FromUri] MainDomain.OilMakerSearchRequest request)
         {
             if (request == null || !ModelState.IsValid)
             {

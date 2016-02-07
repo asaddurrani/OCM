@@ -1,18 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Http;
+using Interfaces.IServices;
+using IstMvcFramework.ModelMappers;
+using IstMvcFramework.Models;
+using IstMvcFramework.Models.Response;
+using MainDomain = Models.RequestModels;
 
 namespace IstMvcFramework.Areas.Api.Controllers
 {
-    public class OilFilterMakerController : Controller
+    public class OilFilterMakerController : ApiController
     {
-        //
-        // GET: /Api/OilFilterMaker/
-        public ActionResult Index()
+        private readonly IOilFilterMakerService _oilFilterMakerService;
+
+        public OilFilterMakerController(IOilFilterMakerService oilFilterMakerService)
         {
-            return View();
+            _oilFilterMakerService = oilFilterMakerService;
         }
-	}
+
+        public Models.Response.OilFilterMakerResponse Get()
+        {
+            return _oilFilterMakerService.GetAll().CreateFrom();
+        }
+    }
 }

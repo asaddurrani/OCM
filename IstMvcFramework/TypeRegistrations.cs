@@ -1,10 +1,6 @@
 ﻿using Implementation.Services;
 using Interfaces.IServices;
-using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security;
 using Microsoft.Practices.Unity;
-using Models.IdentityModels;
-using System.Web;
 
 namespace IstMvcFramework
 {

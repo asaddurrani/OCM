@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Http;
 using Interfaces.IServices;
 using IstMvcFramework.ModelMappers;
 using IstMvcFramework.Models;
+using IstMvcFramework.Models.Response;
 using MainDomain = Models.RequestModels;
 
 namespace IstMvcFramework.Areas.Api.Controllers
@@ -24,13 +26,18 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-        public Models.OilFilterResponse Get([FromUri] MainDomain.OilFilterSearchRequest request)
+        public OilFilterResponse Get([FromUri] MainDomain.OilFilterSearchRequest request)
         {
             if (request == null || !ModelState.IsValid)
             {
                 throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
             }
-            return _oilFilterService.GetAllOilFilters().CreateFrom();
+            var result = _oilFilterService.GetAllOilFilters();
+            return new OilFilterResponse
+            {
+                OilFilters = result.OilFilters.Select(x => x.CreateFrom()),
+                TotalCount = result.TotalCount
+            };
         }
 
         //[ApiException]

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using IstMvcFramework.Models.Response;
 using MainDomain = Models.ResponseModels;
 
 namespace IstMvcFramework.ModelMappers
@@ -13,9 +14,9 @@ namespace IstMvcFramework.ModelMappers
         /// <summary>
         ///  Create web model from entity
         /// </summary>
-        public static Models.ProductResponse CreateFrom(this MainDomain.ProductResponse source)
+        public static ProductResponse CreateFrom(this MainDomain.ProductResponse source)
         {
-            return new Models.ProductResponse
+            return new ProductResponse
             {
                 TotalCount = source.TotalCount,
                 Products = source.Products.Select(p => p.CreateFrom())

@@ -10,9 +10,9 @@ namespace IstMvcFramework.ModelMappers
         /// <summary>
         ///  Create web model from entity
         /// </summary>
-        public static Models.VehicleMakerResponse CreateFrom(this MainDomain.VehicalMakerResponse source)
+        public static Models.Response.VehicleMakerResponse CreateFrom(this MainDomain.VehicalMakerResponse source)
         {
-            return new Models.VehicleMakerResponse
+            return new Models.Response.VehicleMakerResponse
             {
                 TotalCount = source.TotalCount,
                 VehicleMakers = source.VehicleMakers.Select(p => p.CreateFrom())

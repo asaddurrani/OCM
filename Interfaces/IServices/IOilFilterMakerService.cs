@@ -6,8 +6,8 @@ namespace Interfaces.IServices
     public interface IOilFilterMakerService
     {
         OilFilterMakerResponse GetAllOilFilters(Models.RequestModels.OilFilterMakerSearchRequest request);
-        OilFilter GetOilFilterById(int id);
-        OilFilter Save(OilFilter oil);
+        OilFilterMakerCompany GetOilFilterById(int id);
+        OilFilterMakerCompany Save(OilFilterMakerCompany oil);
         OilFilterMakerResponse GetAll();
     }
 }

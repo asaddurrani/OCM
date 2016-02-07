@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace IstMvcFramework.Models
+namespace IstMvcFramework.Models.Response
 {
-    public sealed class VehicleModelMakerResponse
+    public class OilFilterMakerResponse
     {
         /// <summary>
-        /// Vehicle Model Makers
+        /// Oils
         /// </summary>
-        public IEnumerable<Models.VehicleModelMaker> VehicleModelMakers { get; set; }
+        public IEnumerable<Models.OilFilterMakerCompany> OilFilterMakerCompanies { get; set; }
 
         /// <summary>
         /// Total Count

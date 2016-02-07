@@ -67,6 +67,7 @@
     <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="Repository\ICustomerVehicleRepository.cs" />
     <Compile Include="Repository\IOilChangeRecordRepository.cs" />
+    <Compile Include="Repository\IOilFilterMakerRepository.cs" />
     <Compile Include="Repository\IOilFilterRepository.cs" />
     <Compile Include="Repository\IOilMakerCompanyRepository.cs" />
     <Compile Include="Repository\IOilMakerRepository.cs" />
