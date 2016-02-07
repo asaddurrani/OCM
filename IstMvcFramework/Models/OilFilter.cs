@@ -10,7 +10,7 @@ namespace IstMvcFramework.Models
         public int OilFilterId { get; set; }
         public string OilFilterName { get; set; }
         public double OilFilterPrice { get; set; }
-        public int OilFilterMakerCompanyId { get; set; }
+        public int? OilFilterMakerCompanyId { get; set; }
         public string OilFilterMakerCompanyName { get; set; }
     }
 }

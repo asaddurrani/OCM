@@ -121,7 +121,7 @@ define("oilFilter/oilFilter.viewModel",
                                         if (data) {
                                             var savedOilFilter = model.OilFilter.Create(data);
                                             if (selectedOilFilter().oilFilterId() <= 0 || selectedOilFilter().oilFilterId() == undefined) {
-                                                oils.splice(0, 0, savedOilFilter);
+                                                oilFilters.splice(0, 0, savedOilFilter);
                                             }
                                             toastr.success("Saved Successfully");
                                             view.hideOilFilterDialog();

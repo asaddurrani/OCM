@@ -90,8 +90,8 @@ namespace IstMvcFramework.ModelMappers
                 OilFilterId = source.OilFilterId,
                 OilFilterName = source.OilFilterName,
                 OilFilterPrice = source.OilFilterPrice,
-                OilFilterMakerCompanyId = source.OilFilterMakerCompany.OilFilterMakerCompanyId,
-                OilFilterMakerCompanyName = source.OilFilterMakerCompany.OilFilterMakerCompanyName
+                OilFilterMakerCompanyId = source.OilFilterMakerCompany != null ?source.OilFilterMakerCompany.OilFilterMakerCompanyId: (int?) null,
+                OilFilterMakerCompanyName = source.OilFilterMakerCompany != null? source.OilFilterMakerCompany.OilFilterMakerCompanyName: string.Empty
             };
 
         }
@@ -106,6 +106,7 @@ namespace IstMvcFramework.ModelMappers
                 OilFilterId = source.OilFilterId,
                 OilFilterName = source.OilFilterName,
                 OilFilterPrice = source.OilFilterPrice,
+                OilFilterMakerCompanyId = source.OilFilterMakerCompanyId
             };
 
         }
