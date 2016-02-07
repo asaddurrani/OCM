@@ -145,6 +145,7 @@
     <Compile Include="RequestModels\OilFilterSearchRequest.cs" />
     <Compile Include="RequestModels\OilMakerSearchRequest.cs" />
     <Compile Include="RequestModels\OilSearchRequest.cs" />
+    <Compile Include="RequestModels\PowerSteeringOilSearchRequest.cs" />
     <Compile Include="RequestModels\ProductSearchRequest.cs" />
     <Compile Include="RequestModels\VehicleModelMakerSearchRequest.cs" />
     <Compile Include="ResponseModels\AirFilterResponse.cs" />

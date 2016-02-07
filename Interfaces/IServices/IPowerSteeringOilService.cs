@@ -1,4 +1,5 @@
-﻿using Models.ResponseModels;
+﻿using Models.DomainModels;
+using Models.ResponseModels;
 
 namespace Interfaces.IServices
 {
@@ -6,5 +7,6 @@ namespace Interfaces.IServices
     {
         PowerSterringOilResponse GetAllPowerSterringOils();
         Models.DomainModels.PowerSterringOil GetPowerSterringOilById(int id);
+        PowerSterringOil Save(PowerSterringOil oil);
     }
 }

@@ -22,5 +22,10 @@ namespace Implementation.Services
         {
             return _powerSterringOilRepository.GetPowerSterringOilById(id);
         }
+
+        public PowerSterringOil Save(PowerSterringOil oil)
+        {
+            return _powerSterringOilRepository.Save(oil);
+        }
     }
 }

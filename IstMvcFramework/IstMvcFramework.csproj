@@ -261,6 +261,7 @@
     <Compile Include="ModelMappers\OilMakerCompanyResponseMapper.cs" />
     <Compile Include="ModelMappers\OilMapper.cs" />
     <Compile Include="ModelMappers\OilResponseMapper.cs" />
+    <Compile Include="ModelMappers\PowerSteeringOilResponseMapper.cs" />
     <Compile Include="ModelMappers\ProductResponseMapper.cs" />
     <Compile Include="ModelMappers\ProductMapper.cs" />
     <Compile Include="ModelMappers\VehicleMakerResponse.cs" />

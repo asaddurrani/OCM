@@ -27,24 +27,24 @@ namespace IstMvcFramework.Areas.Api.Controllers
         /// <summary>
         /// Get All
         /// </summary>
-         public AirFilterResponse Get([FromUri] MainDomain.AirFilterSearchRequest request)
+         public PowerSteeringOilResponse Get([FromUri] MainDomain.PowerSteeringOilSearchRequest request)
         {
             if (request == null || !ModelState.IsValid)
             {
                 throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
             }
-            return _airFilterService.GetAllAirFilters().CreateFrom();
+            return _powerSteeringOilService.GetAllPowerSterringOils().CreateFrom();
         }
 
         //[ApiException]
         [HttpPost]
-        public Models.AirFilter Post(Models.AirFilter oil)
+        public Models.PowerSterringOil Post(Models.PowerSterringOil oil)
         {
             if (!ModelState.IsValid)
             {
                 throw new HttpException((int)HttpStatusCode.BadRequest, "Invalid Request");
             }
-            return _airFilterService.Save(oil.CreateFrom()).CreateFrom();
+            return _powerSteeringOilService.Save(oil.CreateFrom()).CreateFrom();
         }
 	}
 }
