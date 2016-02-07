@@ -35,3 +35,40 @@ D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvc
 D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\WebBase\obj\Debug\WebBase.csprojResolveAssemblyReference.cache
 D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\WebBase\obj\Debug\WebBase.dll
 D:\Projects\Working7-1-15\Working7-1-15\4-with papersheet design\ISTMVCFW-IstMvcFrameworkSPA\WebBase\obj\Debug\WebBase.pdb
+D:\Projects\OSM\OCM\WebBase\bin\Debug\WebBase.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\WebBase.pdb
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.Mvc.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Helpers.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Http.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Mvc.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Razor.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Unity.Mvc4.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\WebActivatorEx.dll
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.Mvc.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Helpers.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Http.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Mvc.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.Razor.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects\OSM\OCM\WebBase\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\OSM\OCM\WebBase\obj\Debug\WebBase.csprojResolveAssemblyReference.cache
+D:\Projects\OSM\OCM\WebBase\obj\Debug\WebBase.dll
+D:\Projects\OSM\OCM\WebBase\obj\Debug\WebBase.pdb
