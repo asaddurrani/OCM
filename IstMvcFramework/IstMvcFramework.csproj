@@ -217,6 +217,7 @@
     <Compile Include="Areas\Api\Controllers\OilFilterController.cs" />
     <Compile Include="Areas\Api\Controllers\OilFilterMakerController.cs" />
     <Compile Include="Areas\Api\Controllers\OilMakerController.cs" />
+    <Compile Include="Areas\Api\Controllers\PowerSteeringOilController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductBaseController.cs" />
     <Compile Include="Areas\Api\Controllers\ProductController.cs" />
     <Compile Include="Areas\Api\Controllers\RecordBaseController.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="Models\OilResponse.cs" />
     <Compile Include="Models\PowerSterringOil.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Response\PowerSteeringOilResponse.cs" />
     <Compile Include="Models\Response\ProductResponse.cs" />
     <Compile Include="Models\RecordBaseData.cs" />
     <Compile Include="Models\RecordModel.cs" />
@@ -757,7 +759,7 @@
     <Content Include="Areas\AirFilter\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\AirFilter\Views\_ViewStart.cshtml" />
     <Content Include="Areas\AirFilter\Views\web.config" />
-    <Content Include="Areas\PowerSteeringOil\Views\PowerSteeringOil\_oilDialog.cshtml" />
+    <Content Include="Areas\PowerSteeringOil\Views\PowerSteeringOil\_powerSteeringOilDialog.cshtml" />
     <Content Include="Areas\PowerSteeringOil\Views\PowerSteeringOil\Index.cshtml" />
     <Content Include="Areas\PowerSteeringOil\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\PowerSteeringOil\Views\_ViewStart.cshtml" />
@@ -891,6 +893,7 @@
     <Folder Include="Areas\Api\Views\OilFilter\" />
     <Folder Include="Areas\Api\Views\OilMaker\" />
     <Folder Include="Areas\Api\Views\Oil\" />
+    <Folder Include="Areas\Api\Views\PowerSteeringOil\" />
     <Folder Include="Areas\Api\Views\RecordBase\" />
     <Folder Include="Areas\Api\Views\RecordByVehiclePlateNumber\" />
     <Folder Include="Areas\Api\Views\Shared\" />

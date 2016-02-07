@@ -19,7 +19,7 @@ define("powerSteeringOil/powerSteeringOil.view",
                 },
                  // Hide Oil the dialog
                 hidePowerSteeringOilDialog = function () {
-                    $("#PowerSteeringOilDialog").modal("hide");
+                    $("#powerSteeringOilDialog").modal("hide");
                 },
 
                 // Initialize

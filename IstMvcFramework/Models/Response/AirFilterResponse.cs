@@ -5,7 +5,7 @@ namespace IstMvcFramework.Models.Response
     public class AirFilterResponse
     {
         /// <summary>
-        /// Oils
+        /// Air Filters
         /// </summary>
         public IEnumerable<Models.AirFilter> AirFilters { get; set; }
 
