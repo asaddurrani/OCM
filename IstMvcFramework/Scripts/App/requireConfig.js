@@ -16,7 +16,7 @@
             "airFilter": "/Areas/AirFilter/Scripts",
             "brakeOil": "/Areas/BrakeOil/Scripts",
             "oilFilter": "/Areas/OilFilter/Scripts",
-            "powerSteeringOil": "/Areas/Record/Scripts",
+            "powerSteeringOil": "/Areas/PowerSteeringOil/Scripts",
         }
 
     });

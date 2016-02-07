@@ -48,7 +48,7 @@ define("powerSteeringOil/powerSteeringOil.viewModel",
                                 powerSteeringOils.removeAll();
                                 if (data != null) {
                                     pager().totalCount(data.TotalCount);
-                                    _.each(data.PowerSteeringOils, function (item) {
+                                    _.each(data.PowerSterringOils, function (item) {
                                         var module = new model.PowerSteeringOil.Create(item);
                                         powerSteeringOils.push(module);
                                     });
@@ -99,7 +99,7 @@ define("powerSteeringOil/powerSteeringOil.viewModel",
                                                 powerSteeringOils.splice(0, 0, savedPowerSteeringOil);
                                             }
                                             toastr.success("Saved Successfully");
-                                            view.hideAirFilterDialog();
+                                            view.hidePowerSteeringOilDialog();
                                         }
                                     },
                                     error: function (response) {
